@@ -1,0 +1,5288 @@
+
+ //////////// 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+3818722
+
+
+
+
+
+
+
+
+
+
+
+3818771
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+ Подарунок 
+ 
+ 
+ 
+ 
+ 
+
+
+
+3818771
+
+
+
+
+Samsung Galaxy J7 J700H/DS Gold + захисне скло + чохол!
+
+
+
+
+
+var pricerawjson = '%7B%22price%22%3A4999%2C%22status%22%3A%22active%22%2C%22sell_status%22%3A%22available%22%2C%22pl_bonus_charge_pcs%22%3A%220%22%2C%22pl_use_instant_bonus%22%3A%220%22%2C%22old_price%22%3A0%2C%22old_usd_price%22%3A0%2C%22price_formatted%22%3A%224%20999%22%2C%22old_price_formatted%22%3A%220%22%2C%22usd_price%22%3A189.72%2C%22is_price_deviated%22%3A%220%22%2C%22atp%22%3Atrue%7D';
+var price_json = App.getService('JSON').parse(decodeURIComponent(pricerawjson));
+price_json.icon_view = 'tile';
+price_json.price_unit = 'грн';
+price_json.price_old_unit = 'грн';
+price_json.hide_old_price = 0;
+price_json.show_usd_price = false;
+var priceFormatter = new GoodsPriceBlockFormatter_class(price_json);
+priceFormatter.setFormattedPrice(3818771);
+var price_json_3818771 = price_json;
+var bonus_charge_div = document.getElementById("bonus_catalog_record3818771");
+if (bonus_charge_div) {
+new BonusElement_class(bonus_charge_div, price_json).init();
+}
+
+
+
+
+
+
+
+1414 відгуків
+
+
+
+
+
+
+var bonus_charge_div = document.getElementById("bonus_catalog_record3818771");
+if (bonus_charge_div
+&& window['price_json_3818771']
+&& price_json_3818771['pl_bonus_charge_pcs']
+) {
+new BonusElement_class(bonus_charge_div, price_json_3818771).init();
+} else if (bonus_charge_div) {
+var data = {
+"pl_bonus_charge_pcs": 0,
+"pl_use_instant_bonus": 0
+};
+new BonusElement_class(bonus_charge_div, data).init();
+}
+
+
+
+
+
+
+
+
+Купити
+
+
+
+
+
+
+
+
+
+Wishlists.setCatalogTilePopupParent('wishlist-popup-'+3818771);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Екран (5.5&quot;, Super AMOLED Plus, 1280x720)/ Samsung Exynos 7580 (1.5 ГГц)/ основна камера: 13 Мп, фронтальна камера: 5 Мп / RAM 1.5 ГБ/ 16 ГБ вбудованої пам&#039;яті + microSD/SDHC (до 128 ГБ)/ 3G/ GPS/ підтримка 2-х SIM-карток (Micro-SIM)/ Android 5.1 (Lollipop) / 3000 мА·год
+
+
+
+if (!App.isDesktop()) {
+$('catalog_item3818771').addClass('touch');
+}
+GoodsCatalog.add(3818771, 'catalog_tile');
+
+
+
+
+ВідеооглядДемонстрація товару
+
+
+
+
+
+
+ //////////// 
+
+ //////////// 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+14653634
+
+
+
+
+
+
+
+
+
+
+
+16105004
+
+
+
+
+
+
+
+
+
+
+
+14653682
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+14653682
+
+
+
+
+Nokia 6 Dual Sim Silver
+
+
+
+
+
+var pricerawjson = '%7B%22price%22%3A6999%2C%22status%22%3A%22active%22%2C%22sell_status%22%3A%22available%22%2C%22pl_bonus_charge_pcs%22%3A%220%22%2C%22pl_use_instant_bonus%22%3A%220%22%2C%22old_price%22%3A0%2C%22old_usd_price%22%3A0%2C%22price_formatted%22%3A%226%20999%22%2C%22old_price_formatted%22%3A%220%22%2C%22usd_price%22%3A265.62%2C%22is_price_deviated%22%3A%220%22%2C%22atp%22%3Atrue%7D';
+var price_json = App.getService('JSON').parse(decodeURIComponent(pricerawjson));
+price_json.icon_view = 'tile';
+price_json.price_unit = 'грн';
+price_json.price_old_unit = 'грн';
+price_json.hide_old_price = 0;
+price_json.show_usd_price = false;
+var priceFormatter = new GoodsPriceBlockFormatter_class(price_json);
+priceFormatter.setFormattedPrice(14653682);
+var price_json_14653682 = price_json;
+var bonus_charge_div = document.getElementById("bonus_catalog_record14653682");
+if (bonus_charge_div) {
+new BonusElement_class(bonus_charge_div, price_json).init();
+}
+
+
+
+
+
+
+
+150 відгуків
+
+
+
+
+
+
+var bonus_charge_div = document.getElementById("bonus_catalog_record14653682");
+if (bonus_charge_div
+&& window['price_json_14653682']
+&& price_json_14653682['pl_bonus_charge_pcs']
+) {
+new BonusElement_class(bonus_charge_div, price_json_14653682).init();
+} else if (bonus_charge_div) {
+var data = {
+"pl_bonus_charge_pcs": 0,
+"pl_use_instant_bonus": 0
+};
+new BonusElement_class(bonus_charge_div, data).init();
+}
+
+
+
+
+
+
+
+
+Купити
+
+
+
+
+
+
+
+
+
+Wishlists.setCatalogTilePopupParent('wishlist-popup-'+14653682);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Екран (5.5&quot;, IPS, 1920x1080) / Qualcomm Snapdragon 430 (1.3 ГГц) / основна камера: 16 Мп, фронтальна камера: 8 Мп / RAM 3 ГБ / 32 ГБ вбудованої пам&#039;яті + microSD / SDHC (до 128 ГБ) / 3G / LTE / GPS / підтримка 2х SIM-карток (Nano-SIM) / Android 7.1 (Nougat) / 3000 мА·год
+
+
+
+if (!App.isDesktop()) {
+$('catalog_item14653682').addClass('touch');
+}
+GoodsCatalog.add(14653682, 'catalog_tile');
+
+
+
+
+Відео про&nbsp;товарrsrqzcwwxetxtfcqeyybyuxaywbcufdtcq
+
+
+
+
+
+
+ //////////// 
+
+ //////////// 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+3818036
+
+
+
+
+
+
+
+
+
+
+
+3818176
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+ Подарунок 
+ 
+ 
+ 
+ 
+ 
+
+
+
+3818036
+
+
+
+
+Samsung Galaxy J5 J500H/DS Black + чохол + захисне скло!
+
+
+
+
+
+var pricerawjson = '%7B%22price%22%3A3999%2C%22status%22%3A%22active%22%2C%22sell_status%22%3A%22available%22%2C%22pl_bonus_charge_pcs%22%3A%220%22%2C%22pl_use_instant_bonus%22%3A%220%22%2C%22old_price%22%3A0%2C%22old_usd_price%22%3A0%2C%22price_formatted%22%3A%223%20999%22%2C%22old_price_formatted%22%3A%220%22%2C%22usd_price%22%3A151.76%2C%22is_price_deviated%22%3A%220%22%2C%22atp%22%3Atrue%7D';
+var price_json = App.getService('JSON').parse(decodeURIComponent(pricerawjson));
+price_json.icon_view = 'tile';
+price_json.price_unit = 'грн';
+price_json.price_old_unit = 'грн';
+price_json.hide_old_price = 0;
+price_json.show_usd_price = false;
+var priceFormatter = new GoodsPriceBlockFormatter_class(price_json);
+priceFormatter.setFormattedPrice(3818036);
+var price_json_3818036 = price_json;
+var bonus_charge_div = document.getElementById("bonus_catalog_record3818036");
+if (bonus_charge_div) {
+new BonusElement_class(bonus_charge_div, price_json).init();
+}
+
+
+
+
+
+
+
+1140 відгуків
+
+
+
+
+
+
+var bonus_charge_div = document.getElementById("bonus_catalog_record3818036");
+if (bonus_charge_div
+&& window['price_json_3818036']
+&& price_json_3818036['pl_bonus_charge_pcs']
+) {
+new BonusElement_class(bonus_charge_div, price_json_3818036).init();
+} else if (bonus_charge_div) {
+var data = {
+"pl_bonus_charge_pcs": 0,
+"pl_use_instant_bonus": 0
+};
+new BonusElement_class(bonus_charge_div, data).init();
+}
+
+
+
+
+
+
+
+
+Купити
+
+
+
+
+
+
+
+
+
+Wishlists.setCatalogTilePopupParent('wishlist-popup-'+3818036);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Екран (5&quot;, Super AMOLED, 1280x720)/ Qualcomm Snapdragon 410 (1.2 ГГц)/ основна камера: 13 Мп, фронтальна камера: 5 Мп / RAM 1.5 ГБ/ 8 ГБ вбудованої пам&#039;яті + microSD/SDHC (до 128 ГБ)/ 3G / GPS/ підтримка 2-х SIM-карток (Micro-SIM)/ Android 5.1 (Lollipop) / 2600 мА·год
+
+
+
+if (!App.isDesktop()) {
+$('catalog_item3818036').addClass('touch');
+}
+GoodsCatalog.add(3818036, 'catalog_tile');
+
+
+
+
+ВідеооглядДемонстрація товару
+
+
+
+
+
+
+ //////////// 
+
+ //////////// 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+17489972
+
+
+
+
+
+
+
+
+
+
+
+18045186
+
+
+
+
+
+
+
+
+
+
+
+17490805
+
+
+
+
+
+
+
+
+
+
+
+17479997
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+17489972
+
+
+
+
+Xiaomi Redmi Note 4X 3/32GB Black
+
+
+
+
+
+var pricerawjson = '%7B%22price%22%3A4349%2C%22status%22%3A%22active%22%2C%22sell_status%22%3A%22available%22%2C%22pl_bonus_charge_pcs%22%3A%220%22%2C%22pl_use_instant_bonus%22%3A%220%22%2C%22old_price%22%3A0%2C%22old_usd_price%22%3A0%2C%22price_formatted%22%3A%224%20349%22%2C%22old_price_formatted%22%3A%220%22%2C%22usd_price%22%3A165.05%2C%22is_price_deviated%22%3A%220%22%2C%22atp%22%3Atrue%7D';
+var price_json = App.getService('JSON').parse(decodeURIComponent(pricerawjson));
+price_json.icon_view = 'tile';
+price_json.price_unit = 'грн';
+price_json.price_old_unit = 'грн';
+price_json.hide_old_price = 0;
+price_json.show_usd_price = false;
+var priceFormatter = new GoodsPriceBlockFormatter_class(price_json);
+priceFormatter.setFormattedPrice(17489972);
+var price_json_17489972 = price_json;
+var bonus_charge_div = document.getElementById("bonus_catalog_record17489972");
+if (bonus_charge_div) {
+new BonusElement_class(bonus_charge_div, price_json).init();
+}
+
+
+
+
+
+
+
+743 відгуки
+
+
+
+
+
+
+var bonus_charge_div = document.getElementById("bonus_catalog_record17489972");
+if (bonus_charge_div
+&& window['price_json_17489972']
+&& price_json_17489972['pl_bonus_charge_pcs']
+) {
+new BonusElement_class(bonus_charge_div, price_json_17489972).init();
+} else if (bonus_charge_div) {
+var data = {
+"pl_bonus_charge_pcs": 0,
+"pl_use_instant_bonus": 0
+};
+new BonusElement_class(bonus_charge_div, data).init();
+}
+
+
+
+
+
+
+
+
+Купити
+
+
+
+
+
+
+
+
+
+Wishlists.setCatalogTilePopupParent('wishlist-popup-'+17489972);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Екран (5.5&quot;, IPS, 1920x1080)/ Qualcomm Snapdragon 625 (2 ГГц)/ основна камера: 13 Мп, фронтальна камера: 5 Мп / RAM 3 ГБ/ 32 ГБ вбудованої пам&#039;яті + microSD/SDHC (до 128 ГБ)/ 3G/ LTE/ GPS/ GLONASS/ підтримка 2-х SIM-карток (Micro-SIM + Nano-SIM)/ Android 6.0 (Marshmallow) / 4100 мА·год
+
+
+
+if (!App.isDesktop()) {
+$('catalog_item17489972').addClass('touch');
+}
+GoodsCatalog.add(17489972, 'catalog_tile');
+
+
+
+
+
+
+ //////////// 
+
+ //////////// 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+9858713
+
+
+
+
+
+
+
+
+
+
+
+9859602
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+9859602
+
+
+
+
+Motorola MOTO G4 (XT1622) White
+
+
+
+
+
+var pricerawjson = '%7B%22price%22%3A3799%2C%22status%22%3A%22active%22%2C%22sell_status%22%3A%22available%22%2C%22pl_bonus_charge_pcs%22%3A%220%22%2C%22pl_use_instant_bonus%22%3A%220%22%2C%22old_price%22%3A4333%2C%22old_usd_price%22%3A164.44%2C%22price_formatted%22%3A%223%20799%22%2C%22old_price_formatted%22%3A%224%20333%22%2C%22usd_price%22%3A144.17%2C%22is_price_deviated%22%3A%220%22%2C%22atp%22%3Atrue%7D';
+var price_json = App.getService('JSON').parse(decodeURIComponent(pricerawjson));
+price_json.icon_view = 'tile';
+price_json.price_unit = 'грн';
+price_json.price_old_unit = 'грн';
+price_json.hide_old_price = 0;
+price_json.show_usd_price = false;
+var priceFormatter = new GoodsPriceBlockFormatter_class(price_json);
+priceFormatter.setFormattedPrice(9859602);
+var price_json_9859602 = price_json;
+var bonus_charge_div = document.getElementById("bonus_catalog_record9859602");
+if (bonus_charge_div) {
+new BonusElement_class(bonus_charge_div, price_json).init();
+}
+
+
+
+
+
+
+
+353 відгуки
+
+
+
+
+
+
+var bonus_charge_div = document.getElementById("bonus_catalog_record9859602");
+if (bonus_charge_div
+&& window['price_json_9859602']
+&& price_json_9859602['pl_bonus_charge_pcs']
+) {
+new BonusElement_class(bonus_charge_div, price_json_9859602).init();
+} else if (bonus_charge_div) {
+var data = {
+"pl_bonus_charge_pcs": 0,
+"pl_use_instant_bonus": 0
+};
+new BonusElement_class(bonus_charge_div, data).init();
+}
+
+
+
+
+
+
+
+
+Купити
+
+
+
+
+
+
+
+
+
+Wishlists.setCatalogTilePopupParent('wishlist-popup-'+9859602);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Екран (5.5&quot;, IPS, 1920x1080)/ Qualcomm Snapdragon 617 (1.5 ГГц)/ основна камера: 13 Мп, фронтальна камера: 5 Мп / RAM 2 ГБ/ 16 ГБ вбудованої пам&#039;яті + microSD/SDHC (до 128 ГБ)/ 3G/ LTE/ GPS/ підтримка 2-х SIM-карток (Micro-SIM)/ Android 6.0 (Marshmallow) / 3000 мА·год
+
+
+
+if (!App.isDesktop()) {
+$('catalog_item9859602').addClass('touch');
+}
+GoodsCatalog.add(9859602, 'catalog_tile');
+
+
+
+
+ВідеооглядДемонстрація товару
+
+
+
+
+
+
+ //////////// 
+
+ //////////// 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+ Подарунок 
+ 
+ 
+ 
+ 
+ 
+
+
+
+17217371
+
+
+
+
+Apple iPhone 6 32GB Space Gray
+
+
+
+
+
+var pricerawjson = '%7B%22price%22%3A11499%2C%22status%22%3A%22active%22%2C%22sell_status%22%3A%22available%22%2C%22pl_bonus_charge_pcs%22%3A%220%22%2C%22pl_use_instant_bonus%22%3A%220%22%2C%22old_price%22%3A0%2C%22old_usd_price%22%3A0%2C%22price_formatted%22%3A%2211%20499%22%2C%22old_price_formatted%22%3A%220%22%2C%22usd_price%22%3A436.39%2C%22is_price_deviated%22%3A%220%22%2C%22atp%22%3Atrue%7D';
+var price_json = App.getService('JSON').parse(decodeURIComponent(pricerawjson));
+price_json.icon_view = 'tile';
+price_json.price_unit = 'грн';
+price_json.price_old_unit = 'грн';
+price_json.hide_old_price = 0;
+price_json.show_usd_price = false;
+var priceFormatter = new GoodsPriceBlockFormatter_class(price_json);
+priceFormatter.setFormattedPrice(17217371);
+var price_json_17217371 = price_json;
+var bonus_charge_div = document.getElementById("bonus_catalog_record17217371");
+if (bonus_charge_div) {
+new BonusElement_class(bonus_charge_div, price_json).init();
+}
+
+
+
+
+
+
+
+31 відгук
+
+
+
+
+
+
+var bonus_charge_div = document.getElementById("bonus_catalog_record17217371");
+if (bonus_charge_div
+&& window['price_json_17217371']
+&& price_json_17217371['pl_bonus_charge_pcs']
+) {
+new BonusElement_class(bonus_charge_div, price_json_17217371).init();
+} else if (bonus_charge_div) {
+var data = {
+"pl_bonus_charge_pcs": 0,
+"pl_use_instant_bonus": 0
+};
+new BonusElement_class(bonus_charge_div, data).init();
+}
+
+
+ 
+ 10 999 грн.
+ за програмою «Rozetka Обмін»&nbsp;
+ 
+ 
+ 
+ SpecialsLabelShow.initSpecialsLabelInfo(
+ 'special_price_show_39_17217371',
+ '<body> <span style="font-family:Arial, Helvetica, sans-serif; color:#333333; font-size:18px; line-height:normal;">Акционный код доступен и действителен только по программе обмена</span> <p> <br> <span style="font-family:Arial, Helvetica, sans-serif; color:#333333; font-size:16px; line-height:normal;"> Для получения скидки необходимо обменять старый телефон при получении заказа. Оцените свое устройство, а также выберите ближайший к Вам комиссионный магазин, где Вы сможете получить за него деньги всего в несколько кликов. <a style="font-family:Arial, Helvetica, sans-serif; color:#3e77aa; font-size:16px; line-height:normal; text-decoration:none" href="http://rozetka.com.ua/lombard/" target="_blank" >Узнать больше →</a> <br></span> <br> <span style="font-family:Arial, Helvetica, sans-serif; color:#333333; font-size:14px; line-height:normal;"> Как использовать промокод? <br> <br> 1. Скопируйте акционный код.<br> 2. Добавьте товар в корзину и перейдите к оформлению заказа.<br> 3. В окне оформления под суммой заказа вы увидите ссылку, «Ввести код».<br> 4. В появившемся поле необходимо ввести код и нажать на кнопку «Применить».<br> <br> </span> <span style="font-family:Arial, Helvetica, sans-serif; color:#333333; font-size:14px; line-height:normal;">При использовании промокода по программе обмена: <br> <br> 1. Оплата частями и Кредит 0% без страховки не действуют. <br> 2. Подарки в стоимость не включены, доступны только при покупке по цене сайта. </p></span> </body>',
+ 'за програмою «Rozetka Обмін»',
+ 'infoMasterCardClick'
+ );
+ 
+ 
+
+
+
+
+
+
+
+
+Купити
+
+
+
+
+
+
+
+
+
+Wishlists.setCatalogTilePopupParent('wishlist-popup-'+17217371);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Екран (4.7&quot;, IPS, 1334x750) / Apple A8 (1.4 ГГц) / основна камера: 8 Мп, фронтальна камера: 1.2 Мп / RAM 1 ГБ/ 32 ГБ вбудованої пам&#039;яті/ 3G/ LTE/ GPS/ Nano-SIM/ iOS 8/ 1810 мА·год
+
+
+
+if (!App.isDesktop()) {
+$('catalog_item17217371').addClass('touch');
+}
+GoodsCatalog.add(17217371, 'catalog_tile');
+
+
+
+
+
+
+ //////////// 
+
+ //////////// 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+21640039
+
+
+
+
+
+
+
+
+
+
+
+21638926
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+ Подарунок 
+ 
+ 
+ 
+ 
+ 
+
+
+
+21638926
+
+
+
+
+Apple iPhone 6s 64GB Space Gray (FKQN2RM/A) як новий Original factory refurbished by Apple
+
+
+
+
+
+var pricerawjson = '%7B%22price%22%3A13999%2C%22status%22%3A%22active%22%2C%22sell_status%22%3A%22available%22%2C%22pl_bonus_charge_pcs%22%3A%220%22%2C%22pl_use_instant_bonus%22%3A%220%22%2C%22old_price%22%3A0%2C%22old_usd_price%22%3A0%2C%22price_formatted%22%3A%2213%20999%22%2C%22old_price_formatted%22%3A%220%22%2C%22usd_price%22%3A531.27%2C%22is_price_deviated%22%3A%220%22%2C%22atp%22%3Atrue%7D';
+var price_json = App.getService('JSON').parse(decodeURIComponent(pricerawjson));
+price_json.icon_view = 'tile';
+price_json.price_unit = 'грн';
+price_json.price_old_unit = 'грн';
+price_json.hide_old_price = 0;
+price_json.show_usd_price = false;
+var priceFormatter = new GoodsPriceBlockFormatter_class(price_json);
+priceFormatter.setFormattedPrice(21638926);
+var price_json_21638926 = price_json;
+var bonus_charge_div = document.getElementById("bonus_catalog_record21638926");
+if (bonus_charge_div) {
+new BonusElement_class(bonus_charge_div, price_json).init();
+}
+
+
+
+
+
+
+
+3 відгуки
+
+
+
+
+
+
+var bonus_charge_div = document.getElementById("bonus_catalog_record21638926");
+if (bonus_charge_div
+&& window['price_json_21638926']
+&& price_json_21638926['pl_bonus_charge_pcs']
+) {
+new BonusElement_class(bonus_charge_div, price_json_21638926).init();
+} else if (bonus_charge_div) {
+var data = {
+"pl_bonus_charge_pcs": 0,
+"pl_use_instant_bonus": 0
+};
+new BonusElement_class(bonus_charge_div, data).init();
+}
+
+
+
+
+
+
+
+
+Купити
+
+
+
+
+
+
+
+
+
+Wishlists.setCatalogTilePopupParent('wishlist-popup-'+21638926);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Екран (4.7&quot;, IPS, 1334x750) / Apple A9 (1.8 ГГц) / основна камера: 12 Мп, фронтальна камера: 5 Мп / RAM 2 ГБ / 64 ГБ вбудованої пам&#039;яті / 3G / LTE / GPS / Nano-SIM / iOS 9 / 1715 мА·год
+
+
+
+if (!App.isDesktop()) {
+$('catalog_item21638926').addClass('touch');
+}
+GoodsCatalog.add(21638926, 'catalog_tile');
+
+
+
+
+Відеоогляд
+
+
+
+
+
+
+ //////////// 
+
+ //////////// 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+13721402
+
+
+
+
+
+
+
+
+
+
+
+13721668
+
+
+
+
+
+
+
+
+
+
+
+13721535
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+13721402
+
+
+
+
+Huawei P8 Lite 2017 (PRA-LA1) Black + чохол + захисне скло!
+
+
+
+
+
+var pricerawjson = '%7B%22price%22%3A6499%2C%22status%22%3A%22active%22%2C%22sell_status%22%3A%22available%22%2C%22pl_bonus_charge_pcs%22%3A%220%22%2C%22pl_use_instant_bonus%22%3A%220%22%2C%22old_price%22%3A6499%2C%22old_usd_price%22%3A246.64%2C%22price_formatted%22%3A%226%20499%22%2C%22old_price_formatted%22%3A%226%20499%22%2C%22usd_price%22%3A246.64%2C%22is_price_deviated%22%3A%220%22%2C%22atp%22%3Atrue%7D';
+var price_json = App.getService('JSON').parse(decodeURIComponent(pricerawjson));
+price_json.icon_view = 'tile';
+price_json.price_unit = 'грн';
+price_json.price_old_unit = 'грн';
+price_json.hide_old_price = 0;
+price_json.show_usd_price = false;
+var priceFormatter = new GoodsPriceBlockFormatter_class(price_json);
+priceFormatter.setFormattedPrice(13721402);
+var price_json_13721402 = price_json;
+var bonus_charge_div = document.getElementById("bonus_catalog_record13721402");
+if (bonus_charge_div) {
+new BonusElement_class(bonus_charge_div, price_json).init();
+}
+
+
+
+
+
+
+
+219 відгуків
+
+
+
+
+
+
+var bonus_charge_div = document.getElementById("bonus_catalog_record13721402");
+if (bonus_charge_div
+&& window['price_json_13721402']
+&& price_json_13721402['pl_bonus_charge_pcs']
+) {
+new BonusElement_class(bonus_charge_div, price_json_13721402).init();
+} else if (bonus_charge_div) {
+var data = {
+"pl_bonus_charge_pcs": 0,
+"pl_use_instant_bonus": 0
+};
+new BonusElement_class(bonus_charge_div, data).init();
+}
+
+
+
+
+
+
+
+
+Купити
+
+
+
+
+
+
+
+
+
+Wishlists.setCatalogTilePopupParent('wishlist-popup-'+13721402);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Екран (5.2&quot;, IPS, 1920x1080)/ HiSilicon Kirin 655 (4 x 2.1 ГГц + 4 x 1.7 ГГц)/ Дві основні камери: 12 Мп, фронтальна камера: 8 Мп/ RAM 3 ГБ/ 16 ГБ вбудованої пам&#039;яті + microSD/SDHC (до 128 ГБ)/ 3G/ GPS/ GLONASS/ підтримка 2-х SIM-карток (Nano-SIM)/ Android 7.0 (Nougat)/ 3000 мА·год
+
+
+
+if (!App.isDesktop()) {
+$('catalog_item13721402').addClass('touch');
+}
+GoodsCatalog.add(13721402, 'catalog_tile');
+
+
+
+
+Відеоогляд
+
+
+
+
+
+
+ //////////// 
+
+ //////////// 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+18100296
+
+
+
+
+
+
+
+
+
+
+
+18100404
+
+
+
+
+
+
+
+
+
+
+
+18100440
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+ Подарунок 
+ 
+ 
+ 
+ 
+ 
+
+
+
+18100296
+
+
+
+
+Samsung Galaxy J7 (2017) J730 Black + карта пам'яті 64гб!
+
+
+
+
+
+var pricerawjson = '%7B%22price%22%3A8999%2C%22status%22%3A%22active%22%2C%22sell_status%22%3A%22available%22%2C%22pl_bonus_charge_pcs%22%3A%220%22%2C%22pl_use_instant_bonus%22%3A%220%22%2C%22old_price%22%3A0%2C%22old_usd_price%22%3A0%2C%22price_formatted%22%3A%228%20999%22%2C%22old_price_formatted%22%3A%220%22%2C%22usd_price%22%3A341.52%2C%22is_price_deviated%22%3A%220%22%2C%22atp%22%3Atrue%7D';
+var price_json = App.getService('JSON').parse(decodeURIComponent(pricerawjson));
+price_json.icon_view = 'tile';
+price_json.price_unit = 'грн';
+price_json.price_old_unit = 'грн';
+price_json.hide_old_price = 0;
+price_json.show_usd_price = false;
+var priceFormatter = new GoodsPriceBlockFormatter_class(price_json);
+priceFormatter.setFormattedPrice(18100296);
+var price_json_18100296 = price_json;
+var bonus_charge_div = document.getElementById("bonus_catalog_record18100296");
+if (bonus_charge_div) {
+new BonusElement_class(bonus_charge_div, price_json).init();
+}
+
+
+
+
+
+
+
+104 відгуки
+
+
+
+
+
+
+var bonus_charge_div = document.getElementById("bonus_catalog_record18100296");
+if (bonus_charge_div
+&& window['price_json_18100296']
+&& price_json_18100296['pl_bonus_charge_pcs']
+) {
+new BonusElement_class(bonus_charge_div, price_json_18100296).init();
+} else if (bonus_charge_div) {
+var data = {
+"pl_bonus_charge_pcs": 0,
+"pl_use_instant_bonus": 0
+};
+new BonusElement_class(bonus_charge_div, data).init();
+}
+
+
+
+
+
+
+
+
+Купити
+
+
+
+
+
+
+
+
+
+Wishlists.setCatalogTilePopupParent('wishlist-popup-'+18100296);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Екран (5.5&quot;, Super AMOLED, 1920x1080) / Exynos 7870 (1.6 ГГц) / основна камера: 13 Мп, фронтальна камера: 13 Мп / RAM 3 ГБ / 16 ГБ вбудованої пам&#039;яті + microSD / SDHC (до 256 ГБ) / 3G / LTE / GPS / GLONASS / підтримка 2х SIM-карток (Nano-SIM) / Android 7.1 (Nougat) / 3600 мА·год
+
+
+
+if (!App.isDesktop()) {
+$('catalog_item18100296').addClass('touch');
+}
+GoodsCatalog.add(18100296, 'catalog_tile');
+
+
+
+
+Відеоогляд
+
+
+
+
+
+
+ //////////// 
+
+ //////////// 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+15222497
+
+
+
+
+
+
+
+
+
+
+
+15259926
+
+
+
+
+
+
+
+
+
+
+
+15260185
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+ Подарунок 
+ 
+ 
+ 
+ 
+ 
+
+
+
+15222497
+
+
+
+
+Samsung Galaxy S8 64GB Midnight Black + сертифікат Samsung 2000грн!
+
+
+
+
+
+var pricerawjson = '%7B%22price%22%3A22999%2C%22status%22%3A%22active%22%2C%22sell_status%22%3A%22available%22%2C%22pl_bonus_charge_pcs%22%3A%220%22%2C%22pl_use_instant_bonus%22%3A%220%22%2C%22old_price%22%3A24999%2C%22old_usd_price%22%3A948.73%2C%22price_formatted%22%3A%2222%20999%22%2C%22old_price_formatted%22%3A%2224%20999%22%2C%22usd_price%22%3A872.83%2C%22is_price_deviated%22%3A%220%22%2C%22atp%22%3Atrue%7D';
+var price_json = App.getService('JSON').parse(decodeURIComponent(pricerawjson));
+price_json.icon_view = 'tile';
+price_json.price_unit = 'грн';
+price_json.price_old_unit = 'грн';
+price_json.hide_old_price = 0;
+price_json.show_usd_price = false;
+var priceFormatter = new GoodsPriceBlockFormatter_class(price_json);
+priceFormatter.setFormattedPrice(15222497);
+var price_json_15222497 = price_json;
+var bonus_charge_div = document.getElementById("bonus_catalog_record15222497");
+if (bonus_charge_div) {
+new BonusElement_class(bonus_charge_div, price_json).init();
+}
+
+
+
+
+
+
+
+103 відгуки
+
+
+
+
+
+
+var bonus_charge_div = document.getElementById("bonus_catalog_record15222497");
+if (bonus_charge_div
+&& window['price_json_15222497']
+&& price_json_15222497['pl_bonus_charge_pcs']
+) {
+new BonusElement_class(bonus_charge_div, price_json_15222497).init();
+} else if (bonus_charge_div) {
+var data = {
+"pl_bonus_charge_pcs": 0,
+"pl_use_instant_bonus": 0
+};
+new BonusElement_class(bonus_charge_div, data).init();
+}
+
+
+
+
+
+
+
+
+Купити
+
+
+
+
+
+
+
+
+
+Wishlists.setCatalogTilePopupParent('wishlist-popup-'+15222497);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Екран (5.8&quot;, Super AMOLED, 2960х1440)/ Samsung Exynos 8895 (4 x 2.3 ГГц + 4 x 1.7 ГГц)/ основна камера 12 Мп + фронтальна 8 Мп/ RAM 4 ГБ/ 64 ГБ вбудованої пам&#039;яті + microSD (до 256 ГБ)/ 3G/ LTE/ GPS/ підтримка 2-х SIM-карток (Nano-SIM)/ Android 7.0 (Nougat) / 3000 мА·годПідтримується встановлення двох SIM-карток або однієї SIM-картки та карти пам&#039;яті. Слот для другої SIM-картки суміщений зі слотом для карти пам&#039;яті.
+
+
+
+if (!App.isDesktop()) {
+$('catalog_item15222497').addClass('touch');
+}
+GoodsCatalog.add(15222497, 'catalog_tile');
+
+
+
+
+Відеоогляд
+
+
+
+
+
+
+ //////////// 
+
+ //////////// 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+15961858
+
+
+
+
+
+
+
+
+
+
+
+16810070
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+15961858
+
+
+
+
+Xiaomi Redmi 4X 3/32GB Black (Міжнародна версія)
+
+
+
+
+
+var pricerawjson = '%7B%22price%22%3A4099%2C%22status%22%3A%22active%22%2C%22sell_status%22%3A%22available%22%2C%22pl_bonus_charge_pcs%22%3A%220%22%2C%22pl_use_instant_bonus%22%3A%220%22%2C%22old_price%22%3A0%2C%22old_usd_price%22%3A0%2C%22price_formatted%22%3A%224%20099%22%2C%22old_price_formatted%22%3A%220%22%2C%22usd_price%22%3A155.56%2C%22is_price_deviated%22%3A%220%22%2C%22atp%22%3Atrue%7D';
+var price_json = App.getService('JSON').parse(decodeURIComponent(pricerawjson));
+price_json.icon_view = 'tile';
+price_json.price_unit = 'грн';
+price_json.price_old_unit = 'грн';
+price_json.hide_old_price = 0;
+price_json.show_usd_price = false;
+var priceFormatter = new GoodsPriceBlockFormatter_class(price_json);
+priceFormatter.setFormattedPrice(15961858);
+var price_json_15961858 = price_json;
+var bonus_charge_div = document.getElementById("bonus_catalog_record15961858");
+if (bonus_charge_div) {
+new BonusElement_class(bonus_charge_div, price_json).init();
+}
+
+
+
+
+
+
+
+416 відгуків
+
+
+
+
+
+
+var bonus_charge_div = document.getElementById("bonus_catalog_record15961858");
+if (bonus_charge_div
+&& window['price_json_15961858']
+&& price_json_15961858['pl_bonus_charge_pcs']
+) {
+new BonusElement_class(bonus_charge_div, price_json_15961858).init();
+} else if (bonus_charge_div) {
+var data = {
+"pl_bonus_charge_pcs": 0,
+"pl_use_instant_bonus": 0
+};
+new BonusElement_class(bonus_charge_div, data).init();
+}
+
+
+
+
+
+
+
+
+Купити
+
+
+
+
+
+
+
+
+
+Wishlists.setCatalogTilePopupParent('wishlist-popup-'+15961858);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Екран (5&quot;, IPS, 1280x720)/ Qualcomm Snapdragon 435 (1.4 ГГц)/ основна камера: 13 Мп, фронтальна камера: 5 Мп / RAM 3 ГБ/ 32 ГБ вбудованої пам&#039;яті + microSD/SDHC (до 128 ГБ)/ 3G/ LTE/ GPS/ GLONASS/ підтримка 2-х SIM-карток (Micro-SIM + Nano-SIM)/ Android 6.0 (Marshmallow) / 4100 мА·год
+
+
+
+if (!App.isDesktop()) {
+$('catalog_item15961858').addClass('touch');
+}
+GoodsCatalog.add(15961858, 'catalog_tile');
+
+
+
+
+
+
+ //////////// 
+
+ //////////// 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+7779180
+
+
+
+
+Lenovo K5 (A6020a40) Silver
+
+
+
+
+
+var pricerawjson = '%7B%22price%22%3A2995%2C%22status%22%3A%22active%22%2C%22sell_status%22%3A%22available%22%2C%22pl_bonus_charge_pcs%22%3A%220%22%2C%22pl_use_instant_bonus%22%3A%220%22%2C%22old_price%22%3A0%2C%22old_usd_price%22%3A0%2C%22price_formatted%22%3A%222%20995%22%2C%22old_price_formatted%22%3A%220%22%2C%22usd_price%22%3A113.66%2C%22is_price_deviated%22%3A%220%22%2C%22atp%22%3Atrue%7D';
+var price_json = App.getService('JSON').parse(decodeURIComponent(pricerawjson));
+price_json.icon_view = 'tile';
+price_json.price_unit = 'грн';
+price_json.price_old_unit = 'грн';
+price_json.hide_old_price = 0;
+price_json.show_usd_price = false;
+var priceFormatter = new GoodsPriceBlockFormatter_class(price_json);
+priceFormatter.setFormattedPrice(7779180);
+var price_json_7779180 = price_json;
+var bonus_charge_div = document.getElementById("bonus_catalog_record7779180");
+if (bonus_charge_div) {
+new BonusElement_class(bonus_charge_div, price_json).init();
+}
+
+
+
+
+
+
+
+252 відгуки
+
+
+
+
+
+
+var bonus_charge_div = document.getElementById("bonus_catalog_record7779180");
+if (bonus_charge_div
+&& window['price_json_7779180']
+&& price_json_7779180['pl_bonus_charge_pcs']
+) {
+new BonusElement_class(bonus_charge_div, price_json_7779180).init();
+} else if (bonus_charge_div) {
+var data = {
+"pl_bonus_charge_pcs": 0,
+"pl_use_instant_bonus": 0
+};
+new BonusElement_class(bonus_charge_div, data).init();
+}
+
+
+
+
+
+
+
+
+Купити
+
+
+
+
+
+
+
+
+
+Wishlists.setCatalogTilePopupParent('wishlist-popup-'+7779180);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Екран (5&quot;, IPS, 1280x720)/ Qualcomm Snapdragon 415 (1.4 ГГц)/ основна камера: 13 Мп, фронтальна камера: 5 Мп / RAM 2 ГБ/ 16 ГБ вбудованої пам&#039;яті + microSD/SDHC (до 32 ГБ)/ 3G/ LTE/ GPS/ підтримка 2-х SIM-карток (Micro-SIM)/ Android 5.1 (Lollipop) / 2750 мА·год
+
+
+
+if (!App.isDesktop()) {
+$('catalog_item7779180').addClass('touch');
+}
+GoodsCatalog.add(7779180, 'catalog_tile');
+
+
+
+
+Демонстрація товару
+
+
+
+
+
+
+ //////////// 
+
+ //////////// 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+14653598
+
+
+
+
+
+
+
+
+
+
+
+16104626
+
+
+
+
+
+
+
+
+
+
+
+16104620
+
+
+
+
+
+
+
+
+
+
+
+14653640
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+16104626
+
+
+
+
+Nokia 5 Dual Sim Copper + захисне скло в подарунок!
+
+
+
+
+
+var pricerawjson = '%7B%22price%22%3A5999%2C%22status%22%3A%22active%22%2C%22sell_status%22%3A%22available%22%2C%22pl_bonus_charge_pcs%22%3A%220%22%2C%22pl_use_instant_bonus%22%3A%220%22%2C%22old_price%22%3A0%2C%22old_usd_price%22%3A0%2C%22price_formatted%22%3A%225%20999%22%2C%22old_price_formatted%22%3A%220%22%2C%22usd_price%22%3A227.67%2C%22is_price_deviated%22%3A%220%22%2C%22atp%22%3Atrue%7D';
+var price_json = App.getService('JSON').parse(decodeURIComponent(pricerawjson));
+price_json.icon_view = 'tile';
+price_json.price_unit = 'грн';
+price_json.price_old_unit = 'грн';
+price_json.hide_old_price = 0;
+price_json.show_usd_price = false;
+var priceFormatter = new GoodsPriceBlockFormatter_class(price_json);
+priceFormatter.setFormattedPrice(16104626);
+var price_json_16104626 = price_json;
+var bonus_charge_div = document.getElementById("bonus_catalog_record16104626");
+if (bonus_charge_div) {
+new BonusElement_class(bonus_charge_div, price_json).init();
+}
+
+
+
+
+
+
+
+104 відгуки
+
+
+
+
+
+
+var bonus_charge_div = document.getElementById("bonus_catalog_record16104626");
+if (bonus_charge_div
+&& window['price_json_16104626']
+&& price_json_16104626['pl_bonus_charge_pcs']
+) {
+new BonusElement_class(bonus_charge_div, price_json_16104626).init();
+} else if (bonus_charge_div) {
+var data = {
+"pl_bonus_charge_pcs": 0,
+"pl_use_instant_bonus": 0
+};
+new BonusElement_class(bonus_charge_div, data).init();
+}
+
+
+
+
+
+
+
+
+Купити
+
+
+
+
+
+
+
+
+
+Wishlists.setCatalogTilePopupParent('wishlist-popup-'+16104626);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Екран (5.2&quot;, IPS, 1280x720) / Qualcomm Snapdragon 430 (1.4 ГГц) / основна камера: 13 Мп, фронтальна камера: 8 Мп / RAM 2 ГБ / 16 ГБ вбудованої пам&#039;яті + microSD / SDHC (до 128 ГБ) / 3G / LTE / GPS / підтримка 2х SIM-карток (Nano-SIM) / Android 7.1 (Nougat) / 3000 мА·год
+
+
+
+if (!App.isDesktop()) {
+$('catalog_item16104626').addClass('touch');
+}
+GoodsCatalog.add(16104626, 'catalog_tile');
+
+
+
+
+Відеоогляд
+
+
+
+
+
+
+ //////////// 
+
+ //////////// 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+7646250
+
+
+
+
+
+
+
+
+
+
+
+7644724
+
+
+
+
+
+
+
+
+
+
+
+7635099
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+7644724
+
+
+
+
+Samsung Galaxy J3 2016 SM-J320H Gold + захисне скло + чохол!
+
+
+
+
+
+var pricerawjson = '%7B%22price%22%3A3499%2C%22status%22%3A%22active%22%2C%22sell_status%22%3A%22available%22%2C%22pl_bonus_charge_pcs%22%3A%220%22%2C%22pl_use_instant_bonus%22%3A%220%22%2C%22old_price%22%3A0%2C%22old_usd_price%22%3A0%2C%22price_formatted%22%3A%223%20499%22%2C%22old_price_formatted%22%3A%220%22%2C%22usd_price%22%3A132.79%2C%22is_price_deviated%22%3A%220%22%2C%22atp%22%3Atrue%7D';
+var price_json = App.getService('JSON').parse(decodeURIComponent(pricerawjson));
+price_json.icon_view = 'tile';
+price_json.price_unit = 'грн';
+price_json.price_old_unit = 'грн';
+price_json.hide_old_price = 0;
+price_json.show_usd_price = false;
+var priceFormatter = new GoodsPriceBlockFormatter_class(price_json);
+priceFormatter.setFormattedPrice(7644724);
+var price_json_7644724 = price_json;
+var bonus_charge_div = document.getElementById("bonus_catalog_record7644724");
+if (bonus_charge_div) {
+new BonusElement_class(bonus_charge_div, price_json).init();
+}
+
+
+
+
+
+
+
+621 відгук
+
+
+
+
+
+
+var bonus_charge_div = document.getElementById("bonus_catalog_record7644724");
+if (bonus_charge_div
+&& window['price_json_7644724']
+&& price_json_7644724['pl_bonus_charge_pcs']
+) {
+new BonusElement_class(bonus_charge_div, price_json_7644724).init();
+} else if (bonus_charge_div) {
+var data = {
+"pl_bonus_charge_pcs": 0,
+"pl_use_instant_bonus": 0
+};
+new BonusElement_class(bonus_charge_div, data).init();
+}
+
+
+
+
+
+
+
+
+Купити
+
+
+
+
+
+
+
+
+
+Wishlists.setCatalogTilePopupParent('wishlist-popup-'+7644724);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Екран (5&quot;, Super AMOLED, 1280x720)/ чотириядерний (1.3 ГГц)/ основна камера: 8 Мп, фронтальна камера: 5 Мп / RAM 1.5 ГБ/ 8 ГБ вбудованої пам&#039;яті + microSD (до 128 ГБ)/ 3G/ GPS/ підтримка 2-х SIM-карток (Micro-SIM + Micro-SIM)/ Android 5.1 Lollipop / 2600 мА·год
+
+
+
+if (!App.isDesktop()) {
+$('catalog_item7644724').addClass('touch');
+}
+GoodsCatalog.add(7644724, 'catalog_tile');
+
+
+
+
+
+
+ //////////// 
+
+ //////////// 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+10729415
+
+
+
+
+
+
+
+
+
+
+
+10730339
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+10730339
+
+
+
+
+Huawei Y3 II (LUA-U22) Gold + захисне скло!
+
+
+
+
+
+var pricerawjson = '%7B%22price%22%3A2299%2C%22status%22%3A%22active%22%2C%22sell_status%22%3A%22available%22%2C%22pl_bonus_charge_pcs%22%3A%220%22%2C%22pl_use_instant_bonus%22%3A%220%22%2C%22old_price%22%3A0%2C%22old_usd_price%22%3A0%2C%22price_formatted%22%3A%222%20299%22%2C%22old_price_formatted%22%3A%220%22%2C%22usd_price%22%3A87.25%2C%22is_price_deviated%22%3A%220%22%2C%22atp%22%3Atrue%7D';
+var price_json = App.getService('JSON').parse(decodeURIComponent(pricerawjson));
+price_json.icon_view = 'tile';
+price_json.price_unit = 'грн';
+price_json.price_old_unit = 'грн';
+price_json.hide_old_price = 0;
+price_json.show_usd_price = false;
+var priceFormatter = new GoodsPriceBlockFormatter_class(price_json);
+priceFormatter.setFormattedPrice(10730339);
+var price_json_10730339 = price_json;
+var bonus_charge_div = document.getElementById("bonus_catalog_record10730339");
+if (bonus_charge_div) {
+new BonusElement_class(bonus_charge_div, price_json).init();
+}
+
+
+
+
+
+
+
+433 відгуки
+
+
+
+
+
+
+var bonus_charge_div = document.getElementById("bonus_catalog_record10730339");
+if (bonus_charge_div
+&& window['price_json_10730339']
+&& price_json_10730339['pl_bonus_charge_pcs']
+) {
+new BonusElement_class(bonus_charge_div, price_json_10730339).init();
+} else if (bonus_charge_div) {
+var data = {
+"pl_bonus_charge_pcs": 0,
+"pl_use_instant_bonus": 0
+};
+new BonusElement_class(bonus_charge_div, data).init();
+}
+
+
+
+
+
+
+
+
+Купити
+
+
+
+
+
+
+
+
+
+Wishlists.setCatalogTilePopupParent('wishlist-popup-'+10730339);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Екран (4.5&quot;, TFT, 854x480)/ MediaTek MT6582M (1.3 ГГц)/ основна камера: 5 Мп, фронтальна камера: 2 Мп / RAM 1 ГБ/ 8 ГБ вбудованої пам&#039;яті + підтримка microSD/SDHC (до 32 ГБ)/ 3G/ GPS/ підтримка 2-х SIM-карток (Micro-SIM)/ Android 5.1 (Lollipop) / 2100 мА·год
+
+
+
+if (!App.isDesktop()) {
+$('catalog_item10730339').addClass('touch');
+}
+GoodsCatalog.add(10730339, 'catalog_tile');
+
+
+
+
+Демонстрація товару
+
+
+
+
+
+
+ //////////// 
+
+ //////////// 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+7239328
+
+
+
+
+
+
+
+
+
+
+
+8110112
+
+
+
+
+
+
+
+
+
+
+
+7239508
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+7239508
+
+
+
+
+Huawei Y6 Pro (TIT-U02) White + чохол + захисне скло!
+
+
+
+
+
+var pricerawjson = '%7B%22price%22%3A3999%2C%22status%22%3A%22active%22%2C%22sell_status%22%3A%22available%22%2C%22pl_bonus_charge_pcs%22%3A%220%22%2C%22pl_use_instant_bonus%22%3A%220%22%2C%22old_price%22%3A0%2C%22old_usd_price%22%3A0%2C%22price_formatted%22%3A%223%20999%22%2C%22old_price_formatted%22%3A%220%22%2C%22usd_price%22%3A151.76%2C%22is_price_deviated%22%3A%220%22%2C%22atp%22%3Atrue%7D';
+var price_json = App.getService('JSON').parse(decodeURIComponent(pricerawjson));
+price_json.icon_view = 'tile';
+price_json.price_unit = 'грн';
+price_json.price_old_unit = 'грн';
+price_json.hide_old_price = 0;
+price_json.show_usd_price = false;
+var priceFormatter = new GoodsPriceBlockFormatter_class(price_json);
+priceFormatter.setFormattedPrice(7239508);
+var price_json_7239508 = price_json;
+var bonus_charge_div = document.getElementById("bonus_catalog_record7239508");
+if (bonus_charge_div) {
+new BonusElement_class(bonus_charge_div, price_json).init();
+}
+
+
+
+
+
+
+
+546 відгуків
+
+
+
+
+
+
+var bonus_charge_div = document.getElementById("bonus_catalog_record7239508");
+if (bonus_charge_div
+&& window['price_json_7239508']
+&& price_json_7239508['pl_bonus_charge_pcs']
+) {
+new BonusElement_class(bonus_charge_div, price_json_7239508).init();
+} else if (bonus_charge_div) {
+var data = {
+"pl_bonus_charge_pcs": 0,
+"pl_use_instant_bonus": 0
+};
+new BonusElement_class(bonus_charge_div, data).init();
+}
+
+
+
+
+
+
+
+
+Купити
+
+
+
+
+
+
+
+
+
+Wishlists.setCatalogTilePopupParent('wishlist-popup-'+7239508);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Екран (5&quot;, IPS, 1280x720)/ MediaTek MT6582 (1.3 ГГц)/ основна камера: 13 Мп, фронтальна камера: 5 Мп / RAM 2 ГБ/ 16 ГБ вбудованої пам&#039;яті + microSD/SDHC (до 128 ГБ)/ 3G/ GPS/ підтримка 2-х SIM-карток (Micro-SIM)/ Android 5.1 (Lollipop) / 4000 мА·год
+
+
+
+if (!App.isDesktop()) {
+$('catalog_item7239508').addClass('touch');
+}
+GoodsCatalog.add(7239508, 'catalog_tile');
+
+
+
+
+
+
+ //////////// 
+
+ //////////// 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+9142067
+
+
+
+
+
+
+
+
+
+
+
+9142037
+
+
+
+
+
+
+
+
+
+
+
+9141889
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+ Подарунок 
+ 
+ 
+ 
+ 
+ 
+
+
+
+9142067
+
+
+
+
+Samsung Galaxy J5 (2016) J510H/DS Black + захисне скло + чохол!
+
+
+
+
+
+var pricerawjson = '%7B%22price%22%3A5199%2C%22status%22%3A%22active%22%2C%22sell_status%22%3A%22available%22%2C%22pl_bonus_charge_pcs%22%3A%220%22%2C%22pl_use_instant_bonus%22%3A%220%22%2C%22old_price%22%3A0%2C%22old_usd_price%22%3A0%2C%22price_formatted%22%3A%225%20199%22%2C%22old_price_formatted%22%3A%220%22%2C%22usd_price%22%3A197.31%2C%22is_price_deviated%22%3A%220%22%2C%22atp%22%3Atrue%7D';
+var price_json = App.getService('JSON').parse(decodeURIComponent(pricerawjson));
+price_json.icon_view = 'tile';
+price_json.price_unit = 'грн';
+price_json.price_old_unit = 'грн';
+price_json.hide_old_price = 0;
+price_json.show_usd_price = false;
+var priceFormatter = new GoodsPriceBlockFormatter_class(price_json);
+priceFormatter.setFormattedPrice(9142067);
+var price_json_9142067 = price_json;
+var bonus_charge_div = document.getElementById("bonus_catalog_record9142067");
+if (bonus_charge_div) {
+new BonusElement_class(bonus_charge_div, price_json).init();
+}
+
+
+
+
+
+
+
+473 відгуки
+
+
+
+
+
+
+var bonus_charge_div = document.getElementById("bonus_catalog_record9142067");
+if (bonus_charge_div
+&& window['price_json_9142067']
+&& price_json_9142067['pl_bonus_charge_pcs']
+) {
+new BonusElement_class(bonus_charge_div, price_json_9142067).init();
+} else if (bonus_charge_div) {
+var data = {
+"pl_bonus_charge_pcs": 0,
+"pl_use_instant_bonus": 0
+};
+new BonusElement_class(bonus_charge_div, data).init();
+}
+
+
+
+
+
+
+
+
+Купити
+
+
+
+
+
+
+
+
+
+Wishlists.setCatalogTilePopupParent('wishlist-popup-'+9142067);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Екран (5.2&quot;, Super AMOLED, 1280x720)/ Чотириядерний Qualcomm Snapdragon 410 (1.2 ГГц)/ основна камера: 13 Мп, фронтальна камера: 5 Мп / RAM 2 ГБ/ 16 ГБ вбудованої пам&#039;яті + microSD/SDHC (до 128 ГБ)/ 3G/ GPS/ підтримка 2-х SIM-карток (Micro-SIM)/ Android 6.0 (Marshmallow) / 3100 мА·год
+
+
+
+if (!App.isDesktop()) {
+$('catalog_item9142067').addClass('touch');
+}
+GoodsCatalog.add(9142067, 'catalog_tile');
+
+
+
+
+Демонстрація товару
+
+
+
+
+
+
+ //////////// 
+
+ //////////// 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+13252176
+
+
+
+
+
+
+
+
+
+
+
+13252218
+
+
+
+
+
+
+
+
+
+
+
+13252239
+
+
+
+
+
+
+
+
+
+
+
+13252225
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+ Подарунок 
+ 
+ 
+ 
+ 
+ 
+
+
+
+13252176
+
+
+
+
+Samsung Galaxy A5 2017 Duos SM-A520 Black + Samsung U Flex!
+
+
+
+
+
+var pricerawjson = '%7B%22price%22%3A11999%2C%22status%22%3A%22active%22%2C%22sell_status%22%3A%22available%22%2C%22pl_bonus_charge_pcs%22%3A%220%22%2C%22pl_use_instant_bonus%22%3A%220%22%2C%22old_price%22%3A0%2C%22old_usd_price%22%3A0%2C%22price_formatted%22%3A%2211%20999%22%2C%22old_price_formatted%22%3A%220%22%2C%22usd_price%22%3A455.37%2C%22is_price_deviated%22%3A%220%22%2C%22atp%22%3Atrue%7D';
+var price_json = App.getService('JSON').parse(decodeURIComponent(pricerawjson));
+price_json.icon_view = 'tile';
+price_json.price_unit = 'грн';
+price_json.price_old_unit = 'грн';
+price_json.hide_old_price = 0;
+price_json.show_usd_price = false;
+var priceFormatter = new GoodsPriceBlockFormatter_class(price_json);
+priceFormatter.setFormattedPrice(13252176);
+var price_json_13252176 = price_json;
+var bonus_charge_div = document.getElementById("bonus_catalog_record13252176");
+if (bonus_charge_div) {
+new BonusElement_class(bonus_charge_div, price_json).init();
+}
+
+
+
+
+
+
+
+136 відгуків
+
+
+
+
+
+
+var bonus_charge_div = document.getElementById("bonus_catalog_record13252176");
+if (bonus_charge_div
+&& window['price_json_13252176']
+&& price_json_13252176['pl_bonus_charge_pcs']
+) {
+new BonusElement_class(bonus_charge_div, price_json_13252176).init();
+} else if (bonus_charge_div) {
+var data = {
+"pl_bonus_charge_pcs": 0,
+"pl_use_instant_bonus": 0
+};
+new BonusElement_class(bonus_charge_div, data).init();
+}
+
+
+
+
+
+
+
+
+Купити
+
+
+
+
+
+
+
+
+
+Wishlists.setCatalogTilePopupParent('wishlist-popup-'+13252176);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Екран (5.2&quot;, Super AMOLED, 1920x1080)/ Samsung Exynos 7880 (1.9 ГГц)/ основна камера: 16 Мп, фронтальна камера: 16 Мп/ RAM 3 ГБ/ 32 ГБ вбудованої пам&#039;яті + microSD/SDHC (до 256 ГБ)/ 3G/ LTE/ GPS/ підтримка 2-х SIM-карток (Nano-SIM)/ Android 6.0 (Marshmallow)/ 3000 мА·год
+
+
+
+if (!App.isDesktop()) {
+$('catalog_item13252176').addClass('touch');
+}
+GoodsCatalog.add(13252176, 'catalog_tile');
+
+
+
+
+ВідеооглядrsrqzcwwxetxtfcqeyybyuxaywbcufdtcqДемонстрація товару
+
+
+
+
+
+
+ //////////// 
+
+ //////////// 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+1106609
+
+
+
+
+
+
+
+
+
+
+
+6800444
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+1106609
+
+
+
+
+Apple iPhone 5s 16GB Silver
+
+
+Закінчується
+
+
+
+
+var pricerawjson = '%7B%22price%22%3A7777%2C%22status%22%3A%22active%22%2C%22sell_status%22%3A%22limited%22%2C%22pl_bonus_charge_pcs%22%3A%220%22%2C%22pl_use_instant_bonus%22%3A%220%22%2C%22old_price%22%3A8499%2C%22old_usd_price%22%3A322.54%2C%22price_formatted%22%3A%227%20777%22%2C%22old_price_formatted%22%3A%228%20499%22%2C%22usd_price%22%3A295.14%2C%22is_price_deviated%22%3A%220%22%2C%22atp%22%3Atrue%7D';
+var price_json = App.getService('JSON').parse(decodeURIComponent(pricerawjson));
+price_json.icon_view = 'tile';
+price_json.price_unit = 'грн';
+price_json.price_old_unit = 'грн';
+price_json.hide_old_price = 0;
+price_json.show_usd_price = false;
+var priceFormatter = new GoodsPriceBlockFormatter_class(price_json);
+priceFormatter.setFormattedPrice(1106609);
+var price_json_1106609 = price_json;
+var bonus_charge_div = document.getElementById("bonus_catalog_record1106609");
+if (bonus_charge_div) {
+new BonusElement_class(bonus_charge_div, price_json).init();
+}
+
+
+
+
+
+
+
+386 відгуків
+
+
+
+
+
+
+var bonus_charge_div = document.getElementById("bonus_catalog_record1106609");
+if (bonus_charge_div
+&& window['price_json_1106609']
+&& price_json_1106609['pl_bonus_charge_pcs']
+) {
+new BonusElement_class(bonus_charge_div, price_json_1106609).init();
+} else if (bonus_charge_div) {
+var data = {
+"pl_bonus_charge_pcs": 0,
+"pl_use_instant_bonus": 0
+};
+new BonusElement_class(bonus_charge_div, data).init();
+}
+
+
+
+
+
+
+
+
+Купити
+
+
+
+
+
+
+
+
+
+Wishlists.setCatalogTilePopupParent('wishlist-popup-'+1106609);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Екран Retina 4&quot; (1136x640), ємнісний Multi-Touch / моноблок / двоядерний Apple A7 (1.3 ГГц) / ОЗП 1 ГБ / основна камера 8 Мп, фронтальна 1.2 Мп / Bluetooth 4.0 / Wi-Fi 802.11a/b/g/n / A-GPS / GLONASS / 16 ГБ вбудованої пам&#039;яті / роз&#039;єм 3.5 мм / LTE / iOS 7 / 123.8 x 58.6 x 7.6 мм, 112 г / сріблястий
+
+
+
+if (!App.isDesktop()) {
+$('catalog_item1106609').addClass('touch');
+}
+GoodsCatalog.add(1106609, 'catalog_tile');
+
+
+
+
+Відеоогляд
+
+
+
+
+
+
+ //////////// 
+
+ //////////// 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+7323250
+
+
+
+
+
+
+
+
+
+
+
+7323478
+
+
+
+
+
+
+
+
+
+
+
+7323502
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+ Подарунок 
+ 
+ 
+ 
+ 
+ 
+
+
+
+7323250
+
+
+
+
+Sony Xperia X Dual Black
+rsrqzcwwxetxtfcqeyybyuxaywbcufdtcq
+
+
+
+
+var pricerawjson = '%7B%22price%22%3A7999%2C%22status%22%3A%22active%22%2C%22sell_status%22%3A%22available%22%2C%22pl_bonus_charge_pcs%22%3A%220%22%2C%22pl_use_instant_bonus%22%3A%220%22%2C%22old_price%22%3A9999%2C%22old_usd_price%22%3A379.47%2C%22price_formatted%22%3A%227%20999%22%2C%22old_price_formatted%22%3A%229%20999%22%2C%22usd_price%22%3A303.57%2C%22is_price_deviated%22%3A%220%22%2C%22atp%22%3Atrue%7D';
+var price_json = App.getService('JSON').parse(decodeURIComponent(pricerawjson));
+price_json.icon_view = 'tile';
+price_json.price_unit = 'грн';
+price_json.price_old_unit = 'грн';
+price_json.hide_old_price = 0;
+price_json.show_usd_price = false;
+var priceFormatter = new GoodsPriceBlockFormatter_class(price_json);
+priceFormatter.setFormattedPrice(7323250);
+var price_json_7323250 = price_json;
+var bonus_charge_div = document.getElementById("bonus_catalog_record7323250");
+if (bonus_charge_div) {
+new BonusElement_class(bonus_charge_div, price_json).init();
+}
+
+
+
+
+
+
+
+120 відгуків
+
+
+
+
+
+
+var bonus_charge_div = document.getElementById("bonus_catalog_record7323250");
+if (bonus_charge_div
+&& window['price_json_7323250']
+&& price_json_7323250['pl_bonus_charge_pcs']
+) {
+new BonusElement_class(bonus_charge_div, price_json_7323250).init();
+} else if (bonus_charge_div) {
+var data = {
+"pl_bonus_charge_pcs": 0,
+"pl_use_instant_bonus": 0
+};
+new BonusElement_class(bonus_charge_div, data).init();
+}
+
+
+
+
+
+
+
+
+Купити
+
+
+
+
+
+
+
+
+
+Wishlists.setCatalogTilePopupParent('wishlist-popup-'+7323250);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Екран (5&quot;, IPS, 1920x1080)/ Qualcomm Snapdragon 650 (Dual 1.8 ГГц + Quad 1.4 ГГц)/ основна камера: 23 Мп, фронтальна камера: 13 Мп/ RAM 3 ГБ/ 64 ГБ вбудованої пам&#039;яті + microSD/SDHC (до 200 ГБ)/ 3G/ LTE/ GPS/ підтримка 2-х SIM-карток (Nano-SIM)/ Android 6.0 (Marshmallow)/ 2620 мА·год
+
+
+
+if (!App.isDesktop()) {
+$('catalog_item7323250').addClass('touch');
+}
+GoodsCatalog.add(7323250, 'catalog_tile');
+
+
+
+
+ВідеооглядДемонстрація товару
+
+
+
+
+
+
+ //////////// 
+
+ //////////// 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+14653436
+
+
+
+
+
+
+
+
+
+
+
+16097786
+
+
+
+
+
+
+
+
+
+
+
+14653556
+
+
+
+
+
+
+
+
+
+
+
+16097744
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+14653436
+
+
+
+
+Nokia 3 Dual Sim Matte Black+ УМБ 5000 мАг + захисне скло у подарунок!
+
+
+
+
+
+var pricerawjson = '%7B%22price%22%3A4299%2C%22status%22%3A%22active%22%2C%22sell_status%22%3A%22available%22%2C%22pl_bonus_charge_pcs%22%3A%220%22%2C%22pl_use_instant_bonus%22%3A%220%22%2C%22old_price%22%3A0%2C%22old_usd_price%22%3A0%2C%22price_formatted%22%3A%224%20299%22%2C%22old_price_formatted%22%3A%220%22%2C%22usd_price%22%3A163.15%2C%22is_price_deviated%22%3A%220%22%2C%22atp%22%3Atrue%7D';
+var price_json = App.getService('JSON').parse(decodeURIComponent(pricerawjson));
+price_json.icon_view = 'tile';
+price_json.price_unit = 'грн';
+price_json.price_old_unit = 'грн';
+price_json.hide_old_price = 0;
+price_json.show_usd_price = false;
+var priceFormatter = new GoodsPriceBlockFormatter_class(price_json);
+priceFormatter.setFormattedPrice(14653436);
+var price_json_14653436 = price_json;
+var bonus_charge_div = document.getElementById("bonus_catalog_record14653436");
+if (bonus_charge_div) {
+new BonusElement_class(bonus_charge_div, price_json).init();
+}
+
+
+
+
+
+
+
+91 відгук
+
+
+
+
+
+
+var bonus_charge_div = document.getElementById("bonus_catalog_record14653436");
+if (bonus_charge_div
+&& window['price_json_14653436']
+&& price_json_14653436['pl_bonus_charge_pcs']
+) {
+new BonusElement_class(bonus_charge_div, price_json_14653436).init();
+} else if (bonus_charge_div) {
+var data = {
+"pl_bonus_charge_pcs": 0,
+"pl_use_instant_bonus": 0
+};
+new BonusElement_class(bonus_charge_div, data).init();
+}
+
+
+
+
+
+
+
+
+Купити
+
+
+
+
+
+
+
+
+
+Wishlists.setCatalogTilePopupParent('wishlist-popup-'+14653436);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Екран (5&quot;, IPS, 1280x720)/ MediaTek 6737 (1.3 ГГц)/ основна камера: 8 Мп, фронтальна камера: 8 Мп/ RAM 2 ГБ/ 16 ГБ вбудованої пам&#039;яті + microSD/SDHC (до 128 ГБ)/ 3G/ LTE/ GPS/ підтримка 2-х SIM-карток (Nano-SIM)/ Android 7.1 (Nougat) / 2650 мА·год
+
+
+
+if (!App.isDesktop()) {
+$('catalog_item14653436').addClass('touch');
+}
+GoodsCatalog.add(14653436, 'catalog_tile');
+
+
+
+
+Відеоогляд
+
+
+
+
+
+
+ //////////// 
+
+ //////////// 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+11256417
+
+
+
+
+
+
+
+
+
+
+
+11256389
+
+
+
+
+
+
+
+
+
+
+
+11256403
+
+
+
+
+
+
+
+
+
+
+
+11256256
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+11256417
+
+
+
+
+Apple iPhone 7 32GB Black
+
+
+
+
+
+var pricerawjson = '%7B%22price%22%3A18999%2C%22status%22%3A%22active%22%2C%22sell_status%22%3A%22available%22%2C%22pl_bonus_charge_pcs%22%3A%220%22%2C%22pl_use_instant_bonus%22%3A%220%22%2C%22old_price%22%3A0%2C%22old_usd_price%22%3A0%2C%22price_formatted%22%3A%2218%20999%22%2C%22old_price_formatted%22%3A%220%22%2C%22usd_price%22%3A721.02%2C%22is_price_deviated%22%3A%220%22%2C%22atp%22%3Atrue%7D';
+var price_json = App.getService('JSON').parse(decodeURIComponent(pricerawjson));
+price_json.icon_view = 'tile';
+price_json.price_unit = 'грн';
+price_json.price_old_unit = 'грн';
+price_json.hide_old_price = 0;
+price_json.show_usd_price = false;
+var priceFormatter = new GoodsPriceBlockFormatter_class(price_json);
+priceFormatter.setFormattedPrice(11256417);
+var price_json_11256417 = price_json;
+var bonus_charge_div = document.getElementById("bonus_catalog_record11256417");
+if (bonus_charge_div) {
+new BonusElement_class(bonus_charge_div, price_json).init();
+}
+
+
+
+
+
+
+
+99 відгуків
+
+
+
+
+
+
+var bonus_charge_div = document.getElementById("bonus_catalog_record11256417");
+if (bonus_charge_div
+&& window['price_json_11256417']
+&& price_json_11256417['pl_bonus_charge_pcs']
+) {
+new BonusElement_class(bonus_charge_div, price_json_11256417).init();
+} else if (bonus_charge_div) {
+var data = {
+"pl_bonus_charge_pcs": 0,
+"pl_use_instant_bonus": 0
+};
+new BonusElement_class(bonus_charge_div, data).init();
+}
+
+
+
+
+
+
+
+
+Купити
+
+
+
+
+
+
+
+
+
+Wishlists.setCatalogTilePopupParent('wishlist-popup-'+11256417);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Екран (4.7&quot;, IPS, 1334x750)/ Apple A10 Fusion/ основна камера: 12 Мп, фронтальна камера: 7 Мп/ RAM 2 ГБ/ 32 ГБ вбудованої пам&#039;яті/ 3G/ LTE/ GPS/ Nano-SIM/ iOS 10
+
+
+
+if (!App.isDesktop()) {
+$('catalog_item11256417').addClass('touch');
+}
+GoodsCatalog.add(11256417, 'catalog_tile');
+
+
+
+
+ВідеооглядПриклади фото
+
+
+
+
+
+
+ //////////// 
+
+ //////////// 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+18969811
+
+
+
+
+
+
+
+
+
+
+
+18969706
+
+
+
+
+
+
+
+
+
+
+
+20803938
+
+
+
+
+
+
+
+
+
+
+
+20803882
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+18969811
+
+
+
+
+Meizu M5C 2/16GB Black (Міжнародна версія)
+
+
+
+
+
+var pricerawjson = '%7B%22price%22%3A2699%2C%22status%22%3A%22active%22%2C%22sell_status%22%3A%22available%22%2C%22pl_bonus_charge_pcs%22%3A%220%22%2C%22pl_use_instant_bonus%22%3A%220%22%2C%22old_price%22%3A0%2C%22old_usd_price%22%3A0%2C%22price_formatted%22%3A%222%20699%22%2C%22old_price_formatted%22%3A%220%22%2C%22usd_price%22%3A102.43%2C%22is_price_deviated%22%3A%220%22%2C%22atp%22%3Atrue%7D';
+var price_json = App.getService('JSON').parse(decodeURIComponent(pricerawjson));
+price_json.icon_view = 'tile';
+price_json.price_unit = 'грн';
+price_json.price_old_unit = 'грн';
+price_json.hide_old_price = 0;
+price_json.show_usd_price = false;
+var priceFormatter = new GoodsPriceBlockFormatter_class(price_json);
+priceFormatter.setFormattedPrice(18969811);
+var price_json_18969811 = price_json;
+var bonus_charge_div = document.getElementById("bonus_catalog_record18969811");
+if (bonus_charge_div) {
+new BonusElement_class(bonus_charge_div, price_json).init();
+}
+
+
+
+
+
+
+
+39 відгуків
+
+
+
+
+
+
+var bonus_charge_div = document.getElementById("bonus_catalog_record18969811");
+if (bonus_charge_div
+&& window['price_json_18969811']
+&& price_json_18969811['pl_bonus_charge_pcs']
+) {
+new BonusElement_class(bonus_charge_div, price_json_18969811).init();
+} else if (bonus_charge_div) {
+var data = {
+"pl_bonus_charge_pcs": 0,
+"pl_use_instant_bonus": 0
+};
+new BonusElement_class(bonus_charge_div, data).init();
+}
+
+
+
+
+
+
+
+
+Купити
+
+
+
+
+
+
+
+
+
+Wishlists.setCatalogTilePopupParent('wishlist-popup-'+18969811);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Екран (5.0&quot;, IPS, 1280x720) / MediaTek MT6737 (1.3 ГГц) / основна камера: 8 Мп, фронтальна камера: 5 Мп / RAM 2 ГБ / 16 ГБ вбудованої пам&#039;яті + microSD / SDHC (до 128 ГБ) / 3G / LTE / GPS / підтримка 2х SIM-карток (Nano-SIM) / Android 6.0 (Marshmallow) / 3000 мА·год
+
+
+
+if (!App.isDesktop()) {
+$('catalog_item18969811').addClass('touch');
+}
+GoodsCatalog.add(18969811, 'catalog_tile');
+
+
+
+
+
+
+ //////////// 
+
+ //////////// 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+14609348
+
+
+
+
+
+
+
+
+
+
+
+20758189
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+14609348
+
+
+
+
+Huawei P10 4/32GB (VTR-L29) Black + сертифікат 2500грн + чохол Huawei Smart View Cover!
+
+
+
+
+
+var pricerawjson = '%7B%22price%22%3A16999%2C%22status%22%3A%22active%22%2C%22sell_status%22%3A%22available%22%2C%22pl_bonus_charge_pcs%22%3A%220%22%2C%22pl_use_instant_bonus%22%3A%220%22%2C%22old_price%22%3A0%2C%22old_usd_price%22%3A0%2C%22price_formatted%22%3A%2216%20999%22%2C%22old_price_formatted%22%3A%220%22%2C%22usd_price%22%3A645.12%2C%22is_price_deviated%22%3A%220%22%2C%22atp%22%3Atrue%7D';
+var price_json = App.getService('JSON').parse(decodeURIComponent(pricerawjson));
+price_json.icon_view = 'tile';
+price_json.price_unit = 'грн';
+price_json.price_old_unit = 'грн';
+price_json.hide_old_price = 0;
+price_json.show_usd_price = false;
+var priceFormatter = new GoodsPriceBlockFormatter_class(price_json);
+priceFormatter.setFormattedPrice(14609348);
+var price_json_14609348 = price_json;
+var bonus_charge_div = document.getElementById("bonus_catalog_record14609348");
+if (bonus_charge_div) {
+new BonusElement_class(bonus_charge_div, price_json).init();
+}
+
+
+
+
+
+
+
+37 відгуків
+
+
+
+
+
+
+var bonus_charge_div = document.getElementById("bonus_catalog_record14609348");
+if (bonus_charge_div
+&& window['price_json_14609348']
+&& price_json_14609348['pl_bonus_charge_pcs']
+) {
+new BonusElement_class(bonus_charge_div, price_json_14609348).init();
+} else if (bonus_charge_div) {
+var data = {
+"pl_bonus_charge_pcs": 0,
+"pl_use_instant_bonus": 0
+};
+new BonusElement_class(bonus_charge_div, data).init();
+}
+
+
+
+
+
+
+
+
+Купити
+
+
+
+
+
+
+
+
+
+Wishlists.setCatalogTilePopupParent('wishlist-popup-'+14609348);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Екран (5.1&quot;, IPS, 1920x1080)/ HiSilicon Kirin 960 (4 ядра 2.4 ГГц + 4 ядра 1.8 ГГц)/ Дві основні камери: 20 Мп + 12 Мп, фронтальна камера: 8 Мп/ RAM 4 ГБ/ 32 ГБ вбудованої пам&#039;яті + microSD/SDHC (до 256 ГБ)/ 3G/ LTE/ GPS/ GLONASS/ підтримка 2-х SIM-карток (Nano-SIM)/ Android 7.0 (Nougat)/ 3200 мА·год
+
+
+
+if (!App.isDesktop()) {
+$('catalog_item14609348').addClass('touch');
+}
+GoodsCatalog.add(14609348, 'catalog_tile');
+
+
+
+
+Відеоогляд
+
+
+
+
+
+
+ //////////// 
+
+ //////////// 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+21204163
+
+
+
+
+TP-LINK Neffos X1 Lite Gray (TP904A24UA) + захисне скло та УМБ у подарунок!
+
+
+
+
+
+var pricerawjson = '%7B%22price%22%3A2999%2C%22status%22%3A%22active%22%2C%22sell_status%22%3A%22available%22%2C%22pl_bonus_charge_pcs%22%3A%220%22%2C%22pl_use_instant_bonus%22%3A%220%22%2C%22old_price%22%3A0%2C%22old_usd_price%22%3A0%2C%22price_formatted%22%3A%222%20999%22%2C%22old_price_formatted%22%3A%220%22%2C%22usd_price%22%3A113.81%2C%22is_price_deviated%22%3A%220%22%2C%22atp%22%3Atrue%7D';
+var price_json = App.getService('JSON').parse(decodeURIComponent(pricerawjson));
+price_json.icon_view = 'tile';
+price_json.price_unit = 'грн';
+price_json.price_old_unit = 'грн';
+price_json.hide_old_price = 0;
+price_json.show_usd_price = false;
+var priceFormatter = new GoodsPriceBlockFormatter_class(price_json);
+priceFormatter.setFormattedPrice(21204163);
+var price_json_21204163 = price_json;
+var bonus_charge_div = document.getElementById("bonus_catalog_record21204163");
+if (bonus_charge_div) {
+new BonusElement_class(bonus_charge_div, price_json).init();
+}
+
+
+
+
+
+
+
+16 відгуків
+
+
+
+
+
+
+var bonus_charge_div = document.getElementById("bonus_catalog_record21204163");
+if (bonus_charge_div
+&& window['price_json_21204163']
+&& price_json_21204163['pl_bonus_charge_pcs']
+) {
+new BonusElement_class(bonus_charge_div, price_json_21204163).init();
+} else if (bonus_charge_div) {
+var data = {
+"pl_bonus_charge_pcs": 0,
+"pl_use_instant_bonus": 0
+};
+new BonusElement_class(bonus_charge_div, data).init();
+}
+
+
+
+
+
+
+
+
+Купити
+
+
+
+
+
+
+
+
+
+Wishlists.setCatalogTilePopupParent('wishlist-popup-'+21204163);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Екран (5&quot;, IPS, 1280x720) / MediaTek MT6750 (1.5 ГГц + 1.0 ГГц) / основна камера: 13 Мп, фронтальна камера: 5 Мп / RAM 2 ГБ / 16 ГБ вбудованої пам&#039;яті + microSD (до 128 ГБ) / 3G / LTE / GPS / підтримка 2х SIM-карток (Nano-SIM) / Android 7.0 (Nougat) / 2550 мА·год
+
+
+
+if (!App.isDesktop()) {
+$('catalog_item21204163').addClass('touch');
+}
+GoodsCatalog.add(21204163, 'catalog_tile');
+
+
+
+
+
+
+ //////////// 
+
+ //////////// 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+14293076
+
+
+
+
+
+
+
+
+
+
+
+14294948
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+14294948
+
+
+
+
+Doogee X6 White
+
+
+
+
+
+var pricerawjson = '%7B%22price%22%3A1699%2C%22status%22%3A%22active%22%2C%22sell_status%22%3A%22available%22%2C%22pl_bonus_charge_pcs%22%3A%220%22%2C%22pl_use_instant_bonus%22%3A%220%22%2C%22old_price%22%3A1999%2C%22old_usd_price%22%3A75.86%2C%22price_formatted%22%3A%221%20699%22%2C%22old_price_formatted%22%3A%221%20999%22%2C%22usd_price%22%3A64.48%2C%22is_price_deviated%22%3A%220%22%2C%22atp%22%3Atrue%7D';
+var price_json = App.getService('JSON').parse(decodeURIComponent(pricerawjson));
+price_json.icon_view = 'tile';
+price_json.price_unit = 'грн';
+price_json.price_old_unit = 'грн';
+price_json.hide_old_price = 0;
+price_json.show_usd_price = false;
+var priceFormatter = new GoodsPriceBlockFormatter_class(price_json);
+priceFormatter.setFormattedPrice(14294948);
+var price_json_14294948 = price_json;
+var bonus_charge_div = document.getElementById("bonus_catalog_record14294948");
+if (bonus_charge_div) {
+new BonusElement_class(bonus_charge_div, price_json).init();
+}
+
+
+
+
+
+
+
+44 відгуки
+
+
+
+
+
+
+var bonus_charge_div = document.getElementById("bonus_catalog_record14294948");
+if (bonus_charge_div
+&& window['price_json_14294948']
+&& price_json_14294948['pl_bonus_charge_pcs']
+) {
+new BonusElement_class(bonus_charge_div, price_json_14294948).init();
+} else if (bonus_charge_div) {
+var data = {
+"pl_bonus_charge_pcs": 0,
+"pl_use_instant_bonus": 0
+};
+new BonusElement_class(bonus_charge_div, data).init();
+}
+
+
+
+
+
+
+
+
+Купити
+
+
+
+
+
+
+
+
+
+Wishlists.setCatalogTilePopupParent('wishlist-popup-'+14294948);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Екран (5.5&quot;, IPS, 1280х720)/ MediaTek MT6580 (1.3 ГГц)/ основна камера: 5 Мп, фронтальна камера: 2 Мп / RAM 1 ГБ/ 8 ГБ вбудованої пам&#039;яті + microSD/SDHC (до 32 ГБ)/ 3G/ GPS/ підтримка 2-х SIM-карток (Micro-SIM)/ Android 5.1 (Lollipop)/ 3000 мА·год
+
+
+
+if (!App.isDesktop()) {
+$('catalog_item14294948').addClass('touch');
+}
+GoodsCatalog.add(14294948, 'catalog_tile');
+
+
+
+
+
+
+ //////////// 
+
+ //////////// 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+21196939
+
+
+
+
+Prestigio MultiPhone Wize R3 PSP3423 Duo Black
+
+
+
+
+
+var pricerawjson = '%7B%22price%22%3A999%2C%22status%22%3A%22active%22%2C%22sell_status%22%3A%22available%22%2C%22pl_bonus_charge_pcs%22%3A%220%22%2C%22pl_use_instant_bonus%22%3A%220%22%2C%22old_price%22%3A0%2C%22old_usd_price%22%3A0%2C%22price_formatted%22%3A%22999%22%2C%22old_price_formatted%22%3A%220%22%2C%22usd_price%22%3A37.91%2C%22is_price_deviated%22%3A%220%22%2C%22atp%22%3Atrue%7D';
+var price_json = App.getService('JSON').parse(decodeURIComponent(pricerawjson));
+price_json.icon_view = 'tile';
+price_json.price_unit = 'грн';
+price_json.price_old_unit = 'грн';
+price_json.hide_old_price = 0;
+price_json.show_usd_price = false;
+var priceFormatter = new GoodsPriceBlockFormatter_class(price_json);
+priceFormatter.setFormattedPrice(21196939);
+var price_json_21196939 = price_json;
+var bonus_charge_div = document.getElementById("bonus_catalog_record21196939");
+if (bonus_charge_div) {
+new BonusElement_class(bonus_charge_div, price_json).init();
+}
+
+
+
+
+
+
+
+5 відгуків
+
+
+
+
+
+
+var bonus_charge_div = document.getElementById("bonus_catalog_record21196939");
+if (bonus_charge_div
+&& window['price_json_21196939']
+&& price_json_21196939['pl_bonus_charge_pcs']
+) {
+new BonusElement_class(bonus_charge_div, price_json_21196939).init();
+} else if (bonus_charge_div) {
+var data = {
+"pl_bonus_charge_pcs": 0,
+"pl_use_instant_bonus": 0
+};
+new BonusElement_class(bonus_charge_div, data).init();
+}
+
+
+
+
+
+
+
+
+Купити
+
+
+
+
+
+
+
+
+
+Wishlists.setCatalogTilePopupParent('wishlist-popup-'+21196939);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Екран (4&quot;, TN, 800x480) / Spreadtrum SC7731C (1.2 ГГц) / основна камера: 2 Мп, фронтальна камера: 0.3 Мп / RAM 512 МБ / 4 ГБ вбудованої пам&#039;яті + microSD / SDHC (до 32 ГБ) / 3G / GPS / підтримка 2х SIM-карток (Micro-SIM + Mini-SIM) / Android 5.1 (Lollipop) / 1300 мА·год
+
+
+
+if (!App.isDesktop()) {
+$('catalog_item21196939').addClass('touch');
+}
+GoodsCatalog.add(21196939, 'catalog_tile');
+
+
+
+
+
+
+ //////////// 
+
+ //////////// 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+17918718
+
+
+
+
+Lenovo ZUK Z1 3/64GB Grey (Міжнародна версія)
+
+
+
+
+
+var pricerawjson = '%7B%22price%22%3A4099%2C%22status%22%3A%22active%22%2C%22sell_status%22%3A%22available%22%2C%22pl_bonus_charge_pcs%22%3A%220%22%2C%22pl_use_instant_bonus%22%3A%220%22%2C%22old_price%22%3A0%2C%22old_usd_price%22%3A0%2C%22price_formatted%22%3A%224%20099%22%2C%22old_price_formatted%22%3A%220%22%2C%22usd_price%22%3A155.56%2C%22is_price_deviated%22%3A%220%22%2C%22atp%22%3Atrue%7D';
+var price_json = App.getService('JSON').parse(decodeURIComponent(pricerawjson));
+price_json.icon_view = 'tile';
+price_json.price_unit = 'грн';
+price_json.price_old_unit = 'грн';
+price_json.hide_old_price = 0;
+price_json.show_usd_price = false;
+var priceFormatter = new GoodsPriceBlockFormatter_class(price_json);
+priceFormatter.setFormattedPrice(17918718);
+var price_json_17918718 = price_json;
+var bonus_charge_div = document.getElementById("bonus_catalog_record17918718");
+if (bonus_charge_div) {
+new BonusElement_class(bonus_charge_div, price_json).init();
+}
+
+
+
+
+
+
+
+108 відгуків
+
+
+
+
+
+
+var bonus_charge_div = document.getElementById("bonus_catalog_record17918718");
+if (bonus_charge_div
+&& window['price_json_17918718']
+&& price_json_17918718['pl_bonus_charge_pcs']
+) {
+new BonusElement_class(bonus_charge_div, price_json_17918718).init();
+} else if (bonus_charge_div) {
+var data = {
+"pl_bonus_charge_pcs": 0,
+"pl_use_instant_bonus": 0
+};
+new BonusElement_class(bonus_charge_div, data).init();
+}
+
+
+
+
+
+
+
+
+Купити
+
+
+
+
+
+
+
+
+
+Wishlists.setCatalogTilePopupParent('wishlist-popup-'+17918718);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Екран (5.5&quot;, IPS, 1920x1080)/ Qualcomm Snapdragon 801 (2.5 ГГц)/ основна камера: 13 Мп, фронтальна камера: 8 Мп/ RAM 3 ГБ/ 64 ГБ вбудованої пам&#039;яті/ 3G/ LTE/ GPS/ підтримка 2-х SIM-карток (Nano-SIM)/ Android 5.1.1 (Lollipop) / 4100 мА·год
+
+
+
+if (!App.isDesktop()) {
+$('catalog_item17918718').addClass('touch');
+}
+GoodsCatalog.add(17918718, 'catalog_tile');
+
+
+
+
+
+
+ //////////// 
+
+ //////////// 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+12136244
+
+
+
+
+
+
+
+
+
+
+
+12136272
+
+
+
+
+
+
+
+
+
+
+
+11916969
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+12136272
+
+
+
+
+Apple iPhone 6s 32GB Silver
+
+
+Закінчується
+
+
+
+
+var pricerawjson = '%7B%22price%22%3A16499%2C%22status%22%3A%22active%22%2C%22sell_status%22%3A%22limited%22%2C%22pl_bonus_charge_pcs%22%3A%220%22%2C%22pl_use_instant_bonus%22%3A%220%22%2C%22old_price%22%3A0%2C%22old_usd_price%22%3A0%2C%22price_formatted%22%3A%2216%20499%22%2C%22old_price_formatted%22%3A%220%22%2C%22usd_price%22%3A626.15%2C%22is_price_deviated%22%3A%220%22%2C%22atp%22%3Atrue%7D';
+var price_json = App.getService('JSON').parse(decodeURIComponent(pricerawjson));
+price_json.icon_view = 'tile';
+price_json.price_unit = 'грн';
+price_json.price_old_unit = 'грн';
+price_json.hide_old_price = 0;
+price_json.show_usd_price = false;
+var priceFormatter = new GoodsPriceBlockFormatter_class(price_json);
+priceFormatter.setFormattedPrice(12136272);
+var price_json_12136272 = price_json;
+var bonus_charge_div = document.getElementById("bonus_catalog_record12136272");
+if (bonus_charge_div) {
+new BonusElement_class(bonus_charge_div, price_json).init();
+}
+
+
+
+
+
+
+
+72 відгуки
+
+
+
+
+
+
+var bonus_charge_div = document.getElementById("bonus_catalog_record12136272");
+if (bonus_charge_div
+&& window['price_json_12136272']
+&& price_json_12136272['pl_bonus_charge_pcs']
+) {
+new BonusElement_class(bonus_charge_div, price_json_12136272).init();
+} else if (bonus_charge_div) {
+var data = {
+"pl_bonus_charge_pcs": 0,
+"pl_use_instant_bonus": 0
+};
+new BonusElement_class(bonus_charge_div, data).init();
+}
+
+
+ 
+ 15 499 грн.
+ за програмою «Rozetka Обмін»&nbsp;
+ 
+ 
+ 
+ SpecialsLabelShow.initSpecialsLabelInfo(
+ 'special_price_show_39_12136272',
+ '<body> <span style="font-family:Arial, Helvetica, sans-serif; color:#333333; font-size:18px; line-height:normal;">Акционный код доступен и действителен только по программе обмена</span> <p> <br> <span style="font-family:Arial, Helvetica, sans-serif; color:#333333; font-size:16px; line-height:normal;"> Для получения скидки необходимо обменять старый телефон при получении заказа. Оцените свое устройство, а также выберите ближайший к Вам комиссионный магазин, где Вы сможете получить за него деньги всего в несколько кликов. <a style="font-family:Arial, Helvetica, sans-serif; color:#3e77aa; font-size:16px; line-height:normal; text-decoration:none" href="http://rozetka.com.ua/lombard/" target="_blank" >Узнать больше →</a> <br></span> <br> <span style="font-family:Arial, Helvetica, sans-serif; color:#333333; font-size:14px; line-height:normal;"> Как использовать промокод? <br> <br> 1. Скопируйте акционный код.<br> 2. Добавьте товар в корзину и перейдите к оформлению заказа.<br> 3. В окне оформления под суммой заказа вы увидите ссылку, «Ввести код».<br> 4. В появившемся поле необходимо ввести код и нажать на кнопку «Применить».<br> <br> </span> <span style="font-family:Arial, Helvetica, sans-serif; color:#333333; font-size:14px; line-height:normal;">При использовании промокода по программе обмена: <br> <br> 1. Оплата частями и Кредит 0% без страховки не действуют. <br> 2. Подарки в стоимость не включены, доступны только при покупке по цене сайта. </p></span> </body>',
+ 'за програмою «Rozetka Обмін»',
+ 'infoMasterCardClick'
+ );
+ 
+ 
+
+
+
+
+
+
+
+
+Купити
+
+
+
+
+
+
+
+
+
+Wishlists.setCatalogTilePopupParent('wishlist-popup-'+12136272);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Екран (4.7&quot;, IPS, 1334x750) / Apple A9 (1.8 ГГц) / основна камера: 12 Мп, фронтальна камера: 5 Мп / RAM 2 ГБ/ 32 ГБ вбудованої пам&#039;яті/ 3G/ LTE/ GPS/ Nano-SIM/ iOS 9/
+
+
+
+if (!App.isDesktop()) {
+$('catalog_item12136272').addClass('touch');
+}
+GoodsCatalog.add(12136272, 'catalog_tile');
+
+
+
+
+Відео про&nbsp;товар
+
+
+
+
+
+
+ //////////// 
+
+ //////////// 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+16808426
+
+
+
+
+
+
+
+
+
+
+
+16808462
+
+
+
+
+
+
+
+
+
+
+
+16807712
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+16808426
+
+
+
+
+Motorola MOTO G5 (XT1676) Gold
+
+
+
+
+
+var pricerawjson = '%7B%22price%22%3A5995%2C%22status%22%3A%22active%22%2C%22sell_status%22%3A%22available%22%2C%22pl_bonus_charge_pcs%22%3A%220%22%2C%22pl_use_instant_bonus%22%3A%220%22%2C%22old_price%22%3A0%2C%22old_usd_price%22%3A0%2C%22price_formatted%22%3A%225%20995%22%2C%22old_price_formatted%22%3A%220%22%2C%22usd_price%22%3A227.51%2C%22is_price_deviated%22%3A%220%22%2C%22atp%22%3Atrue%7D';
+var price_json = App.getService('JSON').parse(decodeURIComponent(pricerawjson));
+price_json.icon_view = 'tile';
+price_json.price_unit = 'грн';
+price_json.price_old_unit = 'грн';
+price_json.hide_old_price = 0;
+price_json.show_usd_price = false;
+var priceFormatter = new GoodsPriceBlockFormatter_class(price_json);
+priceFormatter.setFormattedPrice(16808426);
+var price_json_16808426 = price_json;
+var bonus_charge_div = document.getElementById("bonus_catalog_record16808426");
+if (bonus_charge_div) {
+new BonusElement_class(bonus_charge_div, price_json).init();
+}
+
+
+
+
+
+
+
+32 відгуки
+
+
+
+
+
+
+var bonus_charge_div = document.getElementById("bonus_catalog_record16808426");
+if (bonus_charge_div
+&& window['price_json_16808426']
+&& price_json_16808426['pl_bonus_charge_pcs']
+) {
+new BonusElement_class(bonus_charge_div, price_json_16808426).init();
+} else if (bonus_charge_div) {
+var data = {
+"pl_bonus_charge_pcs": 0,
+"pl_use_instant_bonus": 0
+};
+new BonusElement_class(bonus_charge_div, data).init();
+}
+
+
+
+
+
+
+
+
+Купити
+
+
+
+
+
+
+
+
+
+Wishlists.setCatalogTilePopupParent('wishlist-popup-'+16808426);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Екран (5&quot;, IPS, 1920x1080)/ Qualcomm Snapdragon 430 (1.4 ГГц)/ основна камера: 13 Мп, фронтальна камера: 5 Мп / RAM 2 ГБ/ 16 ГБ вбудованої пам&#039;яті + microSD/SDHC (до 128 ГБ)/ 3G/ LTE/ GPS/ підтримка 2-х SIM-карток (Nano-SIM)/ Android 7.0 (Nougat) / 2800 мА·год
+
+
+
+if (!App.isDesktop()) {
+$('catalog_item16808426').addClass('touch');
+}
+GoodsCatalog.add(16808426, 'catalog_tile');
+
+
+
+
+Відео про&nbsp;товарДемонстрація товару
+
+
+
+
+
+
+ //////////// 
+
+ //////////// 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+9141385
+
+
+
+
+
+
+
+
+
+
+
+9141672
+
+
+
+
+
+
+
+
+
+
+
+9141693
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+ Подарунок 
+ 
+ 
+ 
+ 
+ 
+
+
+
+9141672
+
+
+
+
+Samsung Galaxy J7 (2016) J710F/DS Gold + захисне скло + чохол!
+
+
+
+
+
+var pricerawjson = '%7B%22price%22%3A6199%2C%22status%22%3A%22active%22%2C%22sell_status%22%3A%22available%22%2C%22pl_bonus_charge_pcs%22%3A%220%22%2C%22pl_use_instant_bonus%22%3A%220%22%2C%22old_price%22%3A0%2C%22old_usd_price%22%3A0%2C%22price_formatted%22%3A%226%20199%22%2C%22old_price_formatted%22%3A%220%22%2C%22usd_price%22%3A235.26%2C%22is_price_deviated%22%3A%220%22%2C%22atp%22%3Atrue%7D';
+var price_json = App.getService('JSON').parse(decodeURIComponent(pricerawjson));
+price_json.icon_view = 'tile';
+price_json.price_unit = 'грн';
+price_json.price_old_unit = 'грн';
+price_json.hide_old_price = 0;
+price_json.show_usd_price = false;
+var priceFormatter = new GoodsPriceBlockFormatter_class(price_json);
+priceFormatter.setFormattedPrice(9141672);
+var price_json_9141672 = price_json;
+var bonus_charge_div = document.getElementById("bonus_catalog_record9141672");
+if (bonus_charge_div) {
+new BonusElement_class(bonus_charge_div, price_json).init();
+}
+
+
+
+
+
+
+
+529 відгуків
+
+
+
+
+
+
+var bonus_charge_div = document.getElementById("bonus_catalog_record9141672");
+if (bonus_charge_div
+&& window['price_json_9141672']
+&& price_json_9141672['pl_bonus_charge_pcs']
+) {
+new BonusElement_class(bonus_charge_div, price_json_9141672).init();
+} else if (bonus_charge_div) {
+var data = {
+"pl_bonus_charge_pcs": 0,
+"pl_use_instant_bonus": 0
+};
+new BonusElement_class(bonus_charge_div, data).init();
+}
+
+
+
+
+
+
+
+
+Купити
+
+
+
+
+
+
+
+
+
+Wishlists.setCatalogTilePopupParent('wishlist-popup-'+9141672);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Екран (5.5&quot;, Super AMOLED, 1280x720)/ Восьмиядерна (1.6 ГГц)/ основна камера: 13 Мп, фронтальна камера: 5 Мп / RAM 2 ГБ/ 16 ГБ вбудованої пам&#039;яті + microSD/SDHC (до 128 ГБ)/ 3G/ GPS/ підтримка 2-х SIM-карток (Micro-SIM)/ Android 6.0 (Marshmallow) / 3300 мА·год
+
+
+
+if (!App.isDesktop()) {
+$('catalog_item9141672').addClass('touch');
+}
+GoodsCatalog.add(9141672, 'catalog_tile');
+
+
+
+
+Демонстрація товару
+
+
+
+
+
+
+ //////////// 
+
+ //////////// 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+13252267
+
+
+
+
+
+
+
+
+
+
+
+13252316
+
+
+
+
+
+
+
+
+
+
+
+13252358
+
+
+
+
+
+
+
+
+
+
+
+13252337
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+ Подарунок 
+ 
+ 
+ 
+ 
+ 
+
+
+
+13252358
+
+
+
+
+Samsung Galaxy A7 2017 Duos SM-A720 Pink + Samsung U Flex!
+
+
+
+
+
+var pricerawjson = '%7B%22price%22%3A12999%2C%22status%22%3A%22active%22%2C%22sell_status%22%3A%22available%22%2C%22pl_bonus_charge_pcs%22%3A%220%22%2C%22pl_use_instant_bonus%22%3A%220%22%2C%22old_price%22%3A0%2C%22old_usd_price%22%3A0%2C%22price_formatted%22%3A%2212%20999%22%2C%22old_price_formatted%22%3A%220%22%2C%22usd_price%22%3A493.32%2C%22is_price_deviated%22%3A%220%22%2C%22atp%22%3Atrue%7D';
+var price_json = App.getService('JSON').parse(decodeURIComponent(pricerawjson));
+price_json.icon_view = 'tile';
+price_json.price_unit = 'грн';
+price_json.price_old_unit = 'грн';
+price_json.hide_old_price = 0;
+price_json.show_usd_price = false;
+var priceFormatter = new GoodsPriceBlockFormatter_class(price_json);
+priceFormatter.setFormattedPrice(13252358);
+var price_json_13252358 = price_json;
+var bonus_charge_div = document.getElementById("bonus_catalog_record13252358");
+if (bonus_charge_div) {
+new BonusElement_class(bonus_charge_div, price_json).init();
+}
+
+
+
+
+
+
+
+97 відгуків
+
+
+
+
+
+
+var bonus_charge_div = document.getElementById("bonus_catalog_record13252358");
+if (bonus_charge_div
+&& window['price_json_13252358']
+&& price_json_13252358['pl_bonus_charge_pcs']
+) {
+new BonusElement_class(bonus_charge_div, price_json_13252358).init();
+} else if (bonus_charge_div) {
+var data = {
+"pl_bonus_charge_pcs": 0,
+"pl_use_instant_bonus": 0
+};
+new BonusElement_class(bonus_charge_div, data).init();
+}
+
+
+
+
+
+
+
+
+Купити
+
+
+
+
+
+
+
+
+
+Wishlists.setCatalogTilePopupParent('wishlist-popup-'+13252358);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Екран (5.7&quot;, Super AMOLED, 1920x1080)/ Samsung Exynos 7880 (1.9 ГГц)/ основна камера: 16 Мп, фронтальна камера: 16 Мп/ RAM 3 ГБ/ 32 ГБ вбудованої пам&#039;яті + microSD/SDHC (до 256 ГБ)/ 3G/ LTE/ GPS/ підтримка 2-х SIM-карток (Nano-SIM)/ Android 6.0 (Marshmallow)/ 3600 мА·год
+
+
+
+if (!App.isDesktop()) {
+$('catalog_item13252358').addClass('touch');
+}
+GoodsCatalog.add(13252358, 'catalog_tile');
+
+
+
+
+ВідеооглядДемонстрація товару
+
+
+
+
+
+
+ //////////// 
