@@ -6,22 +6,14 @@
         xmlns:local="clr-namespace:Diplom_Parser"
         mc:Ignorable="d"
         Title="MainWindow" Height="700" Width="1000" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
-    <Grid Background="#333">
-        <TextBlock x:Name="textBlock1" 
-                   HorizontalAlignment="Left" 
-                   Margin="252,10,0,0" 
-                   TextWrapping="Wrap" 
-                   Text="TextBlock" 
-                   VerticalAlignment="Top" 
-                   Height="308" 
-                   Width="607"/>
+    <Grid Name="grid1" Background="#333" >
         <StackPanel Name="HamburgerMenu" 
                     Margin="-200,0,0,0" 
                     Background="#333" 
                     HorizontalAlignment="Left" 
                     Height="672" 
                     VerticalAlignment="Top" 
-                    Width="250">
+                    Width="250" Panel.ZIndex="5" >
             <Label x:Name="label" 
                    Width="100"  
                    HorizontalAlignment="Center" 
@@ -47,7 +39,7 @@
                     Margin="30,10,30,1" 
                     Height="50" 
                     BorderThickness="0" 
-                    FontSize="15" />
+                    FontSize="15" Click="phone_btn_Click" />
             <Button x:Name="notebook_btn" 
                     Content="Ноутбуки" 
                     Background="#333"
@@ -55,7 +47,7 @@
                     Margin="30,1,30,1" 
                     Height="50" 
                     BorderThickness="0" 
-                    FontSize="15"/>
+                    FontSize="15" Click="notebook_btn_Click"/>
             <Button x:Name="tv_btn" 
                     Content="Телевізори" 
                     Background="#333" 
@@ -89,5 +81,25 @@
                     BorderThickness="0" 
                     FontSize="15"/>
         </StackPanel>
+        <ScrollViewer ScrollViewer.VerticalScrollBarVisibility="Auto">
+            <Grid Name="grid2" HorizontalAlignment="Center" Height="auto" Margin="250,0,0,0" VerticalAlignment="Top" Width="744" ScrollViewer.VerticalScrollBarVisibility="Visible">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition></RowDefinition>
+                </Grid.RowDefinitions>
+            </Grid>
+        </ScrollViewer>
+        <!--<ListView x:Name="listView"  HorizontalAlignment="Left" Height="671" Margin="250,0,0,0" VerticalAlignment="Top" Width="744" Background="#333" Grid.ColumnSpan="4" BorderThickness="0" IsHitTestVisible="True" Grid.Column="4">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn/>
+                </GridView>
+            </ListView.View>
+        </ListView>-->
     </Grid>
 </Window>

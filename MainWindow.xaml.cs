@@ -27,15 +27,46 @@ namespace Diplom_Parser
         public MainWindow()
         {
             InitializeComponent();
-            /*parser = new Parser();
-            doc = parser.Get_Catalog();
-            textBlock1.Text = doc.DocumentNode.OuterHtml;
-            /* StreamWriter sw = new StreamWriter(new FileStream("FileName.txt", FileMode.Create, FileAccess.Write));
-             sw.Write(textBlock1.Text);
-             sw.Close();*/
-           // parser.Get_Product_Description(doc);
+            parser = new Parser();
+            //doc = parser.Get_Catalog();
+            ////textBlock1.Text = doc.DocumentNode.OuterHtml;
+            //StreamWriter sw = new StreamWriter(new FileStream("FileName.txt", FileMode.Append, FileAccess.Write));
+            //sw.Write(doc.DocumentNode.OuterHtml);
+            //sw.Close();
+            /* doc.Load("FileName.txt", Encoding.GetEncoding(1251));
+             parser.Get_Product_Description(/*doc*/
+             
+            //DEFAULT SMARTPHONE
+            parser.Get_Product_Description("Info.txt");
+            Take_info_in_form(parser.product_list);
+
         }
 
+        public void Take_info_in_form(List<Product> product_list)
+        {   
+            int i = 0, j = 0;
+            foreach(var p in product_list)
+            {
+                Product_block pb = new Product_block();
+                pb.img.Source = new BitmapImage(new Uri(p.image));
+                pb.Prod_name.Text = p.name;
+                
+                pb.Height = 200;
+                pb.Width = 150;
+                pb.Margin = new Thickness(0, 10, 0, 30);
+                if (i == 4)
+                {
+                    i = 0;
+                    j++;
+                    
+                    grid2.RowDefinitions.Add(new RowDefinition());
+                }
+                grid2.Children.Add(pb);
+                Grid.SetColumn(pb, i);
+                Grid.SetRow(pb, j);
+                i++;
+            }
+        }
         private void menu_icon_png_MouseDown(object sender, MouseButtonEventArgs e)
         {
             if (HamburgerMenu.Margin.Left < 0)
@@ -48,6 +79,45 @@ namespace Diplom_Parser
                 HamburgerMenu.Margin = new Thickness(-200, 0, 0, 0);
                 menu_icon_png.Source = new BitmapImage(new Uri(@"images\menu_icon.png", UriKind.Relative));
             }
+        }
+
+        private void notebook_btn_Click(object sender, RoutedEventArgs e)
+        {
+            var url = "https://rozetka.com.ua/ua/notebooks/c80004/filter/page=";
+            parser = new Parser();
+            /*for (int i = 1; i <= 60; i++)
+            {
+                doc = new HtmlDocument();
+                doc=parser.Get_Catalog(url, i);
+                StreamWriter sw = new StreamWriter(new FileStream("NoteBookName.txt", FileMode.Append, FileAccess.Write));
+                sw.Write(doc.DocumentNode.OuterHtml);
+                if (i % 10 == 0)
+                {
+                    MessageBox.Show(i + " DONE!!!!");
+                }
+                sw.Close();
+            }*/
+            //doc.Load("NoteBookName.txt", Encoding.GetEncoding(1251));
+            parser.Get_Product_Description(/*doc*/"NoteInfo.txt");
+            Take_info_in_form(parser.product_list);
+
+        }
+
+        private void phone_btn_Click(object sender, RoutedEventArgs e)
+        {
+            var url = "https://rozetka.com.ua/ua/mobile-phones/c80003/preset=smartfon/";
+            parser = new Parser();
+            /*for (int i = 1; i <= 13; i++)
+            {
+                doc = new HtmlDocument();
+                doc=parser.Get_Catalog(url, i);
+                StreamWriter sw = new StreamWriter(new FileStream("FileName.txt", FileMode.Append, FileAccess.Write));
+                sw.Write(doc.DocumentNode.OuterHtml);
+                sw.Close();
+            }*/
+           // doc.Load("FileName.txt", Encoding.GetEncoding(1251));
+            parser.Get_Product_Description(/*doc*/"Info.txt");
+            Take_info_in_form(parser.product_list);
         }
     }
 }

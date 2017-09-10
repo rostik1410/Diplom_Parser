@@ -15,3 +15,5 @@ D:\GitHub\Diplom_Parser\Diplom_Parser\obj\Debug\Diplom_Parser.Properties.Resourc
 D:\GitHub\Diplom_Parser\Diplom_Parser\obj\Debug\Diplom_Parser.csproj.GenerateResource.Cache
 D:\GitHub\Diplom_Parser\Diplom_Parser\obj\Debug\Diplom_Parser.exe
 D:\GitHub\Diplom_Parser\Diplom_Parser\obj\Debug\Diplom_Parser.pdb
+D:\GitHub\Diplom_Parser\Diplom_Parser\obj\Debug\Product_block.g.cs
+D:\GitHub\Diplom_Parser\Diplom_Parser\obj\Debug\Product_block.baml
