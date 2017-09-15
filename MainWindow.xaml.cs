@@ -28,17 +28,10 @@ namespace Diplom_Parser
         {
             InitializeComponent();
             parser = new Parser();
-            //doc = parser.Get_Catalog();
-            ////textBlock1.Text = doc.DocumentNode.OuterHtml;
-            //StreamWriter sw = new StreamWriter(new FileStream("FileName.txt", FileMode.Append, FileAccess.Write));
-            //sw.Write(doc.DocumentNode.OuterHtml);
-            //sw.Close();
-            /* doc.Load("FileName.txt", Encoding.GetEncoding(1251));
-             parser.Get_Product_Description(/*doc*/
-             
-            //DEFAULT SMARTPHONE
-            parser.Get_Product_Description("Info.txt");
-            Take_info_in_form(parser.product_list);
+            
+            /*doc = parser.Get_Catalog();
+             parser.Get_Product_Description(doc); 
+            Take_info_in_form(parser.product_list);*/
 
         }
 
@@ -88,7 +81,7 @@ namespace Diplom_Parser
             /*for (int i = 1; i <= 60; i++)
             {
                 doc = new HtmlDocument();
-                doc=parser.Get_Catalog(url, i);
+                doc=parser.Get_Catalog(url, i,"notebook");
                 StreamWriter sw = new StreamWriter(new FileStream("NoteBookName.txt", FileMode.Append, FileAccess.Write));
                 sw.Write(doc.DocumentNode.OuterHtml);
                 if (i % 10 == 0)
@@ -97,10 +90,11 @@ namespace Diplom_Parser
                 }
                 sw.Close();
             }*/
-            //doc.Load("NoteBookName.txt", Encoding.GetEncoding(1251));
-            parser.Get_Product_Description(/*doc*/"NoteInfo.txt");
-            Take_info_in_form(parser.product_list);
-
+           
+            //parser.Get_Catalog_ofline("NoteBookName.txt", "notebook");
+            
+             parser.Get_Product_Description_From_DB("notebook");
+             Take_info_in_form(parser.product_list);
         }
 
         private void phone_btn_Click(object sender, RoutedEventArgs e)
@@ -110,13 +104,15 @@ namespace Diplom_Parser
             /*for (int i = 1; i <= 13; i++)
             {
                 doc = new HtmlDocument();
-                doc=parser.Get_Catalog(url, i);
+                doc=parser.Get_Catalog(url, i, "phone");
                 StreamWriter sw = new StreamWriter(new FileStream("FileName.txt", FileMode.Append, FileAccess.Write));
                 sw.Write(doc.DocumentNode.OuterHtml);
                 sw.Close();
             }*/
-           // doc.Load("FileName.txt", Encoding.GetEncoding(1251));
-            parser.Get_Product_Description(/*doc*/"Info.txt");
+
+            //parser.Get_Catalog_ofline("FileName.txt", "phone");
+
+            parser.Get_Product_Description_From_DB("phone");
             Take_info_in_form(parser.product_list);
         }
     }

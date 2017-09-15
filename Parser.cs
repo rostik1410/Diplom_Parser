@@ -5,106 +5,57 @@ using System.Text;
 using System.Threading.Tasks;
 using HtmlAgilityPack;
 using System.IO;
+using System.Data;
+using System.Data.SqlClient;
+using System.Windows;
 
 namespace Diplom_Parser
 {
    public class Parser
     {
+        public SqlConnection conn;
+        private string conn_string = @"Data Source=DESKTOP-KSC06U9;"
+                           + "Initial Catalog=Product; integrated Security=true;";
         public Product product;
         public List<Product> product_list = new List<Product>();
         public Parser()
         {
 
         }    
-        //32 товара
-        public HtmlDocument Get_Catalog(string url , int page)
+        //1 PAGE WITH PRODUCTS
+        public void Get_Catalog(string url , int page, string category)
         {
             var web = new HtmlWeb();
             var doc = web.Load(url+Convert.ToString(page)+'/');
-            return doc;
+            Get_Product_Description(doc, category);
         }
-        //кожен товар з 32
-        public void Get_Product_Description(/*HtmlDocument doc*/ string file_for_read)
+
+        //THIS PART OF CODE CREATED FOR ONE TIME FOR CREATED DATABASE BECAUSE NOW WE ARE HAVE DATA WHAT WE NEED IN FILE 
+        //THIS FILES WILL DROP AFTER DATABASE FILLING
+        public void Get_Catalog_ofline(string filename, string category)
         {
-            // ONLINE PARSING FOR GET DATA
-            // GET BLOCK WITH NAME,URL,SRC AND DESCRIPTION
-            /*  var Node = doc.DocumentNode
-                            .Descendants("div")
-                            .Where(d => d.Attributes.Contains("class") &&
-                            d.Attributes["class"].Value== "g-i-tile g-i-tile-catalog");
+            var doc = new HtmlDocument();
+            doc.Load(filename, Encoding.GetEncoding(1251));
+            Get_Product_Description(doc, category);
+        }
 
-              StreamWriter sw = new StreamWriter(new FileStream("NoteInfoHtml.txt", FileMode.Create, FileAccess.Write), Encoding.GetEncoding(1251));
-              foreach (var n in Node)
-              {
-                  sw.Write("\n //////////// \n");
-                  sw.Write(n.InnerHtml);
-                  sw.Write("\n //////////// \n");
+        // GET BLOCK WITH NAME,URL,SRC AND DESCRIPTION
+        public void Get_Product_Description(HtmlDocument doc,string category)
+        {
+            var Node = doc.DocumentNode
+                          .Descendants("div")
+                          .Where(d => d.Attributes.Contains("class") &&
+                          d.Attributes["class"].Value.Contains("g-i-tile-i-image fix-height"));
 
-              }
-              sw.Close();*/
-
-
-            // GET BLOCK WITH NAME,URL AND SRC WITHOUT DESCRIPTION
-            /*
-            var node_doc = new HtmlDocument();
-            node_doc.Load("NoteInfoHtml.txt", Encoding.GetEncoding(1251));
-            var info_node = node_doc.DocumentNode
-                                .Descendants("div")
-                                .Where(d=>d.Attributes.Contains("class")&&
-                                d.Attributes["class"].Value.Contains("g-i-tile-i-image fix-height"));
-
-            StreamWriter siw = new StreamWriter(new FileStream("NoteInfo.txt", FileMode.Create, FileAccess.Write ),Encoding.GetEncoding(1251));
-            foreach (var n in info_node)
+            foreach (var n in Node)
             {
                 var name = Get_Name_From_Node(n);
                 var url = Get_Url_From_Node(n);
                 var img = Get_Img_From_Node(n);
-                siw.WriteLine(name);
-                siw.WriteLine(url);
-                siw.WriteLine(img);
-                siw.Write(n.InnerHtml);
-                siw.Write(Environment.NewLine);
-                product_list.Add(new Product(name, url, "", img));
+                product_list.Add(new Product(name, url, img));
             }
-            siw.Close();*/
-
-            // ONLY FOR OFLINE QUIKE WORK
-            var name = "";
-            var url = "";
-            var img ="";
-            StreamReader sr = new StreamReader(new FileStream(file_for_read, FileMode.Open, FileAccess.Read), Encoding.GetEncoding(1251));
-            {
-                int i = 0;
-                string line;
-                // Read and display lines from the file until the end of 
-                // the file is reached.
-                while ((line = sr.ReadLine()) != null)
-                {
-                    if (i == 0)
-                    {
-                        name = line;
-                    }
-                    else if (i == 1)
-                    {
-                        url = line;
-                    }
-                    else if (i == 2)
-                    {
-                        img = line;
-                    }
-                    else if (i > 5)
-                    {
-                        if (line == "") i = -1;
-                    }
-                    i++;
-                    if (name != "" && url != "" && img != "")
-                    {
-                        product_list.Add(new Product(name, url, "", img));
-                        name = url = img = "";
-                    }
-                }
-
-            }
+          
+            Add_To_DB(product_list, category);    
         }
 
         private string Get_Name_From_Node(HtmlNode n)
@@ -146,7 +97,80 @@ namespace Diplom_Parser
             return img;
         }
 
-        public void Get_Product_Reviews(string Hrml_code)
+        private string Get_Description_From_Node(HtmlNode n)
+        {
+            var text = n.InnerHtml;
+            var index = text.IndexOf("li") + 3;
+            var description = "";
+            for(int i=index;i<text.Length;i++)
+            {
+                if (text[i] == '"') break;
+                description += text[i];
+            }
+            return description;
+        }
+
+        public SqlConnection Connection
+        {
+            get { return conn; }
+            set { conn = value; }
+
+        }
+
+        public void Add_To_DB(List<Product> product_list , string category)
+        {
+            Connect_To_DB();
+
+            foreach (var p in product_list)
+            {
+                var query = "insert into Product_Info(Category,Product_name,Product_link,Product_img_link) values('"+category+"','"+p.name+"','"+p.url+"','"+p.image+"')";
+                SqlDataAdapter DataAdapter = new SqlDataAdapter(query, conn);
+                DataTable DataTable = new DataTable();
+                DataAdapter.Fill(DataTable);
+            }
+            MessageBox.Show("Заповнення пройшло успішно!!!!");
+            conn.Close();
+        }
+
+        public void Get_Product_Description_From_DB( string category)
+        {
+            product_list = new List<Product>();
+            Connect_To_DB();
+
+            var query = "select * from Product_Info where Category='"+category+"'";
+            SqlDataAdapter DataAdapter = new SqlDataAdapter(query, conn);
+            DataTable DataTable = new DataTable();
+
+            DataAdapter.Fill(DataTable);
+            for (int j = 0; j < DataTable.Rows.Count; j++)
+            {
+              
+                product_list.Add(new Product(DataTable.Rows[j].ItemArray[2].ToString(), DataTable.Rows[j].ItemArray[3].ToString(),  DataTable.Rows[j].ItemArray[4].ToString()));
+                
+            }
+            conn.Close();
+        }
+
+        public void Connect_To_DB()
+        {
+            conn = new SqlConnection(conn_string);
+
+            try
+            {
+                conn.Open();
+                string query = "set dateformat dmy";
+                SqlCommand cmd3 = new SqlCommand(query, conn);
+                cmd3.ExecuteNonQuery();
+            }
+            catch (SqlException xe)
+            {
+                if (xe.ToString().Contains("server was not found"))
+                    MessageBox.Show("Не вдалось підключитись до бази даних.");
+                else if (xe.ToString().Contains("Login failed for user"))
+                    MessageBox.Show("                                      Не вірний логін або пароль." + Environment.NewLine + " Будь ласка переконайтесь у його правильності та спробуйте знову.");
+            }
+        }
+        public void Get_Product_Reviews(HtmlDocument doc)
         {
 
         }
