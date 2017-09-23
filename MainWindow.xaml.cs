@@ -22,13 +22,15 @@ namespace Diplom_Parser
     /// </summary>
     public partial class MainWindow : Window
     {
+        string product_name;
+        string url_img;
         HtmlDocument doc = new HtmlDocument();
         Parser parser;
         public MainWindow()
         {
             InitializeComponent();
             parser = new Parser();
-            
+
             /*doc = parser.Get_Catalog();
              parser.Get_Product_Description(doc); 
             Take_info_in_form(parser.product_list);*/
@@ -36,14 +38,14 @@ namespace Diplom_Parser
         }
 
         public void Take_info_in_form(List<Product> product_list)
-        {   
+        {
             int i = 0, j = 0;
-            foreach(var p in product_list)
+            foreach (var p in product_list)
             {
                 Product_block pb = new Product_block();
                 pb.img.Source = new BitmapImage(new Uri(p.image));
                 pb.Prod_name.Text = p.name;
-                
+
                 pb.Height = 200;
                 pb.Width = 150;
                 pb.Margin = new Thickness(0, 10, 0, 30);
@@ -51,26 +53,13 @@ namespace Diplom_Parser
                 {
                     i = 0;
                     j++;
-                    
+
                     grid2.RowDefinitions.Add(new RowDefinition());
                 }
                 grid2.Children.Add(pb);
                 Grid.SetColumn(pb, i);
                 Grid.SetRow(pb, j);
                 i++;
-            }
-        }
-        private void menu_icon_png_MouseDown(object sender, MouseButtonEventArgs e)
-        {
-            if (HamburgerMenu.Margin.Left < 0)
-            {
-                HamburgerMenu.Margin = new Thickness(0, 0, 0, 0);
-                menu_icon_png.Source = new BitmapImage(new Uri(@"images\arrow_left_icon.png", UriKind.Relative));
-            }
-            else
-            {
-                HamburgerMenu.Margin = new Thickness(-200, 0, 0, 0);
-                menu_icon_png.Source = new BitmapImage(new Uri(@"images\menu_icon.png", UriKind.Relative));
             }
         }
 
@@ -90,11 +79,11 @@ namespace Diplom_Parser
                 }
                 sw.Close();
             }*/
-           
+
             //parser.Get_Catalog_ofline("NoteBookName.txt", "notebook");
-            
-             parser.Get_Product_Description_From_DB("notebook");
-             Take_info_in_form(parser.product_list);
+
+            parser.Get_Product_Information_From_DB("notebook");
+            Take_info_in_form(parser.product_list);
         }
 
         private void phone_btn_Click(object sender, RoutedEventArgs e)
@@ -112,8 +101,46 @@ namespace Diplom_Parser
 
             //parser.Get_Catalog_ofline("FileName.txt", "phone");
 
-            parser.Get_Product_Description_From_DB("phone");
+            parser.Get_Product_Information_From_DB("phone");
             Take_info_in_form(parser.product_list);
+        }
+
+        private void grid2_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
+        {
+            string descrip ="";
+            Description_TB.Text = "";
+            if (grid2.Children.Count > 0)
+            {
+                for (int i = 0; i < grid2.Children.Count; i++)
+                {
+                    if (grid2.Children[i].IsMouseOver == true)
+                    {
+                        var product = (Product_block)grid2.Children[i];
+                        product_name = product.Prod_name.Text;
+                        url_img = product.img.Source.ToString();
+                        Product_grid.Visibility = Visibility.Visible;
+                        Prod_name_LB.Content = product_name;
+                        Description_IMG.Source = new BitmapImage(new Uri(url_img));
+                        break;
+                    }
+
+                }
+                descrip = parser.Get_Description_From_Node(product_name, url_img);
+
+                Description_TB.Text = descrip;
+                
+              //  MessageBox.Show(Description_TB.Text.Length.ToString());
+              //  scrol.VerticalScrollBarVisibility = ScrollBarVisibility.Visible;
+            }
+        }
+
+        private void back_to_menu_icon_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
+        {
+            if (Product_grid.Visibility == Visibility.Visible)
+            {
+                Product_grid.Visibility = Visibility.Hidden;
+
+            }
         }
     }
 }

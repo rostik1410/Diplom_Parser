@@ -27,7 +27,7 @@ namespace Diplom_Parser
         {
             var web = new HtmlWeb();
             var doc = web.Load(url+Convert.ToString(page)+'/');
-            Get_Product_Description(doc, category);
+            Get_Product_Information(doc, category);
         }
 
         //THIS PART OF CODE CREATED FOR ONE TIME FOR CREATED DATABASE BECAUSE NOW WE ARE HAVE DATA WHAT WE NEED IN FILE 
@@ -36,11 +36,11 @@ namespace Diplom_Parser
         {
             var doc = new HtmlDocument();
             doc.Load(filename, Encoding.GetEncoding(1251));
-            Get_Product_Description(doc, category);
+            Get_Product_Information(doc, category);
         }
 
         // GET BLOCK WITH NAME,URL,SRC AND DESCRIPTION
-        public void Get_Product_Description(HtmlDocument doc,string category)
+        public void Get_Product_Information(HtmlDocument doc,string category)
         {
             var Node = doc.DocumentNode
                           .Descendants("div")
@@ -52,7 +52,7 @@ namespace Diplom_Parser
                 var name = Get_Name_From_Node(n);
                 var url = Get_Url_From_Node(n);
                 var img = Get_Img_From_Node(n);
-                product_list.Add(new Product(name, url, img));
+                product_list.Add(new Product(name, url, img, ""));
             }
           
             Add_To_DB(product_list, category);    
@@ -97,17 +97,88 @@ namespace Diplom_Parser
             return img;
         }
 
-        private string Get_Description_From_Node(HtmlNode n)
+        public string Get_Description_From_Node(string product_name, string url_img)
         {
-            var text = n.InnerHtml;
-            var index = text.IndexOf("li") + 3;
-            var description = "";
-            for(int i=index;i<text.Length;i++)
+            string desc = "";
+            List<string> descrip = new List<string>();
+            Connect_To_DB();
+            var query = "select * from Product_Info where Product_name='" + product_name + "' and Product_img_link='" + url_img + "'";
+            SqlDataAdapter DataAdapter = new SqlDataAdapter(query, conn);
+            DataTable DataTable = new DataTable();
+
+            DataAdapter.Fill(DataTable);
+            product = new Product(DataTable.Rows[0].ItemArray[2].ToString(), DataTable.Rows[0].ItemArray[3].ToString(), DataTable.Rows[0].ItemArray[4].ToString(), DataTable.Rows[0].ItemArray[5].ToString());
+            if (product.description == "")
             {
-                if (text[i] == '"') break;
-                description += text[i];
+                var web = new HtmlWeb();
+
+                var doc = web.Load(product.url + "characteristics");
+
+                /* StreamWriter sw = new StreamWriter(new FileStream("description.txt", FileMode.Append, FileAccess.Write));
+
+                   sw.Write(doc.DocumentNode.OuterHtml);
+
+                   sw.Close();*/
+                var Node = doc.DocumentNode
+                             .Descendants("div")
+                             .Where(d => d.Attributes.Contains("class") &&
+                             d.Attributes["class"].Value.Equals("clearfix pp-tab-with-aside-content pp-characteristics-tab"));
+                StreamWriter sw = new StreamWriter(new FileStream("description_only.txt", FileMode.Create, FileAccess.Write),Encoding.GetEncoding(1251));
+
+                foreach (var n in Node)
+                {
+                    //  sw.Write(n.OuterHtml);
+                    sw.Write("\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\");
+                    sw.Write(n.InnerText);
+                }
+                sw.Close();
+
+                StreamReader sr = new StreamReader(new FileStream("description_only.txt", FileMode.Open, FileAccess.Read), Encoding.GetEncoding(1251));
+                {
+                    string line = "";
+                    while ((line=sr.ReadLine())!= null)
+                    {
+                        
+                        if (line!= "" && !line.Contains("\\\\\\\\"))
+                        {
+                           if (line.Contains("&nbsp"))
+                            {
+                                line = line.Substring(0, line.IndexOf("&nbsp"));
+                            }
+
+                            if (line.Contains("&#039;"))
+                            {
+                                line = line.Replace("&#039;", "`");
+                            }
+
+                            if (line.Contains("'"))
+                            {
+                                line = line.Replace("'", "`");
+                            }
+
+                            descrip.Add(line);
+                        }
+
+                    }
+                }
+                
+                foreach (var i in descrip)
+                {
+                    desc += i + Environment.NewLine;
+                }
+
+                query = "update Product_Info set Product_description='"+desc+"' where Product_name='" + product_name + "'";
+                DataAdapter = new SqlDataAdapter(query, conn);
+                DataTable = new DataTable();
+
+                DataAdapter.Fill(DataTable);
+                //MessageBox.Show("УЗЬО!");
             }
-            return description;
+            else
+            {
+                desc = product.description;
+            }
+            return desc;
         }
 
         public SqlConnection Connection
@@ -123,7 +194,7 @@ namespace Diplom_Parser
 
             foreach (var p in product_list)
             {
-                var query = "insert into Product_Info(Category,Product_name,Product_link,Product_img_link) values('"+category+"','"+p.name+"','"+p.url+"','"+p.image+"')";
+                var query = "insert into Product_Info(Category,Product_name,Product_link,Product_img_link,Product_description) values('"+category+"','"+p.name+"','"+p.url+"','"+p.image+"','"+p.description+"')";
                 SqlDataAdapter DataAdapter = new SqlDataAdapter(query, conn);
                 DataTable DataTable = new DataTable();
                 DataAdapter.Fill(DataTable);
@@ -132,7 +203,7 @@ namespace Diplom_Parser
             conn.Close();
         }
 
-        public void Get_Product_Description_From_DB( string category)
+        public void Get_Product_Information_From_DB( string category)
         {
             product_list = new List<Product>();
             Connect_To_DB();
@@ -145,7 +216,7 @@ namespace Diplom_Parser
             for (int j = 0; j < DataTable.Rows.Count; j++)
             {
               
-                product_list.Add(new Product(DataTable.Rows[j].ItemArray[2].ToString(), DataTable.Rows[j].ItemArray[3].ToString(),  DataTable.Rows[j].ItemArray[4].ToString()));
+                product_list.Add(new Product(DataTable.Rows[j].ItemArray[2].ToString(), DataTable.Rows[j].ItemArray[3].ToString(),  DataTable.Rows[j].ItemArray[4].ToString(), DataTable.Rows[j].ItemArray[5].ToString()));
                 
             }
             conn.Close();

@@ -24,5 +24,10 @@ namespace Diplom_Parser
         {
             InitializeComponent();
         }
+
+        private void UI_block_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
+        {
+
+        }
     }
 }

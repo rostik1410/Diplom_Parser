@@ -7,8 +7,24 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="700" Width="1000" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
     <Grid Name="grid1" Background="#333" >
+        <Grid Name="Product_grid" Height="700" Width="1000" Background="#333" Visibility="Hidden" Panel.ZIndex="10" Margin="0,0,0,0" >
+            <StackPanel Height="50" Width="1000" Background="#009586" Margin="0,0" HorizontalAlignment="Center" VerticalAlignment="Top">
+                <Image x:Name="back_to_menu_icon_png" 
+                   Height="40"
+                   Width="40" 
+                   Source="images\arrow_left_icon.png" 
+                   Stretch="Fill"  
+                   HorizontalAlignment="Left" 
+                   Margin="5,5,0,0" MouseLeftButtonUp="back_to_menu_icon_MouseLeftButtonUp"/>
+            </StackPanel>
+            <Label Name="Prod_name_LB" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="50,60,0,0" Height="40" Width="auto" Foreground="White"></Label>
+            <Image x:Name="Description_IMG" Width="250" Height="300" Margin="50,120" VerticalAlignment="Top" HorizontalAlignment="Left"/>
+            <ScrollViewer  VerticalScrollBarVisibility="Visible" Height="500" Width="700" VerticalAlignment="Top" HorizontalAlignment="Right" Margin="0,50,0,0">
+                <TextBlock Name="Description_TB" Height="Auto" Width="600" Margin="50,50" Foreground="White"  ScrollViewer.VerticalScrollBarVisibility="Visible"/>
+            </ScrollViewer>
+        </Grid>
         <StackPanel Name="HamburgerMenu" 
-                    Margin="-200,0,0,0" 
+                    Margin="0,0,0,0" 
                     Background="#333" 
                     HorizontalAlignment="Left" 
                     Height="672" 
@@ -29,7 +45,6 @@
                    Width="40" 
                    Source="images\menu_icon.png" 
                    Stretch="Fill"  
-                   MouseDown="menu_icon_png_MouseDown" 
                    HorizontalAlignment="Right" 
                    Margin="0,-60,5,0"/>
             <Button x:Name="phone_btn" 
@@ -82,7 +97,7 @@
                     FontSize="15"/>
         </StackPanel>
         <ScrollViewer ScrollViewer.VerticalScrollBarVisibility="Auto">
-            <Grid Name="grid2" HorizontalAlignment="Center" Height="auto" Margin="250,0,0,0" VerticalAlignment="Top" Width="744" ScrollViewer.VerticalScrollBarVisibility="Visible">
+            <Grid Name="grid2" HorizontalAlignment="Center" Height="auto" Margin="250,0,0,0" VerticalAlignment="Top" Width="744" ScrollViewer.VerticalScrollBarVisibility="Visible" MouseLeftButtonUp="grid2_MouseLeftButtonUp">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition></ColumnDefinition>
                     <ColumnDefinition></ColumnDefinition>

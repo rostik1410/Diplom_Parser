@@ -11,12 +11,14 @@ namespace Diplom_Parser
         public string name;
         public string url;
         public string image;
+        public string description;
 
-        public Product(string _name, string _url, string _image)
+        public Product(string _name, string _url, string _image, string _description)
         {
             name = _name;
             url = _url;
             image = _image;
+            description = _description;
         }
     }
 }
