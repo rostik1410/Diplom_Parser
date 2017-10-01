@@ -108,7 +108,7 @@ namespace Diplom_Parser
 
             DataAdapter.Fill(DataTable);
             product = new Product(DataTable.Rows[0].ItemArray[2].ToString(), DataTable.Rows[0].ItemArray[3].ToString(), DataTable.Rows[0].ItemArray[4].ToString(), DataTable.Rows[0].ItemArray[5].ToString());
-            if (product.description == "")
+            if (product.description == null || product.description =="")
             {
                 var web = new HtmlWeb();
 
@@ -161,6 +161,7 @@ namespace Diplom_Parser
 
                     }
                 }
+                sr.Close();
                 
                 foreach (var i in descrip)
                 {
@@ -178,6 +179,7 @@ namespace Diplom_Parser
             {
                 desc = product.description;
             }
+            conn.Close();
             return desc;
         }
 
@@ -241,9 +243,179 @@ namespace Diplom_Parser
                     MessageBox.Show("                                      Не вірний логін або пароль." + Environment.NewLine + " Будь ласка переконайтесь у його правильності та спробуйте знову.");
             }
         }
-        public void Get_Product_Reviews(HtmlDocument doc)
-        {
 
+        public string Get_Product_Reviews(string product_name, string url_img)
+        {
+            string revs = "";
+            List<string> reviews = new List<string>();
+            Connect_To_DB();
+            var query = "select Id from Product_Info where Product_name='" + product_name + "' and Product_img_link='" + url_img + "'";
+            SqlDataAdapter DataAdapter = new SqlDataAdapter(query, conn);
+            DataTable DataTable = new DataTable();
+
+            DataAdapter.Fill(DataTable);
+            int product_id = Convert.ToInt32(DataTable.Rows[0].ItemArray[0].ToString());
+
+            query = "select * From Product_Reviews where Product_ID='" + product_id + "'";
+            DataAdapter = new SqlDataAdapter(query, conn);
+            DataTable = new DataTable();
+
+            DataAdapter.Fill(DataTable);
+
+            if (DataTable.Rows.Count == 0)
+            {
+                var web = new HtmlWeb();
+
+                var doc = web.Load(product.url + "comments");
+
+                StreamWriter sw = new StreamWriter(new FileStream("reviews.txt", FileMode.Create, FileAccess.Write));
+
+                sw.Write(doc.DocumentNode.OuterHtml);
+
+                sw.Close();
+
+                var Node = doc.DocumentNode.Descendants("span")
+                               .Where(d => d.Attributes.Contains("class") &&
+                               d.Attributes["class"].Value.Equals("pp-review-heading-title-inner"));
+                string column = "";
+                foreach (var n in Node)
+                {
+                    column += n.InnerText;
+                }
+
+                if (column.Contains("&thinsp;"))
+                {
+                    var col = "";
+                    int index = column.IndexOf("&thinsp;");
+                    for (int i = 0; i < column.Length - 1; i++)
+                    {
+                        if (i < index || i > index + 7)
+                        {
+                            col += column[i];
+                        }
+                    }
+                    column = col;
+                }
+                int count_review = Convert.ToInt32(column);
+                MessageBox.Show("DONE!" + count_review);
+
+                if (count_review > 10)
+                {
+                    int count = 0;
+                    if (count_review % 10 > 0)
+                    {
+                        count = (count_review / 10) + 1;
+                    }
+                    else
+                    {
+                        count = count_review / 10;
+                    }
+                    for (int i = 0; i < count; i++)
+                    {
+                        if (i == 0)
+                        {
+                            Node = doc.DocumentNode.Descendants("div")
+                                                   .Where(d => d.Attributes.Contains("class") &&
+                                                   d.Attributes["class"].Value.Equals("pp-review-text"));
+                            // sw = new StreamWriter(new FileStream("reviews_Page" + (i + 1) + ".txt", FileMode.Create, FileAccess.Write));
+                            foreach (var n in Node)
+                            {
+                                query = "insert Product_Reviews(Product_ID, Review) VALUES('" + product_id + "', '" + n.InnerText + "')";
+                                DataAdapter = new SqlDataAdapter(query, conn);
+                                DataTable = new DataTable();
+
+                                DataAdapter.Fill(DataTable);
+                                revs += n.InnerText;
+                            }
+                            // sw.Close();
+                        }
+                        else
+                        {
+                            doc = web.Load(product.url + "comments/page=" + (i + 1) + "/");
+                            Node = doc.DocumentNode.Descendants("div")
+                                                   .Where(d => d.Attributes.Contains("class") &&
+                                                   d.Attributes["class"].Value.Equals("pp-review-text"));
+                            // sw = new StreamWriter(new FileStream("reviews_Page" + (i + 1) + ".txt", FileMode.Create, FileAccess.Write));
+                            foreach (var n in Node)
+                            {
+                                query = "insert Product_Reviews(Product_ID, Review) VALUES('" + product_id + "', '" + n.InnerText + "')";
+                                DataAdapter = new SqlDataAdapter(query, conn);
+                                DataTable = new DataTable();
+
+                                DataAdapter.Fill(DataTable);
+                                revs += n.InnerText;
+                            }
+                            // sw.Close();
+                        }
+                    }
+                }
+                /*     
+                  StreamWriter sw = new StreamWriter(new FileStream("description_only.txt", FileMode.Create, FileAccess.Write), Encoding.GetEncoding(1251));
+
+                  foreach (var n in Node)
+                  {
+                      //  sw.Write(n.OuterHtml);
+                      sw.Write("\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\");
+                      sw.Write(n.InnerText);
+                  }
+                  sw.Close();
+
+                  StreamReader sr = new StreamReader(new FileStream("description_only.txt", FileMode.Open, FileAccess.Read), Encoding.GetEncoding(1251));
+                  {
+                      string line = "";
+                      while ((line = sr.ReadLine()) != null)
+                      {
+
+                          if (line != "" && !line.Contains("\\\\\\\\"))
+                          {
+                              if (line.Contains("&nbsp"))
+                              {
+                                  line = line.Substring(0, line.IndexOf("&nbsp"));
+                              }
+
+                              if (line.Contains("&#039;"))
+                              {
+                                  line = line.Replace("&#039;", "`");
+                              }
+
+                              if (line.Contains("'"))
+                              {
+                                  line = line.Replace("'", "`");
+                              }
+
+                              reviews.Add(line);
+                          }
+
+                      }
+                  }
+                  sr.Close();
+
+                  foreach (var i in reviews)
+                  {
+                      revs += i + Environment.NewLine;
+                  }
+
+                  query = "update Product_Info set Product_description='" + revs + "' where Product_name='" + product_name + "'";
+                  DataAdapter = new SqlDataAdapter(query, conn);
+                  DataTable = new DataTable();
+
+                  DataAdapter.Fill(DataTable);
+                  //MessageBox.Show("УЗЬО!");
+              }
+              else
+              {
+                  revs = product.description;
+              }*/
+            }
+            else
+            {
+                for(int i =0; i< DataTable.Rows.Count; i++)
+                {
+                    revs += DataTable.Rows[i].ItemArray[2].ToString()+Environment.NewLine;
+                }
+            }
+            conn.Close();
+            return revs;
         }
     }
 }

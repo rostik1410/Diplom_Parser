@@ -108,6 +108,7 @@ namespace Diplom_Parser
         private void grid2_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
         {
             string descrip ="";
+            string revs = "";
             Description_TB.Text = "";
             if (grid2.Children.Count > 0)
             {
@@ -119,6 +120,7 @@ namespace Diplom_Parser
                         product_name = product.Prod_name.Text;
                         url_img = product.img.Source.ToString();
                         Product_grid.Visibility = Visibility.Visible;
+                        scrollview_product.Visibility = Visibility.Visible;
                         Prod_name_LB.Content = product_name;
                         Description_IMG.Source = new BitmapImage(new Uri(url_img));
                         break;
@@ -126,12 +128,21 @@ namespace Diplom_Parser
 
                 }
                 descrip = parser.Get_Description_From_Node(product_name, url_img);
-
                 Description_TB.Text = descrip;
-                
-              //  MessageBox.Show(Description_TB.Text.Length.ToString());
-              //  scrol.VerticalScrollBarVisibility = ScrollBarVisibility.Visible;
+
+                revs = parser.Get_Product_Reviews(product_name, url_img);
+                Reviews_TB.Text = revs;
             }
+
+            //FILL DESCRIPTION FIELD IN DB
+            /*for (int i =0; i< grid2.Children.Count; i++)
+            {
+                var product = (Product_block)grid2.Children[i];
+                product_name = product.Prod_name.Text;
+                url_img = product.img.Source.ToString();
+
+                descrip = parser.Get_Description_From_Node(product_name, url_img);
+            }*/
         }
 
         private void back_to_menu_icon_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
@@ -139,7 +150,7 @@ namespace Diplom_Parser
             if (Product_grid.Visibility == Visibility.Visible)
             {
                 Product_grid.Visibility = Visibility.Hidden;
-
+                scrollview_product.Visibility = Visibility.Hidden;
             }
         }
     }
