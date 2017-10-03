@@ -13,7 +13,7 @@ namespace Diplom_Parser
 {
    public class Parser
     {
-        public SqlConnection conn;
+        private SqlConnection conn;
         private string conn_string = @"Data Source=DESKTOP-KSC06U9;"
                            + "Initial Catalog=Product; integrated Security=true;";
         public Product product;
@@ -265,9 +265,16 @@ namespace Diplom_Parser
             if (DataTable.Rows.Count == 0)
             {
                 var web = new HtmlWeb();
-
-                var doc = web.Load(product.url + "comments");
-
+                var doc = new HtmlDocument();
+                try
+                {
+                    doc = web.Load(product.url + "comments");
+                }
+                catch (Exception)
+                {
+                    MessageBox.Show("Проблеми з'єднання... Перевірте та спробуйте знову.");
+                    return "";
+                }
                 StreamWriter sw = new StreamWriter(new FileStream("reviews.txt", FileMode.Create, FileAccess.Write));
 
                 sw.Write(doc.DocumentNode.OuterHtml);
@@ -320,7 +327,12 @@ namespace Diplom_Parser
                             // sw = new StreamWriter(new FileStream("reviews_Page" + (i + 1) + ".txt", FileMode.Create, FileAccess.Write));
                             foreach (var n in Node)
                             {
-                                query = "insert Product_Reviews(Product_ID, Review) VALUES('" + product_id + "', '" + n.InnerText + "')";
+                                string block = n.InnerText;
+                                if (n.InnerText.Contains("'"))
+                                {
+                                    block = block.Replace("'","`");
+                                }
+                                query = "insert Product_Reviews(Product_ID, Review) VALUES('" + product_id + "', '" + block + "')";
                                 DataAdapter = new SqlDataAdapter(query, conn);
                                 DataTable = new DataTable();
 
@@ -338,74 +350,22 @@ namespace Diplom_Parser
                             // sw = new StreamWriter(new FileStream("reviews_Page" + (i + 1) + ".txt", FileMode.Create, FileAccess.Write));
                             foreach (var n in Node)
                             {
-                                query = "insert Product_Reviews(Product_ID, Review) VALUES('" + product_id + "', '" + n.InnerText + "')";
+                                string block = n.InnerText;
+                                if (n.InnerHtml.Contains("'"))
+                                {
+                                    block = block.Replace("'", "`");         
+                                }
+                                query = "insert Product_Reviews(Product_ID, Review) VALUES('" + product_id + "', '" + block + "')";
                                 DataAdapter = new SqlDataAdapter(query, conn);
                                 DataTable = new DataTable();
 
                                 DataAdapter.Fill(DataTable);
                                 revs += n.InnerText;
                             }
-                            // sw.Close();
+                             //sw.Close();
                         }
                     }
                 }
-                /*     
-                  StreamWriter sw = new StreamWriter(new FileStream("description_only.txt", FileMode.Create, FileAccess.Write), Encoding.GetEncoding(1251));
-
-                  foreach (var n in Node)
-                  {
-                      //  sw.Write(n.OuterHtml);
-                      sw.Write("\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\");
-                      sw.Write(n.InnerText);
-                  }
-                  sw.Close();
-
-                  StreamReader sr = new StreamReader(new FileStream("description_only.txt", FileMode.Open, FileAccess.Read), Encoding.GetEncoding(1251));
-                  {
-                      string line = "";
-                      while ((line = sr.ReadLine()) != null)
-                      {
-
-                          if (line != "" && !line.Contains("\\\\\\\\"))
-                          {
-                              if (line.Contains("&nbsp"))
-                              {
-                                  line = line.Substring(0, line.IndexOf("&nbsp"));
-                              }
-
-                              if (line.Contains("&#039;"))
-                              {
-                                  line = line.Replace("&#039;", "`");
-                              }
-
-                              if (line.Contains("'"))
-                              {
-                                  line = line.Replace("'", "`");
-                              }
-
-                              reviews.Add(line);
-                          }
-
-                      }
-                  }
-                  sr.Close();
-
-                  foreach (var i in reviews)
-                  {
-                      revs += i + Environment.NewLine;
-                  }
-
-                  query = "update Product_Info set Product_description='" + revs + "' where Product_name='" + product_name + "'";
-                  DataAdapter = new SqlDataAdapter(query, conn);
-                  DataTable = new DataTable();
-
-                  DataAdapter.Fill(DataTable);
-                  //MessageBox.Show("УЗЬО!");
-              }
-              else
-              {
-                  revs = product.description;
-              }*/
             }
             else
             {
@@ -415,6 +375,7 @@ namespace Diplom_Parser
                 }
             }
             conn.Close();
+            MessageBox.Show("Success DONE!!!!");
             return revs;
         }
     }
