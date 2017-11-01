@@ -39,23 +39,42 @@ namespace Diplom_Parser
 
         public void Take_info_in_form(List<Product> product_list)
         {
-            int i = 0, j = 0;
+            int i = 0, j = 0, top=0;
             foreach (var p in product_list)
             {
+                top = (j==0) ? 50 : 0;
                 Product_block pb = new Product_block();
                 pb.img.Source = new BitmapImage(new Uri(p.image));
                 pb.Prod_name.Text = p.name;
 
                 pb.Height = 200;
                 pb.Width = 150;
-                pb.Margin = new Thickness(0, 10, 0, 30);
-                if (i == 4)
+                             
+                switch (i)
                 {
-                    i = 0;
-                    j++;
+                    case 0:
+                        pb.Margin = new Thickness(36, top + 20, 0, 0);
+                        break;
+                    case 1:
+                        pb.Margin = new Thickness(10, top + 20, 0, 0);
+                        break;
 
-                    grid2.RowDefinitions.Add(new RowDefinition());
+                    case 2:
+                        pb.Margin = new Thickness(0, top + 20, 10, 0);
+                        break;
+
+                    case 3:
+                        pb.Margin = new Thickness(0, top + 20, 36 , 0);
+                        break;
+
+                    case 4:
+                        i = 0;
+                        j++;
+                        grid2.RowDefinitions.Add(new RowDefinition());
+                        pb.Margin = new Thickness(36, 20, 0, 0);
+                        break;
                 }
+               
                 grid2.Children.Add(pb);
                 Grid.SetColumn(pb, i);
                 Grid.SetRow(pb, j);
@@ -67,6 +86,8 @@ namespace Diplom_Parser
         {
             var url = "https://rozetka.com.ua/ua/notebooks/c80004/filter/page=";
             parser = new Parser();
+            Notebook_Filter.Visibility = Visibility.Visible;
+            title.Visibility = Visibility.Visible;
             /*for (int i = 1; i <= 60; i++)
             {
                 doc = new HtmlDocument();
@@ -90,6 +111,8 @@ namespace Diplom_Parser
         {
             var url = "https://rozetka.com.ua/ua/mobile-phones/c80003/preset=smartfon/";
             parser = new Parser();
+            Phone_Filter.Visibility = Visibility.Visible;
+            title.Visibility = Visibility.Visible;
             /*for (int i = 1; i <= 13; i++)
             {
                 doc = new HtmlDocument();
@@ -116,6 +139,8 @@ namespace Diplom_Parser
                 {
                     if (grid2.Children[i].IsMouseOver == true)
                     {
+                        Phone_Filter.Visibility = Visibility.Hidden;
+                        title.Visibility = Visibility.Hidden;
                         var product = (Product_block)grid2.Children[i];
                         product_name = product.Prod_name.Text;
                         url_img = product.img.Source.ToString();
@@ -151,7 +176,32 @@ namespace Diplom_Parser
             {
                 Product_grid.Visibility = Visibility.Hidden;
                 scrollview_product.Visibility = Visibility.Hidden;
+                Phone_Filter.Visibility = Visibility.Visible;
+                title.Visibility = Visibility.Visible;
             }
+        }
+
+        private void back_to_catalog_icon_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
+        {
+            Phone_Filter.Visibility = Visibility.Hidden;
+            Notebook_Filter.Visibility = Visibility.Hidden;
+            title.Visibility = Visibility.Hidden;
+
+        }
+
+        private void search_icon_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
+        {
+
+        }
+
+        private void PhoneShow_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void NotebookShow_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }

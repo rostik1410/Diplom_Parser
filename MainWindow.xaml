@@ -6,35 +6,420 @@
         xmlns:local="clr-namespace:Diplom_Parser"
         mc:Ignorable="d"
         Title="MainWindow" Height="700" Width="1000" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
-    <Grid Name="grid1" Background="#333" >
-        <ScrollViewer Name="scrollview_product"  VerticalScrollBarVisibility="Visible" Visibility="Hidden" VerticalAlignment="Top" HorizontalAlignment="Right" Panel.ZIndex="10">
-            <Grid Name="Product_grid" Height="1150" Width="1000" Background="#333" Visibility="Hidden" Panel.ZIndex="10" Margin="0,0,0,0" >
-                <StackPanel Height="50" Width="1000" Background="#009586" Margin="0,0" HorizontalAlignment="Center" VerticalAlignment="Top">
+    <Grid Name="grid1" 
+          Background="#2b2b2b" >
+        <ScrollViewer Name="scrollview_product"  
+                      VerticalScrollBarVisibility="Visible" 
+                      Visibility="Hidden" 
+                      VerticalAlignment="Top" 
+                      HorizontalAlignment="Right" 
+                      Panel.ZIndex="10">
+            <Grid Name="Product_grid" 
+                  Height="1150" 
+                  Width="1000" 
+                  Background="#2b2b2b" 
+                  Visibility="Hidden" 
+                  Panel.ZIndex="10" 
+                  Margin="0,0,0,0" >
+                <StackPanel Height="50" 
+                            Width="1000" 
+                            Background="#009586" 
+                            Margin="0,0" 
+                            HorizontalAlignment="Center" 
+                            VerticalAlignment="Top">
                     <Image x:Name="back_to_menu_icon_png" 
                        Height="40"
                        Width="40" 
                        Source="images\arrow_left_icon.png" 
                        Stretch="Fill"  
                        HorizontalAlignment="Left" 
-                       Margin="5,5,0,0" MouseLeftButtonUp="back_to_menu_icon_MouseLeftButtonUp"/>
+                       Margin="5,5,0,0" 
+                       MouseLeftButtonUp="back_to_menu_icon_MouseLeftButtonUp"/>
                 </StackPanel>
-                <Label Name="Prod_name_LB" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="50,60,0,0" Height="40" Width="auto" Foreground="White"></Label>
-                <Image x:Name="Description_IMG" Width="250" Height="300" Margin="50,120" VerticalAlignment="Top" HorizontalAlignment="Left"/>
+                <Label Name="Prod_name_LB" 
+                       VerticalAlignment="Top" 
+                       HorizontalAlignment="Left" 
+                       Margin="50,60,0,0" 
+                       Height="40" 
+                       Width="auto" 
+                       Foreground="White">
+                </Label>
+                <Image x:Name="Description_IMG" 
+                       Width="250" 
+                       Height="300" 
+                       Margin="50,120" 
+                       VerticalAlignment="Top" 
+                       HorizontalAlignment="Left"/>
                 <ScrollViewer  VerticalScrollBarVisibility="Hidden" Height="500" Width="700" VerticalAlignment="Top" HorizontalAlignment="Right" Margin="0,100,0,0">
-                   <TextBlock Name="Description_TB" Height="Auto" Width="600" Margin="50,100" Foreground="White"  ScrollViewer.VerticalScrollBarVisibility="Hidden"/>
+                    <TextBlock Name="Description_TB" 
+                               Height="Auto" 
+                               Width="600" 
+                               Margin="50,100" 
+                               Foreground="White" 
+                               ScrollViewer.VerticalScrollBarVisibility="Hidden"/>
                 </ScrollViewer>
-                <ScrollViewer  VerticalScrollBarVisibility="Hidden" Height="500" Width="950" VerticalAlignment="Top" HorizontalAlignment="Right" Margin="0,600,25,0">
-                    <TextBlock Name="Reviews_TB" Height="Auto" Width="900" Margin="50,50" Foreground="White"  ScrollViewer.VerticalScrollBarVisibility="Hidden"/>
+                <ScrollViewer  VerticalScrollBarVisibility="Hidden" 
+                               Height="500" 
+                               Width="950" 
+                               VerticalAlignment="Top" 
+                               HorizontalAlignment="Right" 
+                               Margin="0,600,25,0">
+                    <TextBlock Name="Reviews_TB" 
+                               Height="Auto" 
+                               Width="900" 
+                               Margin="50,50" 
+                               Foreground="White"  
+                               ScrollViewer.VerticalScrollBarVisibility="Hidden"/>
                 </ScrollViewer>
             </Grid>
         </ScrollViewer>
-        <StackPanel Name="HamburgerMenu" 
+        <StackPanel Name="Phone_Filter"
+                    Margin="0,0"
+                    HorizontalAlignment="Left"
+                    Width="250"
+                    Height="672"
+                    Background="#333"
+                    Panel.ZIndex="10"
+                    Visibility="Hidden">
+            <Label Content="Filter" 
+                   HorizontalAlignment="Center" 
+                   FontSize="20" 
+                   Foreground="White"
+                   VerticalAlignment="Center">
+            </Label>
+            <Expander Header="Діагональ Екрана:"
+                      HorizontalAlignment="Center"
+                      Margin="0,10,0,0"
+                      Width="150"
+                      Background="#009586">
+                <StackPanel Name="display_diagonal"> 
+                    <CheckBox Name="l4"
+                              Width="140"
+                              Content="Менше 4'">
+                    </CheckBox>
+                   
+                    <CheckBox Name="m4to5"
+                              Width="140"
+                              Content="Від 4'= до 4.9'">
+                    </CheckBox>
+                               
+                    <CheckBox Name="m5to5and5"
+                              Width="140"
+                              Content="Від 5' до 5.4'">
+                    </CheckBox>
+
+                    <CheckBox Name="m5and5"
+                              Width="140"
+                              Content="5.5' і більше">
+                    </CheckBox>
+                </StackPanel>
+            </Expander>
+            <Expander Header="Об'єм ОЗУ"
+                      Width="150"
+                      Margin="0,10,0,0"
+                      Background="#009586">
+                <StackPanel Name="OZU">
+                    <CheckBox Name="to1"
+                              Width="140"
+                              Content="Менше 1-о Гб">
+                    </CheckBox>
+                    <CheckBox Name="m1to2"
+                              Width="140"
+                              Content="1-1.9 ГБ">
+                    </CheckBox>
+                    <CheckBox Name="m2to3"
+                              Width="140"
+                              Content="2-3 Гб">
+                    </CheckBox>
+                    <CheckBox Name="m3"
+                              Width="140"
+                              Content="Більше 3-х Гб">
+                    </CheckBox>
+                </StackPanel>
+            </Expander>
+
+            <Expander Header="Операційна система:"
+                      Width="150"
+                      Margin="0,10,0,0"
+                      Background="#009586">
+                <StackPanel>
+                    <CheckBox Name="IOS"
+                        Width="140"
+                        Content="IOS">
+                    </CheckBox>
+                    <CheckBox Name="Android4"
+                              Width="140"
+                              Content="Android 4.4 і старіші">
+                    </CheckBox>
+                    <CheckBox Name="Android5"
+                              Width="140"
+                              Content="Android 5 Lolipop">
+                    </CheckBox>
+                    <CheckBox Name="Android6"
+                              Width="140"
+                              Content="Android 6 Mashmello">
+                    </CheckBox>
+                    <CheckBox Name="Android7"
+                              Width="140"
+                              Content="Android 7 Nougat">
+                    </CheckBox>
+                    <CheckBox Name="Android8"
+                              Width="140"
+                              Content="Android 8 Oreo">
+                    </CheckBox>
+                    <CheckBox Name="Other"
+                              Width="140"
+                              Content="Інші">
+                    </CheckBox>
+                </StackPanel>
+            </Expander>
+
+            <Expander Header="Об'єм постійної пам'яті:"
+                      Width="150"
+                      Margin="0,10,0,0"
+                      Background="#009586">
+                <StackPanel>
+                    <CheckBox Name="l32"
+                        Width="140"
+                        Content="Менше 32-х Гб">
+                    </CheckBox>
+                    <CheckBox Name="m32l64"
+                              Width="140"
+                              Content="Від 32 до 64ГБ">
+                    </CheckBox>
+                    <CheckBox Name="m65l128"
+                              Width="140"
+                              Content="Від 65 до 128Гб">
+                    </CheckBox>
+                    <CheckBox Name="m128"
+                              Width="140"
+                              Content="Більше 128Гб">
+                    </CheckBox>
+                </StackPanel>
+            </Expander>
+
+            <Button Name="Show" Content="Показати" Width="150" Height="25" Background="#009586" HorizontalAlignment="Center" Margin="0,10,0,0" Click="PhoneShow_Click"></Button>
+        </StackPanel>
+        <StackPanel Name="Notebook_Filter"
+                    Margin="0,0"
+                    HorizontalAlignment="Left"
+                    Width="250"
+                    Height="672"
+                    Background="#333"
+                    Panel.ZIndex="10"
+                    Visibility="Hidden">
+            <Label Content="Filter" 
+                   HorizontalAlignment="Center" 
+                   FontSize="20" 
+                   Foreground="White"
+                   VerticalAlignment="Center">
+            </Label>
+            <Expander Header="Діагональ екрана:"
+                      Background="#009586"
+                      Width="150"
+                      Margin="0,10,0,0">
+                <StackPanel Name="notebook_display_diagonal">
+                    <CheckBox Name="a"
+                              Width="140">
+                        
+                    </CheckBox>
+                    <CheckBox Name="b"
+                              Width="140">
+                        
+                    </CheckBox>
+                    <CheckBox Name="c"
+                              Width="140">
+                        
+                    </CheckBox>
+                    <CheckBox Name="d"
+                              Width="140">
+                        
+                    </CheckBox>
+                </StackPanel>
+            </Expander>
+
+            <Expander Header="Об'єм ОЗУ:"
+                      Background="#009586"
+                      Width="150"
+                      Margin="0,10,0,0">
+                <StackPanel Name="Notebook_OZU">
+                    <CheckBox Name="nb_4"
+                              Width="140"
+                              Content="4 Гб">
+                    </CheckBox>
+                    <CheckBox Name="nb_6"
+                              Width="140"
+                              Content="6 Гб">
+                    </CheckBox>
+                    <CheckBox Name="nb_8"
+                              Width="140"
+                              Content="8 Гб">
+                    </CheckBox>
+                    <CheckBox Name="nb_16"
+                              Width="140"
+                              Content="16 Гб">
+                    </CheckBox>
+
+                    <CheckBox Name="nb_m16"
+                              Width="140"
+                              Content="Більше 16-и Гб">
+                    </CheckBox>
+                </StackPanel>
+            </Expander>
+
+            <Expander Header="Тип накопичувача:"
+                      Background="#009586"
+                      Width="150"
+                      Margin="0,10,0,0">
+                <StackPanel Name="TypeDisc">
+                    <CheckBox Name="nb_ssd"
+                              Width="140"
+                              Content="SSD">
+                    </CheckBox>
+                    <CheckBox Name="nb_hdd"
+                              Width="140"
+                              Content="HDD">
+                    </CheckBox>
+                    <CheckBox Name="nb_hddssd"
+                              Width="140"
+                              Content="HDD+SSD">
+                    </CheckBox>
+                </StackPanel>
+            </Expander>
+
+            <Expander Header="Процесор:"
+                      Background="#009586"
+                      Width="150"
+                      Margin="0,10,0,0">
+                <StackPanel Name="Notebook_procesor">
+                    <CheckBox Name="nb_IntelCeleron"
+                              Width="140"
+                              Content="Intel Celeron">
+                    </CheckBox>
+                    <CheckBox Name="nb_IntelPentium"
+                              Width="140"
+                              Content="Intel Pentium">
+                    </CheckBox>
+                    <CheckBox Name="nb_IntelM"
+                              Width="140"
+                              Content="Intel Core M">
+                    </CheckBox>
+                    <CheckBox Name="nb_Inteli3"
+                              Width="140"
+                              Content="Intel Core i3">
+                    </CheckBox>
+                    <CheckBox Name="nb_Inteli5"
+                              Width="140"
+                              Content="Intel Core i5">
+                    </CheckBox>
+                    <CheckBox Name="nb_Inteli7"
+                              Width="140"
+                              Content="Intel Core i7">
+                    </CheckBox>
+                    <CheckBox Name="nb_AMDA"
+                              Width="140"
+                              Content="AMD A series">
+                    </CheckBox>
+                    <CheckBox Name="nb_AMDFX"
+                              Width="140"
+                              Content="AMD FX series">
+                    </CheckBox>
+                </StackPanel>
+            </Expander>
+            <Expander Header="Тип відеокарти:"
+                      Background="#009586"
+                      Width="150"
+                      Margin="0,10,0,0">
+                <StackPanel Name="Notebook_VideocardType">
+                    <CheckBox Name="nb_discret"
+                              Width="140"
+                              Content="Дискретна">
+                    </CheckBox>
+                    <CheckBox Name="nb_integr"
+                              Width="140"
+                              Content="Інтегрована">
+                    </CheckBox>
+                    <CheckBox Name="nb_cli_crosfire"
+                              Width="140"
+                              Content="CLI/CrossFire">
+                    </CheckBox>
+                    <CheckBox Name="nb_proffesional"
+                              Width="140"
+                              Content="Професійна">
+                    </CheckBox>
+                </StackPanel>
+            </Expander>
+
+            <Expander Header="Серія відеокарти:"
+                      Background="#009586"
+                      Width="150"
+                      Margin="0,10,0,0">
+                <StackPanel Name="Notebook_VideocardSeries">
+                    <CheckBox Name="nb_HDgraphics"
+                              Width="140"
+                              Content="HD Graphics">
+                    </CheckBox>
+                    <CheckBox Name="nb_Irisgraphics"
+                              Width="140"
+                              Content="Iris Graphics">
+                    </CheckBox>
+                    <CheckBox Name="nb_AMDRadeon"
+                              Width="140"
+                              Content="AMD Radeon">
+                    </CheckBox>
+                    <CheckBox Name="nb_GeForce"
+                              Width="140"
+                              Content="GeForce">
+                    </CheckBox>
+                </StackPanel>
+            </Expander>
+            <Button Name="NotebookShow" Content="Показати"
+                    Background="#009586"
+                    Width="150"
+                    Margin="0,10,0,0"
+                    Click="NotebookShow_Click">
+            </Button>
+        </StackPanel>
+        <StackPanel Name="title"
+                    HorizontalAlignment="Stretch"
+                    VerticalAlignment="Top"
+                    Background="#009586"
+                    Panel.ZIndex="9"
+                    Height="50"
+                    Visibility="Hidden">
+            <Image x:Name="back_to_catalog" 
+                       Height="40"
+                       Width="40" 
+                       Source="images\arrow_left_icon.png" 
+                       Stretch="Fill"  
+                       HorizontalAlignment="Left" 
+                       Margin="255,5,0,0" 
+                       MouseLeftButtonUp="back_to_catalog_icon_MouseLeftButtonUp"/>
+            <TextBox Name="search"
+                     Height="25"
+                     Width="150"
+                     HorizontalAlignment="Right"
+                     Margin="0,-40,50,0">
+            </TextBox>
+            <Image Name="search_icon"
+                   Height="30"
+                   Width="30"
+                   Source="images\search_icon.png"
+                   Stretch="Fill"
+                   HorizontalAlignment="Right"
+                   Margin="0,-40,10,0"
+                   MouseLeftButtonUp="search_icon_MouseLeftButtonUp">
+                
+            </Image>
+        </StackPanel>
+        <StackPanel Name="Menu" 
                     Margin="0,0,0,0" 
                     Background="#333" 
                     HorizontalAlignment="Left" 
                     Height="672" 
                     VerticalAlignment="Top" 
-                    Width="250" Panel.ZIndex="5" >
+                    Width="250" 
+                    Panel.ZIndex="5" >
             <Label x:Name="label" 
                    Width="100"  
                    HorizontalAlignment="Center" 
@@ -102,7 +487,14 @@
                     FontSize="15"/>
         </StackPanel>
         <ScrollViewer ScrollViewer.VerticalScrollBarVisibility="Auto">
-            <Grid Name="grid2" HorizontalAlignment="Center" Height="auto" Margin="250,0,0,0" VerticalAlignment="Top" Width="744" ScrollViewer.VerticalScrollBarVisibility="Visible" MouseLeftButtonUp="grid2_MouseLeftButtonUp">
+            <Grid Name="grid2" 
+                  HorizontalAlignment="Center" 
+                  Height="auto" 
+                  Margin="250,0,0,0" 
+                  VerticalAlignment="Top" 
+                  Width="744" 
+                  ScrollViewer.VerticalScrollBarVisibility="Visible" 
+                  MouseLeftButtonUp="grid2_MouseLeftButtonUp">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition></ColumnDefinition>
                     <ColumnDefinition></ColumnDefinition>
@@ -114,12 +506,5 @@
                 </Grid.RowDefinitions>
             </Grid>
         </ScrollViewer>
-        <!--<ListView x:Name="listView"  HorizontalAlignment="Left" Height="671" Margin="250,0,0,0" VerticalAlignment="Top" Width="744" Background="#333" Grid.ColumnSpan="4" BorderThickness="0" IsHitTestVisible="True" Grid.Column="4">
-            <ListView.View>
-                <GridView>
-                    <GridViewColumn/>
-                </GridView>
-            </ListView.View>
-        </ListView>-->
     </Grid>
 </Window>

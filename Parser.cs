@@ -11,7 +11,7 @@ using System.Windows;
 
 namespace Diplom_Parser
 {
-   public class Parser
+    public class Parser
     {
         private SqlConnection conn;
         private string conn_string = @"Data Source=DESKTOP-KSC06U9;"
@@ -21,12 +21,12 @@ namespace Diplom_Parser
         public Parser()
         {
 
-        }    
+        }
         //1 PAGE WITH PRODUCTS
-        public void Get_Catalog(string url , int page, string category)
+        public void Get_Catalog(string url, int page, string category)
         {
             var web = new HtmlWeb();
-            var doc = web.Load(url+Convert.ToString(page)+'/');
+            var doc = web.Load(url + Convert.ToString(page) + '/');
             Get_Product_Information(doc, category);
         }
 
@@ -40,7 +40,7 @@ namespace Diplom_Parser
         }
 
         // GET BLOCK WITH NAME,URL,SRC AND DESCRIPTION
-        public void Get_Product_Information(HtmlDocument doc,string category)
+        public void Get_Product_Information(HtmlDocument doc, string category)
         {
             var Node = doc.DocumentNode
                           .Descendants("div")
@@ -54,27 +54,27 @@ namespace Diplom_Parser
                 var img = Get_Img_From_Node(n);
                 product_list.Add(new Product(name, url, img, ""));
             }
-          
-            Add_To_DB(product_list, category);    
+
+            Add_To_DB(product_list, category);
         }
 
         private string Get_Name_From_Node(HtmlNode n)
         {
-            var text=n.InnerHtml;
-            var index = text.IndexOf("title")+7;
+            var text = n.InnerHtml;
+            var index = text.IndexOf("title") + 7;
             var name = "";
-            for(int i = index; i< text.Length; i++)
+            for (int i = index; i < text.Length; i++)
             {
                 if (text[i] == '"') break;
                 name += text[i];
             }
             return name;
         }
-       
+
         private string Get_Url_From_Node(HtmlNode n)
         {
             var text = n.InnerHtml;
-            var index = text.IndexOf("a href")+8;
+            var index = text.IndexOf("a href") + 8;
             var url = "";
             for (int i = index; i < text.Length; i++)
             {
@@ -108,7 +108,7 @@ namespace Diplom_Parser
 
             DataAdapter.Fill(DataTable);
             product = new Product(DataTable.Rows[0].ItemArray[2].ToString(), DataTable.Rows[0].ItemArray[3].ToString(), DataTable.Rows[0].ItemArray[4].ToString(), DataTable.Rows[0].ItemArray[5].ToString());
-            if (product.description == null || product.description =="")
+            if (product.description == null || product.description == "")
             {
                 var web = new HtmlWeb();
 
@@ -123,7 +123,7 @@ namespace Diplom_Parser
                              .Descendants("div")
                              .Where(d => d.Attributes.Contains("class") &&
                              d.Attributes["class"].Value.Equals("clearfix pp-tab-with-aside-content pp-characteristics-tab"));
-                StreamWriter sw = new StreamWriter(new FileStream("description_only.txt", FileMode.Create, FileAccess.Write),Encoding.GetEncoding(1251));
+                StreamWriter sw = new StreamWriter(new FileStream("description_only.txt", FileMode.Create, FileAccess.Write), Encoding.GetEncoding(1251));
 
                 foreach (var n in Node)
                 {
@@ -136,12 +136,12 @@ namespace Diplom_Parser
                 StreamReader sr = new StreamReader(new FileStream("description_only.txt", FileMode.Open, FileAccess.Read), Encoding.GetEncoding(1251));
                 {
                     string line = "";
-                    while ((line=sr.ReadLine())!= null)
+                    while ((line = sr.ReadLine()) != null)
                     {
-                        
-                        if (line!= "" && !line.Contains("\\\\\\\\"))
+
+                        if (line != "" && !line.Contains("\\\\\\\\"))
                         {
-                           if (line.Contains("&nbsp"))
+                            if (line.Contains("&nbsp"))
                             {
                                 line = line.Substring(0, line.IndexOf("&nbsp"));
                             }
@@ -162,13 +162,13 @@ namespace Diplom_Parser
                     }
                 }
                 sr.Close();
-                
+
                 foreach (var i in descrip)
                 {
                     desc += i + Environment.NewLine;
                 }
 
-                query = "update Product_Info set Product_description='"+desc+"' where Product_name='" + product_name + "'";
+                query = "update Product_Info set Product_description='" + desc + "' where Product_name='" + product_name + "'";
                 DataAdapter = new SqlDataAdapter(query, conn);
                 DataTable = new DataTable();
 
@@ -190,13 +190,13 @@ namespace Diplom_Parser
 
         }
 
-        public void Add_To_DB(List<Product> product_list , string category)
+        public void Add_To_DB(List<Product> product_list, string category)
         {
             Connect_To_DB();
 
             foreach (var p in product_list)
             {
-                var query = "insert into Product_Info(Category,Product_name,Product_link,Product_img_link,Product_description) values('"+category+"','"+p.name+"','"+p.url+"','"+p.image+"','"+p.description+"')";
+                var query = "insert into Product_Info(Category,Product_name,Product_link,Product_img_link,Product_description) values('" + category + "','" + p.name + "','" + p.url + "','" + p.image + "','" + p.description + "')";
                 SqlDataAdapter DataAdapter = new SqlDataAdapter(query, conn);
                 DataTable DataTable = new DataTable();
                 DataAdapter.Fill(DataTable);
@@ -205,21 +205,21 @@ namespace Diplom_Parser
             conn.Close();
         }
 
-        public void Get_Product_Information_From_DB( string category)
+        public void Get_Product_Information_From_DB(string category)
         {
             product_list = new List<Product>();
             Connect_To_DB();
 
-            var query = "select * from Product_Info where Category='"+category+"'";
+            var query = "select * from Product_Info where Category='" + category + "'";
             SqlDataAdapter DataAdapter = new SqlDataAdapter(query, conn);
             DataTable DataTable = new DataTable();
 
             DataAdapter.Fill(DataTable);
             for (int j = 0; j < DataTable.Rows.Count; j++)
             {
-              
-                product_list.Add(new Product(DataTable.Rows[j].ItemArray[2].ToString(), DataTable.Rows[j].ItemArray[3].ToString(),  DataTable.Rows[j].ItemArray[4].ToString(), DataTable.Rows[j].ItemArray[5].ToString()));
-                
+
+                product_list.Add(new Product(DataTable.Rows[j].ItemArray[2].ToString(), DataTable.Rows[j].ItemArray[3].ToString(), DataTable.Rows[j].ItemArray[4].ToString(), DataTable.Rows[j].ItemArray[5].ToString()));
+
             }
             conn.Close();
         }
@@ -330,14 +330,30 @@ namespace Diplom_Parser
                                 string block = n.InnerText;
                                 if (n.InnerText.Contains("'"))
                                 {
-                                    block = block.Replace("'","`");
+                                    block = block.Replace("'", "`");
                                 }
-                                query = "insert Product_Reviews(Product_ID, Review) VALUES('" + product_id + "', '" + block + "')";
-                                DataAdapter = new SqlDataAdapter(query, conn);
-                                DataTable = new DataTable();
+                                if (block.Contains("&thinsp;"))
+                                {
+                                    var col = "";
+                                    int index = block.IndexOf("&thinsp;");
+                                    for (int k = 0; k < column.Length - 1; k++)
+                                    {
+                                        if (k < index || k > index + 7)
+                                        {
+                                            col += block[k];
+                                        }
+                                    }
+                                    block = col;
+                                }
+                                if (!block.Contains("?"))
+                                {
+                                    query = "insert Product_Reviews(Product_ID, Review) VALUES('" + product_id + "', '" + block + "')";
+                                    DataAdapter = new SqlDataAdapter(query, conn);
+                                    DataTable = new DataTable();
 
-                                DataAdapter.Fill(DataTable);
-                                revs += n.InnerText;
+                                    DataAdapter.Fill(DataTable);
+                                    revs += block;
+                                }
                             }
                             // sw.Close();
                         }
@@ -353,25 +369,41 @@ namespace Diplom_Parser
                                 string block = n.InnerText;
                                 if (n.InnerHtml.Contains("'"))
                                 {
-                                    block = block.Replace("'", "`");         
+                                    block = block.Replace("'", "`");
                                 }
-                                query = "insert Product_Reviews(Product_ID, Review) VALUES('" + product_id + "', '" + block + "')";
-                                DataAdapter = new SqlDataAdapter(query, conn);
-                                DataTable = new DataTable();
+                                if (block.Contains("&thinsp;"))
+                                {
+                                    var col = "";
+                                    int index = block.IndexOf("&thinsp;");
+                                    for (int k = 0; k < column.Length - 1; k++)
+                                    {
+                                        if (k < index || k > index + 7)
+                                        {
+                                            col += block[k];
+                                        }
+                                    }
+                                    block = col;
+                                }
+                                if (!block.Contains("?"))
+                                {
+                                    query = "insert Product_Reviews(Product_ID, Review) VALUES('" + product_id + "', '" + block + "')";
+                                    DataAdapter = new SqlDataAdapter(query, conn);
+                                    DataTable = new DataTable();
 
-                                DataAdapter.Fill(DataTable);
-                                revs += n.InnerText;
+                                    DataAdapter.Fill(DataTable);
+                                    revs += block;
+                                }
                             }
-                             //sw.Close();
+                            //sw.Close();
                         }
                     }
                 }
             }
             else
             {
-                for(int i =0; i< DataTable.Rows.Count; i++)
+                for (int i = 0; i < DataTable.Rows.Count; i++)
                 {
-                    revs += DataTable.Rows[i].ItemArray[2].ToString()+Environment.NewLine;
+                    revs += DataTable.Rows[i].ItemArray[2].ToString() + Environment.NewLine;
                 }
             }
             conn.Close();

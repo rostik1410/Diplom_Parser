@@ -8,7 +8,7 @@
              Name="UI_block"
              d:DesignHeight="200" d:DesignWidth="150" MouseLeftButtonUp="UI_block_MouseLeftButtonUp">
     <Grid Background="#333">
-        <Image Name="img" Height="100" Width="100" VerticalAlignment="Top"></Image>
-        <TextBlock Name="Prod_name" Foreground="White" Height="80" VerticalAlignment="Bottom" Margin="0,0,0,5" Width="150" TextWrapping="Wrap" HorizontalAlignment="Center"/>
+        <Image Name="img" Height="100" Width="100" VerticalAlignment="Top" Margin="20"></Image>
+        <TextBlock Name="Prod_name" Foreground="White" Height="70" VerticalAlignment="Bottom" Margin="0,0,0,5" Width="150" TextWrapping="Wrap" HorizontalAlignment="Center" TextAlignment="Center"/>
     </Grid>
 </UserControl>
