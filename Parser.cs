@@ -201,6 +201,7 @@ namespace Diplom_Parser
                 DataTable DataTable = new DataTable();
                 DataAdapter.Fill(DataTable);
             }
+            product_list.Clear();
             MessageBox.Show("Заповнення пройшло успішно!!!!");
             conn.Close();
         }

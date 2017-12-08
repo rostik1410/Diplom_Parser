@@ -91,14 +91,7 @@ namespace Diplom_Parser
             /*for (int i = 1; i <= 60; i++)
             {
                 doc = new HtmlDocument();
-                doc=parser.Get_Catalog(url, i,"notebook");
-                StreamWriter sw = new StreamWriter(new FileStream("NoteBookName.txt", FileMode.Append, FileAccess.Write));
-                sw.Write(doc.DocumentNode.OuterHtml);
-                if (i % 10 == 0)
-                {
-                    MessageBox.Show(i + " DONE!!!!");
-                }
-                sw.Close();
+                parser.Get_Catalog(url, i,"notebook");
             }*/
 
             //parser.Get_Catalog_ofline("NoteBookName.txt", "notebook");
@@ -109,22 +102,35 @@ namespace Diplom_Parser
 
         private void phone_btn_Click(object sender, RoutedEventArgs e)
         {
-            var url = "https://rozetka.com.ua/ua/mobile-phones/c80003/preset=smartfon/";
+            var url = "https://rozetka.com.ua/ua/mobile-phones/c80003/page=";
             parser = new Parser();
             Phone_Filter.Visibility = Visibility.Visible;
             title.Visibility = Visibility.Visible;
             /*for (int i = 1; i <= 13; i++)
             {
                 doc = new HtmlDocument();
-                doc=parser.Get_Catalog(url, i, "phone");
-                StreamWriter sw = new StreamWriter(new FileStream("FileName.txt", FileMode.Append, FileAccess.Write));
-                sw.Write(doc.DocumentNode.OuterHtml);
-                sw.Close();
+                parser.Get_Catalog(url, i, "phone");
             }*/
 
             //parser.Get_Catalog_ofline("FileName.txt", "phone");
 
             parser.Get_Product_Information_From_DB("phone");
+            Take_info_in_form(parser.product_list);
+        }
+
+        private void tv_btn_Click(object sender, RoutedEventArgs e)
+        {
+            var url = "https://rozetka.com.ua/ua/all-tv/c80037/page=";
+            parser = new Parser();
+            title.Visibility = Visibility.Visible;
+
+           /* for (int i = 1; i <= 13; i++)
+            {
+                doc = new HtmlDocument();
+                parser.Get_Catalog(url, i, "tv");
+            }*/
+
+            parser.Get_Product_Information_From_DB("tv");
             Take_info_in_form(parser.product_list);
         }
 
@@ -160,7 +166,7 @@ namespace Diplom_Parser
             }
 
             //FILL DESCRIPTION FIELD IN DB
-            /*for (int i =0; i< grid2.Children.Count; i++)
+           /* for (int i =0; i< grid2.Children.Count; i++)
             {
                 var product = (Product_block)grid2.Children[i];
                 product_name = product.Prod_name.Text;
@@ -203,5 +209,6 @@ namespace Diplom_Parser
         {
 
         }
+
     }
 }
