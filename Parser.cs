@@ -304,7 +304,9 @@ namespace Diplom_Parser
                     }
                     column = col;
                 }
-                int count_review = Convert.ToInt32(column);
+               
+                int count_review =(column!="")?Convert.ToInt32(column):0;
+            
                 MessageBox.Show("DONE!" + count_review);
 
                 if (count_review > 10)

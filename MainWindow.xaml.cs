@@ -134,6 +134,22 @@ namespace Diplom_Parser
             Take_info_in_form(parser.product_list);
         }
 
+        private void phototech_btn_Click(object sender, RoutedEventArgs e)
+        {
+            var url = "https://rozetka.com.ua/ua/photo/c80001/filter/page=";
+            parser = new Parser();
+            title.Visibility = Visibility.Visible;
+
+             /*for (int i = 1; i <= 9; i++)
+             {
+                 doc = new HtmlDocument();
+                 parser.Get_Catalog(url, i, "photo");
+             }*/
+
+            parser.Get_Product_Information_From_DB("photo");
+            Take_info_in_form(parser.product_list);
+        }
+
         private void grid2_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
         {
             string descrip ="";
@@ -166,7 +182,7 @@ namespace Diplom_Parser
             }
 
             //FILL DESCRIPTION FIELD IN DB
-           /* for (int i =0; i< grid2.Children.Count; i++)
+            /*for (int i =0; i< grid2.Children.Count; i++)
             {
                 var product = (Product_block)grid2.Children[i];
                 product_name = product.Prod_name.Text;

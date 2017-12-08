@@ -54,7 +54,7 @@
                     <TextBlock Name="Description_TB" 
                                Height="Auto" 
                                Width="600" 
-                               Margin="50,100" 
+                               Margin="50,0" 
                                Foreground="White" 
                                ScrollViewer.VerticalScrollBarVisibility="Hidden"/>
                 </ScrollViewer>
@@ -67,7 +67,7 @@
                     <TextBlock Name="Reviews_TB" 
                                Height="Auto" 
                                Width="900" 
-                               Margin="50,50" 
+                               Margin="50,0" 
                                Foreground="White"  
                                ScrollViewer.VerticalScrollBarVisibility="Hidden"/>
                 </ScrollViewer>
@@ -462,13 +462,13 @@
                     BorderThickness="0" 
                     FontSize="15" Click="tv_btn_Click"/>
             <Button x:Name="phototech_btn" 
-                    Content="Фото та відео техніка" 
+                    Content="Фото техніка" 
                     Background="#333" 
                     Foreground="White" 
                     Margin="30,1,30,1" 
                     Height="50" 
                     BorderThickness="0" 
-                    FontSize="15"/>
+                    FontSize="15" Click="phototech_btn_Click"/>
             <Button x:Name="button4" 
                     Content="Button" 
                     Background="#333" 
