@@ -58,12 +58,19 @@
                                Foreground="White" 
                                ScrollViewer.VerticalScrollBarVisibility="Hidden"/>
                 </ScrollViewer>
+                <Label Content="Відгуки" 
+                       Margin="0,615,0,0"
+                       HorizontalAlignment="Center"
+                       FontWeight="Bold"
+                       FontSize="24"
+                       Foreground="White">
+                </Label>
                 <ScrollViewer  VerticalScrollBarVisibility="Hidden" 
                                Height="500" 
                                Width="950" 
                                VerticalAlignment="Top" 
                                HorizontalAlignment="Right" 
-                               Margin="0,600,25,0">
+                               Margin="0,650,25,0">
                     <TextBlock Name="Reviews_TB" 
                                Height="Auto" 
                                Width="900" 

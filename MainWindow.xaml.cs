@@ -174,6 +174,8 @@ namespace Diplom_Parser
                     }
 
                 }
+
+                //parser.updateDataBase();
                 descrip = parser.Get_Description_From_Node(product_name, url_img);
                 Description_TB.Text = descrip;
 

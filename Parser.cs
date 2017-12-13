@@ -293,7 +293,8 @@ namespace Diplom_Parser
 
                 if (column.Contains("&thinsp;"))
                 {
-                    var col = "";
+                    column = column.Replace("&thinsp;", "");
+                   /* var col = "";
                     int index = column.IndexOf("&thinsp;");
                     for (int i = 0; i < column.Length - 1; i++)
                     {
@@ -302,7 +303,7 @@ namespace Diplom_Parser
                             col += column[i];
                         }
                     }
-                    column = col;
+                    column = col;*/
                 }
                
                 int count_review =(column!="")?Convert.ToInt32(column):0;
@@ -328,36 +329,7 @@ namespace Diplom_Parser
                                                    .Where(d => d.Attributes.Contains("class") &&
                                                    d.Attributes["class"].Value.Equals("pp-review-text"));
                             // sw = new StreamWriter(new FileStream("reviews_Page" + (i + 1) + ".txt", FileMode.Create, FileAccess.Write));
-                            foreach (var n in Node)
-                            {
-                                string block = n.InnerText;
-                                if (n.InnerText.Contains("'"))
-                                {
-                                    block = block.Replace("'", "`");
-                                }
-                                if (block.Contains("&thinsp;"))
-                                {
-                                    var col = "";
-                                    int index = block.IndexOf("&thinsp;");
-                                    for (int k = 0; k < column.Length - 1; k++)
-                                    {
-                                        if (k < index || k > index + 7)
-                                        {
-                                            col += block[k];
-                                        }
-                                    }
-                                    block = col;
-                                }
-                                if (!block.Contains("?"))
-                                {
-                                    query = "insert Product_Reviews(Product_ID, Review) VALUES('" + product_id + "', '" + block + "')";
-                                    DataAdapter = new SqlDataAdapter(query, conn);
-                                    DataTable = new DataTable();
-
-                                    DataAdapter.Fill(DataTable);
-                                    revs += block;
-                                }
-                            }
+                            revs += Replase_Special_Sigh_in_Reviews(Node, column, product_id, DataAdapter, DataTable);
                             // sw.Close();
                         }
                         else
@@ -367,39 +339,19 @@ namespace Diplom_Parser
                                                    .Where(d => d.Attributes.Contains("class") &&
                                                    d.Attributes["class"].Value.Equals("pp-review-text"));
                             // sw = new StreamWriter(new FileStream("reviews_Page" + (i + 1) + ".txt", FileMode.Create, FileAccess.Write));
-                            foreach (var n in Node)
-                            {
-                                string block = n.InnerText;
-                                if (n.InnerHtml.Contains("'"))
-                                {
-                                    block = block.Replace("'", "`");
-                                }
-                                if (block.Contains("&thinsp;"))
-                                {
-                                    var col = "";
-                                    int index = block.IndexOf("&thinsp;");
-                                    for (int k = 0; k < column.Length - 1; k++)
-                                    {
-                                        if (k < index || k > index + 7)
-                                        {
-                                            col += block[k];
-                                        }
-                                    }
-                                    block = col;
-                                }
-                                if (!block.Contains("?"))
-                                {
-                                    query = "insert Product_Reviews(Product_ID, Review) VALUES('" + product_id + "', '" + block + "')";
-                                    DataAdapter = new SqlDataAdapter(query, conn);
-                                    DataTable = new DataTable();
-
-                                    DataAdapter.Fill(DataTable);
-                                    revs += block;
-                                }
-                            }
+                            revs += Replase_Special_Sigh_in_Reviews(Node, column, product_id, DataAdapter, DataTable);
                             //sw.Close();
                         }
                     }
+                }
+                else
+                {
+                    Node = doc.DocumentNode.Descendants("div")
+                                                   .Where(d => d.Attributes.Contains("class") &&
+                                                   d.Attributes["class"].Value.Equals("pp-review-text"));
+                    // sw = new StreamWriter(new FileStream("reviews_Page" + (i + 1) + ".txt", FileMode.Create, FileAccess.Write));
+                    revs += Replase_Special_Sigh_in_Reviews(Node, column, product_id, DataAdapter, DataTable);
+                    // sw.Close();
                 }
             }
             else
@@ -413,5 +365,76 @@ namespace Diplom_Parser
             MessageBox.Show("Success DONE!!!!");
             return revs;
         }
+
+        public string Replase_Special_Sigh_in_Reviews(IEnumerable<HtmlNode> Node , string column, int product_id, SqlDataAdapter DataAdapter, DataTable DataTable)
+        {
+            string revs = "";
+            foreach (var n in Node)
+            {
+                string block = n.InnerText;
+                if (block.Contains("'"))
+                {
+                    block = block.Replace("'", "`");
+                }
+                if (block.Contains("&thinsp;"))
+                {
+                    block = block.Replace("&thinsp;", "");
+                    /*var col = "";
+                    int index = block.IndexOf("&thinsp;");
+                    for (int k = 0; k < column.Length - 1; k++)
+                    {
+                        if (k < index || k > index + 7)
+                        {
+                            col += block[k];
+                        }
+                    }
+                    block = col;*/
+                }
+                if(block.Contains("&nbsp;"))
+                {
+                    block = block.Replace("&nbsp;", " ");
+                }
+                if (!block.Contains("?"))
+                {
+                    var query = "insert Product_Reviews(Product_ID, Review) VALUES('" + product_id + "', '" + block + "')";
+                    DataAdapter = new SqlDataAdapter(query, conn);
+                    DataTable = new DataTable();
+
+                    DataAdapter.Fill(DataTable);
+                    revs += block;
+                }
+            }
+            return revs;
+        }
+
+        /*public void updateDataBase()
+        {
+            Connect_To_DB();
+
+            string query = "select * From Product_Reviews";
+            SqlDataAdapter DataAdapter = new SqlDataAdapter(query, conn);
+            DataTable DataTable = new DataTable();
+
+            DataAdapter.Fill(DataTable);
+            for (int i = 0; i < DataTable.Rows.Count; i++)
+            {
+                int review_id = Convert.ToInt32(DataTable.Rows[i].ItemArray[0].ToString());
+                string review = DataTable.Rows[i].ItemArray[2].ToString();
+                if (review.Contains("&nbsp;"))
+                {
+                    review = review.Replace("&nbsp;", "");
+                    query = "update Product_Reviews set Review ='"+review+"' where ID="+review_id ;
+                    DataAdapter = new SqlDataAdapter(query, conn);
+                    DataTable DataTable2 = new DataTable();
+                    DataAdapter.Fill(DataTable2);
+                }
+                if (i % 500 == 0)
+                {
+                    MessageBox.Show(i + " Done!");
+                }
+            }
+            conn.Close();
+
+        }*/
     }
 }
