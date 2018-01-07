@@ -17,3 +17,11 @@ D:\GitHub\Diplom_Parser\Diplom_Parser\obj\Debug\Diplom_Parser.exe
 D:\GitHub\Diplom_Parser\Diplom_Parser\obj\Debug\Diplom_Parser.pdb
 D:\GitHub\Diplom_Parser\Diplom_Parser\obj\Debug\Product_block.g.cs
 D:\GitHub\Diplom_Parser\Diplom_Parser\obj\Debug\Product_block.baml
+D:\GitHub\Diplom_Parser\Diplom_Parser\bin\Debug\Microsoft.Azure.CognitiveServices.Language.dll
+D:\GitHub\Diplom_Parser\Diplom_Parser\bin\Debug\Microsoft.Rest.ClientRuntime.Azure.dll
+D:\GitHub\Diplom_Parser\Diplom_Parser\bin\Debug\Microsoft.Rest.ClientRuntime.dll
+D:\GitHub\Diplom_Parser\Diplom_Parser\bin\Debug\Newtonsoft.Json.dll
+D:\GitHub\Diplom_Parser\Diplom_Parser\bin\Debug\Microsoft.Azure.CognitiveServices.Language.xml
+D:\GitHub\Diplom_Parser\Diplom_Parser\bin\Debug\Microsoft.Rest.ClientRuntime.xml
+D:\GitHub\Diplom_Parser\Diplom_Parser\bin\Debug\Microsoft.Rest.ClientRuntime.Azure.xml
+D:\GitHub\Diplom_Parser\Diplom_Parser\bin\Debug\Newtonsoft.Json.xml

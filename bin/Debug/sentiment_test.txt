@@ -1,0 +1,1 @@
+\\\\\\\\\\\\\\\\\\\\Document ID: 0 , Sentiment Score: 0,75\\\\\\\\\\\\\\\\\\\\Document ID: 1 , Sentiment Score: 0,52\\\\\\\\\\\\\\\\\\\\Document ID: 2 , Sentiment Score: 0,44
