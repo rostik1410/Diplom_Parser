@@ -103,7 +103,7 @@ namespace Diplom_Parser
         private void phone_btn_Click(object sender, RoutedEventArgs e)
         {
             SentimentAnalysis sa = new SentimentAnalysis();
-            sa.getSentimentalClass("text");
+            sa.getSentimentalClass(new List<string>());
             var url = "https://rozetka.com.ua/ua/mobile-phones/c80003/page=";
             parser = new Parser();
             Phone_Filter.Visibility = Visibility.Visible;

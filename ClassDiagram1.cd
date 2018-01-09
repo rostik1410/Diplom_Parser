@@ -3,7 +3,7 @@
   <Class Name="Diplom_Parser.Parser">
     <Position X="0.75" Y="0.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AgAAEAAAAkAAAAEAAEAMAIIAAAQAAAACgAAAQAACAIA=</HashCode>
+      <HashCode>AgAAEAAAAkAAAAEAAEAMAIICAAQAAAACgAAAQAACAIA=</HashCode>
       <FileName>Parser.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -25,10 +25,17 @@
   <Class Name="Diplom_Parser.MainWindow">
     <Position X="4.75" Y="1.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAgAAAAAAAIAAAgAEAAEAAJAAAAAAAAICA=</HashCode>
+      <HashCode>AAAAAAAAAAAgAAAAAAAIAQAgAEgAEAAJEABAAAAAICg=</HashCode>
       <FileName>MainWindow.xaml.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Diplom_Parser.SentimentAnalysis">
+    <Position X="7.5" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
+      <FileName>SentimentAnalysis.cs</FileName>
+    </TypeIdentifier>
   </Class>
   <Font Name="Segoe UI" Size="9" />
 </ClassDiagram>
