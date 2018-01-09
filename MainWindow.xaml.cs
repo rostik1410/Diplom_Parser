@@ -14,6 +14,7 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.IO;
 using HtmlAgilityPack;
+using Microsoft.Azure.CognitiveServices.Language.TextAnalytics.Models;
 
 namespace Diplom_Parser
 {
@@ -102,8 +103,6 @@ namespace Diplom_Parser
 
         private void phone_btn_Click(object sender, RoutedEventArgs e)
         {
-            SentimentAnalysis sa = new SentimentAnalysis();
-            sa.getSentimentalClass(new List<string>());
             var url = "https://rozetka.com.ua/ua/mobile-phones/c80003/page=";
             parser = new Parser();
             Phone_Filter.Visibility = Visibility.Visible;
@@ -155,7 +154,7 @@ namespace Diplom_Parser
         private void grid2_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
         {
             string descrip ="";
-            string revs = "";
+            List<string> reviews = new List<string>();
             Description_TB.Text = "";
             if (grid2.Children.Count > 0)
             {
@@ -180,9 +179,37 @@ namespace Diplom_Parser
                 //parser.updateDataBase();
                 descrip = parser.Get_Description_From_Node(product_name, url_img);
                 Description_TB.Text = descrip;
+                Reviews_TB.Text = "";
+                reviews = parser.Get_Product_Reviews(product_name, url_img);
+                foreach (var rev in reviews)
+                {
+                    Reviews_TB.Text += rev;
+                }
+                IList<SentimentBatchResultItem> result = new List<SentimentBatchResultItem>();
 
-                revs = parser.Get_Product_Reviews(product_name, url_img);
-                Reviews_TB.Text = revs;
+                SentimentAnalysis sa = new SentimentAnalysis();
+                result = sa.getSentimentalClass(reviews);
+
+
+                int count_positive = 0;
+                foreach(var item in result)
+                {
+                    if(item.Score >= 0.5)
+                    {
+                        count_positive++;
+                    }
+                }
+
+                rews_diff.Text = "Кількість позитивних відгуків " + count_positive + "/" + result.Count;
+
+                List<KeyValuePair<string, int>> valueList = new List<KeyValuePair<string, int>>();
+                valueList.Add(new KeyValuePair<string, int>("Позитивні", count_positive));
+                valueList.Add(new KeyValuePair<string, int>("Негативні", result.Count - count_positive));
+                
+                // Setting data for pie chart
+                pieChart.DataContext = valueList;
+                
+
             }
 
             //FILL DESCRIPTION FIELD IN DB

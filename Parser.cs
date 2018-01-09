@@ -245,9 +245,9 @@ namespace Diplom_Parser
             }
         }
 
-        public string Get_Product_Reviews(string product_name, string url_img)
+        public List<string> Get_Product_Reviews(string product_name, string url_img)
         {
-            string revs = "";
+            //string revs = "";
             List<string> reviews = new List<string>();
             Connect_To_DB();
             var query = "select Id from Product_Info where Product_name='" + product_name + "' and Product_img_link='" + url_img + "'";
@@ -274,7 +274,7 @@ namespace Diplom_Parser
                 catch (Exception)
                 {
                     MessageBox.Show("Проблеми з'єднання... Перевірте та спробуйте знову.");
-                    return "";
+                    return new List<string>();
                 }
                 StreamWriter sw = new StreamWriter(new FileStream("reviews.txt", FileMode.Create, FileAccess.Write));
 
@@ -329,7 +329,7 @@ namespace Diplom_Parser
                                                    .Where(d => d.Attributes.Contains("class") &&
                                                    d.Attributes["class"].Value.Equals("pp-review-text"));
                             // sw = new StreamWriter(new FileStream("reviews_Page" + (i + 1) + ".txt", FileMode.Create, FileAccess.Write));
-                            revs += Replase_Special_Sigh_in_Reviews(Node, column, product_id, DataAdapter, DataTable);
+                            reviews.Add(Replase_Special_Sigh_in_Reviews(Node, column, product_id, DataAdapter, DataTable));
                             // sw.Close();
                         }
                         else
@@ -339,7 +339,7 @@ namespace Diplom_Parser
                                                    .Where(d => d.Attributes.Contains("class") &&
                                                    d.Attributes["class"].Value.Equals("pp-review-text"));
                             // sw = new StreamWriter(new FileStream("reviews_Page" + (i + 1) + ".txt", FileMode.Create, FileAccess.Write));
-                            revs += Replase_Special_Sigh_in_Reviews(Node, column, product_id, DataAdapter, DataTable);
+                            reviews.Add(Replase_Special_Sigh_in_Reviews(Node, column, product_id, DataAdapter, DataTable));
                             //sw.Close();
                         }
                     }
@@ -350,7 +350,7 @@ namespace Diplom_Parser
                                                    .Where(d => d.Attributes.Contains("class") &&
                                                    d.Attributes["class"].Value.Equals("pp-review-text"));
                     // sw = new StreamWriter(new FileStream("reviews_Page" + (i + 1) + ".txt", FileMode.Create, FileAccess.Write));
-                    revs += Replase_Special_Sigh_in_Reviews(Node, column, product_id, DataAdapter, DataTable);
+                    reviews.Add(Replase_Special_Sigh_in_Reviews(Node, column, product_id, DataAdapter, DataTable));
                     // sw.Close();
                 }
             }
@@ -358,12 +358,12 @@ namespace Diplom_Parser
             {
                 for (int i = 0; i < DataTable.Rows.Count; i++)
                 {
-                    revs += DataTable.Rows[i].ItemArray[2].ToString() + Environment.NewLine;
+                    reviews.Add(DataTable.Rows[i].ItemArray[2].ToString() + Environment.NewLine);
                 }
             }
             conn.Close();
             MessageBox.Show("Success DONE!!!!");
-            return revs;
+            return reviews;
         }
 
         public string Replase_Special_Sigh_in_Reviews(IEnumerable<HtmlNode> Node , string column, int product_id, SqlDataAdapter DataAdapter, DataTable DataTable)

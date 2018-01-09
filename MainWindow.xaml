@@ -3,6 +3,8 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:CT="clr-namespace:System.Windows.Controls.DataVisualization.Charting;assembly=System.Windows.Controls.DataVisualization.Toolkit"
+        xmlns:CTV="clr-namespace:System.Windows.Controls.DataVisualization;assembly=System.Windows.Controls.DataVisualization.Toolkit"
         xmlns:local="clr-namespace:Diplom_Parser"
         mc:Ignorable="d"
         Title="MainWindow" Height="700" Width="1000" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
@@ -15,7 +17,7 @@
                       HorizontalAlignment="Right" 
                       Panel.ZIndex="10">
             <Grid Name="Product_grid" 
-                  Height="1150" 
+                  Height="1700" 
                   Width="1000" 
                   Background="#2b2b2b" 
                   Visibility="Hidden" 
@@ -78,6 +80,40 @@
                                Foreground="White"  
                                ScrollViewer.VerticalScrollBarVisibility="Hidden"/>
                 </ScrollViewer>
+                <Grid Margin="50, 1200, 0, 0" Height="450" Width="600">
+                    <TextBlock Name="rews_diff" 
+                               Foreground="White">
+                    </TextBlock>
+
+                    <CT:Chart  Name="pieChart" 
+                                            Title="Співвідношення відгуків" 
+                                            VerticalAlignment="Top" 
+                                            Margin="50,50,0,0" 
+                                            Height="400"
+                                            Foreground="White"
+                                            FontSize="22"
+                                            BorderBrush="#2b2b2b"
+                                            Background="#2b2b2b">
+                        <CT:Chart.PlotAreaStyle>
+                            <Style TargetType="Grid">
+                                <Setter Property="Background" Value="#2b2b2b"></Setter>
+                            </Style>
+                        </CT:Chart.PlotAreaStyle>
+                        <CT:Chart.LegendStyle>
+                            <Style TargetType="CTV:Legend">
+                                <Setter Property="Background" Value="#2b2b2b"></Setter>
+                                <Setter Property="BorderBrush" Value="#2b2b2b"></Setter>
+                            </Style>
+                        </CT:Chart.LegendStyle>
+                        
+                        <CT:PieSeries DependentValuePath="Value" 
+		                                           IndependentValuePath="Key" 
+                                                   ItemsSource="{Binding}" 
+		                                           IsSelectionEnabled="True" 
+                                                   Background="#2b2b2b" 
+                                                   BorderBrush="#FF2B2B2B" />
+                    </CT:Chart>
+                </Grid>
             </Grid>
         </ScrollViewer>
         <StackPanel Name="Phone_Filter"

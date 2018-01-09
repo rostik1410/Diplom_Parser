@@ -25,3 +25,7 @@ D:\GitHub\Diplom_Parser\Diplom_Parser\bin\Debug\Microsoft.Azure.CognitiveService
 D:\GitHub\Diplom_Parser\Diplom_Parser\bin\Debug\Microsoft.Rest.ClientRuntime.xml
 D:\GitHub\Diplom_Parser\Diplom_Parser\bin\Debug\Microsoft.Rest.ClientRuntime.Azure.xml
 D:\GitHub\Diplom_Parser\Diplom_Parser\bin\Debug\Newtonsoft.Json.xml
+D:\GitHub\Diplom_Parser\Diplom_Parser\bin\Debug\System.Windows.Controls.DataVisualization.Toolkit.dll
+D:\GitHub\Diplom_Parser\Diplom_Parser\bin\Debug\System.Windows.Controls.Input.Toolkit.dll
+D:\GitHub\Diplom_Parser\Diplom_Parser\bin\Debug\System.Windows.Controls.Layout.Toolkit.dll
+D:\GitHub\Diplom_Parser\Diplom_Parser\bin\Debug\WPFToolkit.dll
