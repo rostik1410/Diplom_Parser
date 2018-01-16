@@ -7,7 +7,7 @@
         xmlns:CTV="clr-namespace:System.Windows.Controls.DataVisualization;assembly=System.Windows.Controls.DataVisualization.Toolkit"
         xmlns:local="clr-namespace:Diplom_Parser"
         mc:Ignorable="d"
-        Title="MainWindow" Height="700" Width="1000" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
+        Title="User feedback analysis" Height="700" Width="1000" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
     <Grid Name="grid1" 
           Background="#2b2b2b" >
         <ScrollViewer Name="scrollview_product"  
@@ -58,6 +58,7 @@
                                Width="600" 
                                Margin="50,0" 
                                Foreground="White" 
+                               TextWrapping="Wrap"
                                ScrollViewer.VerticalScrollBarVisibility="Hidden"/>
                 </ScrollViewer>
                 <Label Content="Відгуки" 
@@ -75,9 +76,10 @@
                                Margin="0,650,25,0">
                     <TextBlock Name="Reviews_TB" 
                                Height="Auto" 
-                               Width="900" 
+                               Width="850" 
                                Margin="50,0" 
-                               Foreground="White"  
+                               Foreground="White"
+                               TextWrapping="Wrap"
                                ScrollViewer.VerticalScrollBarVisibility="Hidden"/>
                 </ScrollViewer>
                 <Grid Margin="50, 1200, 0, 0" Height="450" Width="600">
@@ -113,6 +115,10 @@
                                                    Background="#2b2b2b" 
                                                    BorderBrush="#FF2B2B2B" />
                     </CT:Chart>
+                    <TextBlock Name="decision" 
+                               Foreground="White"
+                               Margin="50,30,0,0">
+                    </TextBlock>
                 </Grid>
             </Grid>
         </ScrollViewer>
@@ -143,17 +149,17 @@
                    
                     <CheckBox Name="m4to5"
                               Width="140"
-                              Content="Від 4'= до 4.9'">
+                              Content="Від 4'= до 5'">
                     </CheckBox>
                                
                     <CheckBox Name="m5to5and5"
                               Width="140"
-                              Content="Від 5' до 5.4'">
+                              Content="Від 5.1' до 5.5'">
                     </CheckBox>
 
                     <CheckBox Name="m5and5"
                               Width="140"
-                              Content="5.5' і більше">
+                              Content="5.6' і більше">
                     </CheckBox>
                 </StackPanel>
             </Expander>
@@ -168,11 +174,11 @@
                     </CheckBox>
                     <CheckBox Name="m1to2"
                               Width="140"
-                              Content="1-1.9 ГБ">
+                              Content="1-2 ГБ">
                     </CheckBox>
                     <CheckBox Name="m2to3"
                               Width="140"
-                              Content="2-3 Гб">
+                              Content="2.1-3 Гб">
                     </CheckBox>
                     <CheckBox Name="m3"
                               Width="140"
@@ -188,31 +194,11 @@
                 <StackPanel>
                     <CheckBox Name="IOS"
                         Width="140"
-                        Content="IOS">
+                        Content="iOS">
                     </CheckBox>
-                    <CheckBox Name="Android4"
+                    <CheckBox Name="Android"
                               Width="140"
-                              Content="Android 4.4 і старіші">
-                    </CheckBox>
-                    <CheckBox Name="Android5"
-                              Width="140"
-                              Content="Android 5 Lolipop">
-                    </CheckBox>
-                    <CheckBox Name="Android6"
-                              Width="140"
-                              Content="Android 6 Mashmello">
-                    </CheckBox>
-                    <CheckBox Name="Android7"
-                              Width="140"
-                              Content="Android 7 Nougat">
-                    </CheckBox>
-                    <CheckBox Name="Android8"
-                              Width="140"
-                              Content="Android 8 Oreo">
-                    </CheckBox>
-                    <CheckBox Name="Other"
-                              Width="140"
-                              Content="Інші">
+                              Content="Android">
                     </CheckBox>
                 </StackPanel>
             </Expander>
@@ -262,21 +248,26 @@
                       Width="150"
                       Margin="0,10,0,0">
                 <StackPanel Name="notebook_display_diagonal">
-                    <CheckBox Name="a"
-                              Width="140">
-                        
+                    <CheckBox Name="nb_m9l12and5"
+                              Width="140"
+                              Content="9-12.5">
                     </CheckBox>
-                    <CheckBox Name="b"
-                              Width="140">
-                        
+                    <CheckBox Name="nb_13"
+                              Width="140"
+                              Content="13">
                     </CheckBox>
-                    <CheckBox Name="c"
-                              Width="140">
-                        
+                    <CheckBox Name="nb_14"
+                              Width="140"
+                              Content="14">
                     </CheckBox>
-                    <CheckBox Name="d"
-                              Width="140">
-                        
+                    <CheckBox Name="nb_m15l15and6"
+                              Width="140"
+                              Content="15-15.6">
+                    </CheckBox>
+
+                    <CheckBox Name="nb_m16l17"
+                              Width="140"
+                              Content="16-17">
                     </CheckBox>
                 </StackPanel>
             </Expander>
@@ -286,9 +277,9 @@
                       Width="150"
                       Margin="0,10,0,0">
                 <StackPanel Name="Notebook_OZU">
-                    <CheckBox Name="nb_4"
+                    <CheckBox Name="nb_2_4"
                               Width="140"
-                              Content="4 Гб">
+                              Content="2-4 Гб">
                     </CheckBox>
                     <CheckBox Name="nb_6"
                               Width="140"
@@ -298,34 +289,14 @@
                               Width="140"
                               Content="8 Гб">
                     </CheckBox>
-                    <CheckBox Name="nb_16"
+                    <CheckBox Name="nb_12_16"
                               Width="140"
-                              Content="16 Гб">
+                              Content="12-16 Гб">
                     </CheckBox>
 
                     <CheckBox Name="nb_m16"
                               Width="140"
                               Content="Більше 16-и Гб">
-                    </CheckBox>
-                </StackPanel>
-            </Expander>
-
-            <Expander Header="Тип накопичувача:"
-                      Background="#009586"
-                      Width="150"
-                      Margin="0,10,0,0">
-                <StackPanel Name="TypeDisc">
-                    <CheckBox Name="nb_ssd"
-                              Width="140"
-                              Content="SSD">
-                    </CheckBox>
-                    <CheckBox Name="nb_hdd"
-                              Width="140"
-                              Content="HDD">
-                    </CheckBox>
-                    <CheckBox Name="nb_hddssd"
-                              Width="140"
-                              Content="HDD+SSD">
                     </CheckBox>
                 </StackPanel>
             </Expander>
@@ -343,21 +314,9 @@
                               Width="140"
                               Content="Intel Pentium">
                     </CheckBox>
-                    <CheckBox Name="nb_IntelM"
+                    <CheckBox Name="nb_IntelCore"
                               Width="140"
-                              Content="Intel Core M">
-                    </CheckBox>
-                    <CheckBox Name="nb_Inteli3"
-                              Width="140"
-                              Content="Intel Core i3">
-                    </CheckBox>
-                    <CheckBox Name="nb_Inteli5"
-                              Width="140"
-                              Content="Intel Core i5">
-                    </CheckBox>
-                    <CheckBox Name="nb_Inteli7"
-                              Width="140"
-                              Content="Intel Core i7">
+                              Content="Intel Core series">
                     </CheckBox>
                     <CheckBox Name="nb_AMDA"
                               Width="140"
@@ -367,32 +326,12 @@
                               Width="140"
                               Content="AMD FX series">
                     </CheckBox>
-                </StackPanel>
-            </Expander>
-            <Expander Header="Тип відеокарти:"
-                      Background="#009586"
-                      Width="150"
-                      Margin="0,10,0,0">
-                <StackPanel Name="Notebook_VideocardType">
-                    <CheckBox Name="nb_discret"
+                    <CheckBox Name="nb_AMDRyzen"
                               Width="140"
-                              Content="Дискретна">
-                    </CheckBox>
-                    <CheckBox Name="nb_integr"
-                              Width="140"
-                              Content="Інтегрована">
-                    </CheckBox>
-                    <CheckBox Name="nb_cli_crosfire"
-                              Width="140"
-                              Content="CLI/CrossFire">
-                    </CheckBox>
-                    <CheckBox Name="nb_proffesional"
-                              Width="140"
-                              Content="Професійна">
+                              Content="AMD Ryzen series">
                     </CheckBox>
                 </StackPanel>
             </Expander>
-
             <Expander Header="Серія відеокарти:"
                       Background="#009586"
                       Width="150"
@@ -423,6 +362,67 @@
                     Click="NotebookShow_Click">
             </Button>
         </StackPanel>
+        <StackPanel Name="TV_Filter"
+                    Margin="0,0"
+                    HorizontalAlignment="Left"
+                    Width="250"
+                    Height="672"
+                    Background="#333"
+                    Panel.ZIndex="10"
+                    Visibility="Hidden">
+            <Label Content="Filter" 
+                   HorizontalAlignment="Center" 
+                   FontSize="20" 
+                   Foreground="White"
+                   VerticalAlignment="Center">
+            </Label>
+            <Expander Header="Діагональ(дюймів)"
+                      Background="#009586"
+                      Width="150"
+                      Margin="0,10,0,0">
+                <StackPanel Name="tv_display_diagonal">
+                    <CheckBox Name="m20l30"
+                              Width="140"
+                              Content="20-30">
+                    </CheckBox>
+                    <CheckBox Name="m30l40"
+                              Width="140"
+                              Content="31-40">
+                    </CheckBox>
+                    <CheckBox Name="m40l60"
+                              Width="140"
+                              Content="41-60">
+                    </CheckBox>
+                    <CheckBox Name="m60"
+                              Width="140"
+                              Content="Більше 60-и">
+                    </CheckBox>
+                </StackPanel>
+            </Expander>
+
+            <Expander Header="Підтримка Smart TV:"
+                      Background="#009586"
+                      Width="150"
+                      Margin="0,10,0,0">
+                <StackPanel Name="SmartTV">
+                    <CheckBox Name="smartyes"
+                              Width="140"
+                              Content="Є">
+                    </CheckBox>
+                    <CheckBox Name="smartno"
+                              Width="140"
+                              Content="Не має">
+                    </CheckBox>
+                </StackPanel>
+            </Expander>
+            <Button Name="TVShow" Content="Показати"
+                    Background="#009586"
+                    Width="150"
+                    Margin="0,10,0,0"
+                    Click="TVShow_Click">
+            </Button>
+        </StackPanel>
+
         <StackPanel Name="title"
                     HorizontalAlignment="Stretch"
                     VerticalAlignment="Top"
@@ -438,7 +438,7 @@
                        HorizontalAlignment="Left" 
                        Margin="255,5,0,0" 
                        MouseLeftButtonUp="back_to_catalog_icon_MouseLeftButtonUp"/>
-            <TextBox Name="search"
+            <TextBox Name="searchTB"
                      Height="25"
                      Width="150"
                      HorizontalAlignment="Right"
@@ -512,22 +512,6 @@
                     Height="50" 
                     BorderThickness="0" 
                     FontSize="15" Click="phototech_btn_Click"/>
-            <Button x:Name="button4" 
-                    Content="Button" 
-                    Background="#333" 
-                    Foreground="White" 
-                    Margin="30,1,30,1" 
-                    Height="50"
-                    BorderThickness="0" 
-                    FontSize="15"/>
-            <Button x:Name="button5" 
-                    Content="Button" 
-                    Background="#333" 
-                    Foreground="White"
-                    Margin="30,1,30,1" 
-                    Height="50" 
-                    BorderThickness="0" 
-                    FontSize="15"/>
         </StackPanel>
         <ScrollViewer ScrollViewer.VerticalScrollBarVisibility="Auto">
             <Grid Name="grid2" 
